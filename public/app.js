@@ -95,8 +95,81 @@ const userListEl = document.getElementById('user-list');
 const unreviewedToggle = document.getElementById('unreviewed-toggle');
 const downloadCsvBtn = document.getElementById('download-csv');
 const downloadJsonBtn = document.getElementById('download-json');
+const toggleSidebarBtn = document.getElementById('toggle-sidebar');
+
+const textModal = document.getElementById('text-modal');
+const textModalTitle = document.getElementById('text-modal-title');
+const textModalSubtitle = document.getElementById('text-modal-subtitle');
+const textModalContent = document.getElementById('text-modal-content');
+const textModalClose = document.getElementById('text-modal-close');
 
 const toast = document.getElementById('toast');
+
+function setSidebarCollapsed(collapsed) {
+  document.body.classList.toggle('sidebar-collapsed', collapsed);
+  try {
+    localStorage.setItem('hev_sidebar', collapsed ? 'collapsed' : 'open');
+  } catch {
+    // ignore
+  }
+  if (toggleSidebarBtn) {
+    toggleSidebarBtn.textContent = collapsed ? 'Show sidebar' : 'Hide sidebar';
+  }
+}
+
+if (toggleSidebarBtn) {
+  let collapsed = false;
+  try {
+    collapsed = localStorage.getItem('hev_sidebar') === 'collapsed';
+  } catch {
+    collapsed = false;
+  }
+  setSidebarCollapsed(collapsed);
+  toggleSidebarBtn.addEventListener('click', () => {
+    setSidebarCollapsed(!document.body.classList.contains('sidebar-collapsed'));
+  });
+}
+
+function closeTextModal() {
+  if (!textModal) return;
+  textModal.classList.add('hidden');
+  if (textModalTitle) textModalTitle.textContent = '';
+  if (textModalSubtitle) textModalSubtitle.textContent = '';
+  if (textModalContent) textModalContent.innerHTML = '';
+}
+
+function openTextModal({ title, subtitle = '', bullets = [], html = '' }) {
+  if (!textModal) return;
+  if (textModalTitle) textModalTitle.textContent = title || '';
+  if (textModalSubtitle) textModalSubtitle.textContent = subtitle || '';
+  if (textModalContent) {
+    if (html) {
+      textModalContent.innerHTML = html;
+    } else if (bullets && bullets.length) {
+      const ul = document.createElement('ul');
+      bullets.forEach(b => {
+        const li = document.createElement('li');
+        li.textContent = b;
+        ul.appendChild(li);
+      });
+      textModalContent.innerHTML = '';
+      textModalContent.appendChild(ul);
+    } else {
+      textModalContent.innerHTML = '<div class="empty">No content.</div>';
+    }
+  }
+  textModal.classList.remove('hidden');
+}
+
+if (textModalClose) {
+  textModalClose.addEventListener('click', closeTextModal);
+}
+
+if (textModal) {
+  textModal.addEventListener('click', (event) => {
+    if (event.target === textModal) closeTextModal();
+  });
+}
 
 function setCurrentUser(user, authEnabled = true) {
   state.authEnabled = authEnabled;
@@ -529,10 +602,42 @@ function renderItems(items) {
         const sec = document.createElement('div');
         sec.className = `section-card section-${key}`;
         const bullets = (item.categorized?.[key] || []).filter(Boolean);
-        sec.innerHTML = `
-          <h4>${label}</h4>
-          ${bullets.length ? bullets.map(b => `<div>• ${escapeHtml(b)}</div>`).join('') : '<div class="empty">Not captured</div>'}
-        `;
+        const head = document.createElement('div');
+        head.className = 'section-head';
+        const h4 = document.createElement('h4');
+        h4.textContent = label;
+        head.appendChild(h4);
+
+        const openBtn = document.createElement('button');
+        openBtn.type = 'button';
+        openBtn.className = 'ghost tiny';
+        openBtn.textContent = 'Open';
+        openBtn.disabled = bullets.length === 0;
+        openBtn.addEventListener('click', () => {
+          openTextModal({
+            title: label,
+            subtitle: `${item.title || 'Untitled Study'} · PMID ${item.pmid || 'n/a'}`,
+            bullets
+          });
+        });
+        head.appendChild(openBtn);
+        sec.appendChild(head);
+
+        if (bullets.length) {
+          const ul = document.createElement('ul');
+          ul.className = 'bullet-list';
+          bullets.forEach(b => {
+            const li = document.createElement('li');
+            li.textContent = b;
+            ul.appendChild(li);
+          });
+          sec.appendChild(ul);
+        } else {
+          const empty = document.createElement('div');
+          empty.className = 'empty';
+          empty.textContent = 'Not captured';
+          sec.appendChild(empty);
+        }
         grid.appendChild(sec);
       });
       card.appendChild(grid);
@@ -549,7 +654,29 @@ function renderItems(items) {
     const abstract = document.createElement('div');
     abstract.className = 'abstract';
     const abstractText = escapeHtml(item.abstract || '').replace(/\n/g, '<br>');
-    abstract.innerHTML = `<strong>Abstract:</strong><br>${abstractText}`;
+    const absHead = document.createElement('div');
+    absHead.className = 'section-head';
+    const absTitle = document.createElement('h4');
+    absTitle.textContent = 'Abstract';
+    absHead.appendChild(absTitle);
+    const absOpen = document.createElement('button');
+    absOpen.type = 'button';
+    absOpen.className = 'ghost tiny';
+    absOpen.textContent = 'Open';
+    absOpen.disabled = !item.abstract;
+    absOpen.addEventListener('click', () => {
+      openTextModal({
+        title: 'Abstract',
+        subtitle: `${item.title || 'Untitled Study'} · PMID ${item.pmid || 'n/a'}`,
+        html: `<div>${abstractText || '<span class="empty">Not provided</span>'}</div>`
+      });
+    });
+    absHead.appendChild(absOpen);
+    abstract.appendChild(absHead);
+    const absBody = document.createElement('div');
+    absBody.className = 'abstract-body';
+    absBody.innerHTML = abstractText || '<span class="empty">Not provided</span>';
+    abstract.appendChild(absBody);
     card.appendChild(abstract);
 
     const validation = document.createElement('div');
@@ -648,7 +775,24 @@ modal.addEventListener('click', (event) => {
 });
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+  if (event.key !== 'Escape') return;
+  if (textModal && !textModal.classList.contains('hidden')) {
+    closeTextModal();
+    return;
+  }
+  if (compareModal && !compareModal.classList.contains('hidden')) {
+    compareModal.classList.add('hidden');
+    return;
+  }
+  if (summaryModal && !summaryModal.classList.contains('hidden')) {
+    summaryModal.classList.add('hidden');
+    return;
+  }
+  if (loginModal && !loginModal.classList.contains('hidden')) {
+    closeLoginModal();
+    return;
+  }
+  if (modal && !modal.classList.contains('hidden')) {
     closeModal();
   }
 });
@@ -689,17 +833,22 @@ async function openCompare(pmid) {
     items.forEach(item => {
       const card = document.createElement('div');
       card.className = 'compare-card';
+      const safeId = escapeHtml(item.id);
+      const safeQuestion = escapeHtml(item.question || '');
+      const safeAnswer = escapeHtml(item.answer || '');
+      const safeExplanation = escapeHtml(item.explanation || '');
+      const safePmid = escapeHtml(item.pmid || '');
       card.innerHTML = `
-        <header>
-          <label>
-            <input type="radio" name="compare-choice" value="${item.id}" ${item.id === compareSelection.choiceId ? 'checked' : ''} />
-            ${item.question.slice(0, 80)}
-          </label>
-          <span class="meta">PMID ${item.pmid}</span>
-        </header>
-        <div><strong>Answer:</strong> ${item.answer}</div>
-        <div><strong>Explanation:</strong> ${item.explanation}</div>
-      `;
+	        <header>
+	          <label>
+	            <input type="radio" name="compare-choice" value="${safeId}" ${item.id === compareSelection.choiceId ? 'checked' : ''} />
+	            ${safeQuestion}
+	          </label>
+	          <span class="meta">PMID ${safePmid}</span>
+	        </header>
+	        <div><strong>Answer:</strong> ${safeAnswer}</div>
+	        <div><strong>Explanation:</strong> ${safeExplanation}</div>
+	      `;
       queryAll('input[type="radio"]', card).forEach(radio => {
         radio.addEventListener('change', evt => {
           compareSelection.choiceId = evt.target.value;

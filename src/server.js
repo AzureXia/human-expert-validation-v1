@@ -392,11 +392,13 @@ function categorizeExtraction(parsed) {
 
   const summaryPieces = [];
   ['population', 'symptoms', 'riskFactors', 'interventions', 'outcomes'].forEach(key => {
-    const unique = Array.from(new Map(buckets[key].map(v => [v.toLowerCase(), v])).values()).slice(0, 2);
-    buckets[key] = unique.map(v => v.length > 120 ? `${v.slice(0, 117)}…` : v);
-    if (buckets[key].length) {
-      summaryPieces.push(`${key.replace(/([A-Z])/g, ' $1')}: ${buckets[key][0]}`);
-    }
+    const unique = Array.from(new Map(buckets[key].map(v => [v.toLowerCase(), v])).values()).slice(0, 5);
+    buckets[key] = unique;
+    if (!buckets[key].length) return;
+    const label = key.replace(/([A-Z])/g, ' $1');
+    const first = buckets[key][0];
+    const compact = first.length > 160 ? `${first.slice(0, 157)}...` : first;
+    summaryPieces.push(`${label}: ${compact}`);
   });
   if (!summaryPieces.length && buckets.other.length) {
     summaryPieces.push(buckets.other[0]);

@@ -101,6 +101,7 @@
               <p class="hint">Upload files (admin) then experts review items. Every click is saved immediately so reviewers can pause and resume later.</p>
             </div>
             <div class="header-actions">
+              <button id="toggle-sidebar" class="ghost">Hide sidebar</button>
               <button id="summary-btn" class="secondary">View Summary</button>
               <button id="download-csv" class="cta">Download results (CSV)</button>
               <button id="download-json" class="cta ghost">Download results (JSON)</button>
@@ -134,16 +135,27 @@
       </div>
     </div>
 
-    <div id="summary-modal" class="modal hidden">
-      <div class="modal-card large">
-        <h3>Session Summary</h3>
-        <div id="summary-content"></div>
-        <div class="modal-actions space-between">
-          <div class="export-group" id="export-buttons"></div>
-          <button id="summary-close" class="secondary">Close</button>
-        </div>
-      </div>
-    </div>
+	    <div id="summary-modal" class="modal hidden">
+	      <div class="modal-card large">
+	        <h3>Session Summary</h3>
+	        <div id="summary-content"></div>
+	        <div class="modal-actions space-between">
+	          <div class="export-group" id="export-buttons"></div>
+	          <button id="summary-close" class="secondary">Close</button>
+	        </div>
+	      </div>
+	    </div>
+
+	    <div id="text-modal" class="modal hidden">
+	      <div class="modal-card large">
+	        <h3 id="text-modal-title"></h3>
+	        <p id="text-modal-subtitle" class="small muted"></p>
+	        <div id="text-modal-content" class="text-modal-content"></div>
+	        <div class="modal-actions">
+	          <button id="text-modal-close" class="secondary">Close</button>
+	        </div>
+	      </div>
+	    </div>
 
     <div id="login-modal" class="modal hidden">
       <div class="modal-card login-card">
