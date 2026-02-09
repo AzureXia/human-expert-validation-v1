@@ -1,0 +1,19 @@
+{
+  "name": "human-expert-validation-v1",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development node src/server.js",
+    "start": "NODE_ENV=production node src/server.js",
+    "hash-password": "node scripts/make_user_hash.mjs"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.0",
+    "express": "^4.19.2",
+    "dotenv": "^16.4.5"
+  }
+}

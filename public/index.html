@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Knowledge Curator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <h1>Human Expert Validation</h1>
+        <section class="auth-card">
+          <div id="current-user" class="current-user">Not signed in</div>
+          <button id="logout-btn" class="secondary hidden">Log out</button>
+        </section>
+        <section class="dataset-section">
+          <h2>Dataset</h2>
+          <div id="dataset-list"></div>
+        </section>
+        <section class="controls">
+          <button id="summary-btn" class="secondary">View Summary</button>
+          <div class="search">
+            <input id="search-input" type="search" placeholder="Search..." />
+          </div>
+          <div class="pagination">
+            <button id="prev-page" class="secondary">◀ Prev</button>
+            <span id="page-info"></span>
+            <button id="next-page" class="secondary">Next ▶</button>
+          </div>
+        </section>
+        <section class="stats" id="stats"></section>
+        <section class="progress" id="progress"></section>
+      </aside>
+      <main class="content">
+        <header class="content-header">
+          <h2 id="dataset-title">Items</h2>
+          <p class="hint">Review each item and record your judgement. After every click you will be asked to confirm.</p>
+        </header>
+        <section id="items" class="item-list"></section>
+      </main>
+    </div>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-card">
+        <h3 id="modal-question"></h3>
+        <p id="modal-subtext"></p>
+        <div class="modal-actions">
+          <button id="modal-confirm" class="primary">Yes</button>
+          <button id="modal-cancel" class="secondary">No</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="compare-modal" class="modal hidden">
+      <div class="modal-card large">
+        <h3>Select the strongest QA pair for this abstract</h3>
+        <div id="compare-list"></div>
+        <div class="modal-actions">
+          <button id="compare-submit" class="primary">Save Choice</button>
+          <button id="compare-close" class="secondary">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="summary-modal" class="modal hidden">
+      <div class="modal-card large">
+        <h3>Session Summary</h3>
+        <div id="summary-content"></div>
+        <div class="modal-actions space-between">
+          <div class="export-group" id="export-buttons"></div>
+          <button id="summary-close" class="secondary">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="login-modal" class="modal hidden">
+      <div class="modal-card login-card">
+        <h3>Expert Login</h3>
+        <p>Sign in to review data and submit judgements.</p>
+        <form id="login-form" class="login-form">
+          <label>
+            Username
+            <input id="login-username" type="text" autocomplete="username" required />
+          </label>
+          <label>
+            Password
+            <input id="login-password" type="password" autocomplete="current-password" required />
+          </label>
+          <p id="login-error" class="login-error hidden"></p>
+          <div class="modal-actions">
+            <button type="submit" class="primary">Sign in</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

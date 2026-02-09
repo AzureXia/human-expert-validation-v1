@@ -1,0 +1,1296 @@
+{
+  "38090695-0": {
+    "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "General population, as the abstract mentions that depression affects 4.4% of the world's population, not specifying a particular demographic.",
+        "",
+        "The abstract states that depression impacts 4.4% of the global population and does not narrow its focus to a specific demographic group (e.g., adolescents, older adults). Therefore, I concluded that the population is general.",
+        "If the abstract had omitted the population, interventions, or outcomes, I would explicitly note these gaps. However, sufficient information on these aspects was provided."
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "",
+        "Treatment gaps in depression caused by side effects, partial remission, treatment resistance, and limited availability of psychotherapy.",
+        "",
+        "The article discusses issues contributing to the treatment gap in depression, such as side effects from medications, difficulties achieving remission, treatment resistance, and limited access to psychotherapy. These are indirect causes or barriers that exacerbate depression."
+      ],
+      "interventions": [
+        "",
+        "Existing therapies can be optimized by combining pharmacological treatments with non-pharmaceutical methods such as:",
+        "Low-intensity psychological interventions",
+        "Improvements in treatment effectiveness.",
+        "Reduction in the treatment gap through prevention and awareness efforts.",
+        "",
+        "Non-pharmaceutical interventions are highlighted, including low-intensity psychological interventions, online tools, and lifestyle changes. The abstract emphasizes combining these methods with existing pharmacological treatments to enhance outcomes. Prevention strategies, like mental health awareness programs and life skill education, are also mentioned.",
+        "The abstract suggests that the interventions aim to improve the overall effectiveness of treatments and address the treatment gap. Additionally, prevention strategies aim to promote positive mental health and reduce undiagnosed cases."
+      ],
+      "outcomes": [
+        "",
+        ""
+      ],
+      "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "32387133-1": {
+    "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "mice subjected to chronic unpredictable stress (animal model for MDD) and humans diagnosed with MDD (via peripheral blood analysis).",
+        "Identify the population studied.",
+        "",
+        "2. Humans diagnosed with MDD, where peripheral blood samples were analyzed to confirm decreased circSTAG1 levels."
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "",
+        "Parse the abstract for causes or triggers of MDD.",
+        "The abstract describes decreased levels of circSTAG1 in chronic stress-exposed mouse brains and human blood as a contributing factor to depression. Chronic unpredictable stress and corticosterone are identified as biochemical triggers leading to astrocyte dysfunction, which is tied to depressive-like behaviors. Dysregulation of m<sup6</supA methylation is presented as another mechanistic contributor."
+      ],
+      "interventions": [
+        "",
+        "Review for interventions or treatments.",
+        "Overexpression of circSTAG1 (via lentiviral microinjection into the mouse hippocampus) is explicitly described as an intervention. The therapeutic mechanism involves altering m<sup6</supA methylation by interacting with ALKBH5, which regulates FAAH mRNA degradation and subsequent astrocyte health.",
+        "The abstract does not specify additional demographics, such as age or any other specific human subgroup in the study of MDD. Furthermore, no mention of standard pharmacological treatments or comprehensive human clinical trials is noted."
+      ],
+      "outcomes": [
+        "",
+        "Positive effects include attenuated depressive-like behaviors (as measured by sucrose preference, forced swim, and tail suspension tests) and reduced astrocyte dysfunction/loss.",
+        "Examine the measured outcomes.",
+        "Behavioral outcomes in mice include improvements in sucrose preference, forced swim, and tail suspension tests—all standard measures of depression-like behaviors.",
+        "Cellular outcomes involve attenuated astrocyte dysfunction and loss.",
+        "Molecular outcomes include increased m<sup6</supA methylation, decreased FAAH mRNA levels, and improved astrocyte viability in vitro."
+      ],
+      "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "31740355-2": {
+    "summary": "population:  | symptoms: Depressive symptomatology is associated with an increased likelihood of both first and recurrent cardiovascular disease (CVD) events, particularly in women. | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "",
+        "The ATTICA study recruited individuals free of CVD, while the GREECS study targeted individuals with acute coronary syndrome. This defines the studied population as adults, divided into two groups based on their CVD status at baseline."
+      ],
+      "symptoms": [
+        "Depressive symptomatology is associated with an increased likelihood of both first and recurrent cardiovascular disease (CVD) events, particularly in women.",
+        "Analysis highlighted differences by sex (men vs. women) and potential disparities in depressive symptom impact.",
+        "First and recurrent CVD events were measured as outcomes. Women with depressive symptoms demonstrated higher risk compared to men (hazard ratios of 2.72 for first CVD events and 1.31 for recurrent events). Mediation analysis emphasized conventional risk factors.",
+        "The abstract explicitly links depressive symptomatology to increased risk of both first and recurrent CVD events. Significant sex-specific effects are emphasized: depressive women are found to be at greater risk than men, and the aggravating role of depressive symptoms is highlighted as independent of other factors.",
+        "women scored higher on depressive symptomatology scales, and depressive women had a higher likelihood of experiencing first and recurrent CVD events than men.",
+        "The abstract does not mention any psychological or cardiovascular interventions tested or proposed for the mitigation of depressive symptoms or CVD risk. It primarily focuses on the observed relationships and sex-specific effects.",
+        "The key outcomes include first and recurrent CVD events. Hazard ratios reveal the impact of depressive symptoms specifically for women (HR = 2.72, HR = 1.31), with a significant proportion attributed to mediating conventional risk factors."
+      ],
+      "riskFactors": [
+        "",
+        "Conventional cardiovascular risk factors (e.g., biological or lifestyle factors) mediate a significant portion of the observed effect (35% for first CVD events and 46% for recurrent events in women).",
+        "",
+        "Mediation analysis confirms that about 35-46% of the excess risk in women is attributed to conventional cardiovascular risk factors, supporting the multifactorial pathway of risk.",
+        "While risk factors and mediators are well-addressed, the abstract lacks detail on treatment/intervention testing or recommendations, leaving a gap regarding actionable steps for prevention or management."
+      ],
+      "interventions": [
+        "",
+        "The abstract does not mention specific interventions or treatments for depression or CVD mitigation.",
+        ""
+      ],
+      "outcomes": [
+        "",
+        "",
+        "This approach effectively summarizes the abstract and establishes a clear chain-of-thought reasoning for each key element."
+      ],
+      "summaryFallback": "population:  | symptoms: Depressive symptomatology is associated with an increased likelihood of both first and recurrent cardiovascular disease (CVD) events, particularly in women. | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "31944483-3": {
+    "summary": "population:  | symptoms: Frequent adolescent pain problems are associated with anxiety symptoms, female sex, and lower socioeconomic status. | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "",
+        "The abstract explicitly states that the participants were adolescents from the Quebec Newborn Twin Study, assessed longitudinally from age 12 to 19. This indicates a focus on adolescence, with a long-term follow-up into early adulthood.",
+        "The \"frequent pain\" trajectory (9% of participants) was associated with several risk factors: anxiety symptoms, female sex, and lower socioeconomic status. This was identified through statistical associations presented with odds ratios and confidence intervals. Genetic and non-shared environmental factors were also noted to drive the link between pain and anxiety."
+      ],
+      "symptoms": [
+        "Frequent adolescent pain problems are associated with anxiety symptoms, female sex, and lower socioeconomic status.",
+        "Pain trajectories and their association with anxiety symptoms.",
+        "Anxiety symptoms were highlighted as a strong predictor of pain trajectory, with increasing odds ratios seen as adolescents aged from 12 to 14. These findings suggest that anxiety potentially contributes to the development or persistence of pain."
+      ],
+      "riskFactors": [
+        "",
+        "",
+        "",
+        "\"none-to-minimal,\" \"sporadic,\" and \"frequent.\" The \"frequent\" trajectory predicted opioid prescriptions at age 19, showing a cause-effect relationship concerning later opioid use. The study also examined the shared etiology of pain and anxiety using genetic and environmental models, providing insight into underlying mechanisms.",
+        "The study highlights the importance of addressing pain and anxiety in adolescence, particularly in females and those from lower socioeconomic backgrounds, to minimize risks like opioid prescriptions in later life. This finding has potential implications for clinical and diagnostic practices."
+      ],
+      "interventions": [
+        "",
+        "No specific mention of interventions or treatments within the abstract.",
+        "",
+        "The abstract did not mention any specific interventions or treatments implemented or tested in this study."
+      ],
+      "outcomes": [
+        "",
+        ""
+      ],
+      "summaryFallback": "population:  | symptoms: Frequent adolescent pain problems are associated with anxiety symptoms, female sex, and lower socioeconomic status. | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "32763833-4": {
+    "summary": "population:  | symptoms: No specific causes or triggers for depression/anxiety are mentioned explicitly in the abstract. The focus is on alleviating symptoms. | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "perinatal women and Chinese Traditional Music-based interventions.",
+        "Extract Population Studied"
+      ],
+      "symptoms": [
+        "No specific causes or triggers for depression/anxiety are mentioned explicitly in the abstract. The focus is on alleviating symptoms.",
+        "While depression and anxiety outcomes are prominently analyzed, the abstract does not delve into their causes or triggers. Instead, it centers on mitigating these symptoms in perinatal contexts, so this category is not mentioned explicitly."
+      ],
+      "riskFactors": [
+        "",
+        "Identify Causes, Triggers, or Risk Factors"
+      ],
+      "interventions": [
+        "",
+        "Five-element music interventions based on Chinese Traditional Music.",
+        "The abstract aims to systematically review randomized controlled trials (RCTs) studying the efficacy of five-element music interventions, highlighting outcomes related to mental health (depression/anxiety) and labor pain.",
+        "The abstract specifies that the intervention targets women in prenatal, perinatal, and postpartum stages. This is a clearly-defined demographic focusing on perinatal women.",
+        "Analyze Intervention",
+        "The intervention studied is five-element music, derived from Chinese Traditional Music. This suggests it is a non-pharmacological, culturally specific intervention aimed at improving mental and physical outcomes.",
+        "Serum DYN levels (potentially a marker for labor or pain response) are increased post-intervention."
+      ],
+      "outcomes": [
+        "",
+        "Reduced depression levels (SMD = -2.03) and anxiety levels (SMD = -3.49), along with a lower severe anxiety rate (OR = 0.42).",
+        "Reduced labor pain (MD = -0.67), shorter labor duration (MD = -0.85), and decreased hemorrhage 2 hours after parturition (MD = -19.55).",
+        "Examine Outcomes Measured",
+        "Depression levels (measured by standardized mean difference, SMD = -2.03) and anxiety levels (SMD = -3.49) are significantly improved, along with a reduction in severe anxiety rates (OR = 0.42).",
+        "Labor pain, labor duration, and postpartum hemorrhage are improved, with respective effect measures showing statistically significant reductions.",
+        "The review explicitly mentions limitations with study quality and quantity, which could affect the reliability of results. More rigorous research is needed."
+      ],
+      "summaryFallback": "population:  | symptoms: No specific causes or triggers for depression/anxiety are mentioned explicitly in the abstract. The focus is on alleviating symptoms. | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "32184606-5": {
+    "summary": "population: Adult patients (ages 18-59) and elderly patients (ages ≥60) undergoing inpatient ECT for various psychiatric conditions, including major depressive disorder (MDD), bipolar depression, bipolar mania, schizophrenia, schizoaffective disorder, and others. | symptoms: The study does not directly discuss causes or risk factors for depression, anxiety, or other psychiatric conditions; instead, it focuses on predictors for the number of electroconvulsive therapy (ECT) sessions required for symptom remission across different diagnoses and age groups. | risk Factors:  | interventions: Electroconvulsive therapy (ECT) is the intervention studied. | outcomes: ",
+    "categorized": {
+      "population": [
+        "Adult patients (ages 18-59) and elderly patients (ages ≥60) undergoing inpatient ECT for various psychiatric conditions, including major depressive disorder (MDD), bipolar depression, bipolar mania, schizophrenia, schizoaffective disorder, and others.",
+        "The number of ECT sessions needed for symptom remission, specifically the variation based on diagnosis and age. Elderly patients with MDD required significantly more ECT sessions compared to adult patients with MDD.",
+        "Elderly patients with MDD required statistically more ECT sessions (13.4) compared to adult MDD patients (9), with significance (p = 0.008).",
+        "The abstract describes a study that analyzed the clinical characteristics of psychiatric patients undergoing ECT and compared the number of required sessions by age and diagnosis to achieve remission. It focuses on predictors of ECT session counts rather than causes, triggers, or risk factors of specific psychiatric disorders.",
+        "",
+        "adults (18-59 years) and elderly (≥60 years). Both groups included psychiatric inpatients receiving ECT for various diagnoses. This clearly provides information on the population studied.",
+        "The significant difference in required ECT sessions between elderly and adult patients with MDD (13.4 sessions vs. 9 sessions) indicates the potential influence of age on treatment response for specific conditions."
+      ],
+      "symptoms": [
+        "The study does not directly discuss causes or risk factors for depression, anxiety, or other psychiatric conditions; instead, it focuses on predictors for the number of electroconvulsive therapy (ECT) sessions required for symptom remission across different diagnoses and age groups.",
+        "Electroconvulsive therapy (ECT) is the intervention examined, specifically the number of sessions required to achieve symptom remission for different psychiatric diagnoses and age groups."
+      ],
+      "riskFactors": [
+        "",
+        "The abstract does not mention specific causes, triggers, or risk factors associated with depression, anxiety, or other psychiatric conditions. The focus is solely on treatment predictors (ECT session counts).",
+        "The abstract omits any discussion regarding psychosocial, genetic, or environmental causes/risk factors for psychiatric conditions. It also does not address non-ECT treatments or interventions. Instead, the focus is entirely on ECT treatment outcomes, specifically session counts as they vary across age and diagnoses."
+      ],
+      "interventions": [
+        "Electroconvulsive therapy (ECT) is the intervention studied.",
+        ""
+      ],
+      "outcomes": [
+        "",
+        "The outcome measured is the number of ECT sessions needed. Findings show variation by diagnosis (e.g., schizophrenia, bipolar depression, MDD) and age. For older adults with MDD, the number of sessions required was higher compared to younger adults."
+      ],
+      "summaryFallback": "population: Adult patients (ages 18-59) and elderly patients (ages ≥60) undergoing inpatient ECT for various psychiatric conditions, including major depressive disorder (MDD), bipolar depression, bipolar mania, schizophrenia, schizoaffective disorder, and others. | symptoms: The study does not directly discuss causes or risk factors for depression, anxiety, or other psychiatric conditions; instead, it focuses on predictors for the number of electroconvulsive therapy (ECT) sessions required for symptom remission across different diagnoses and age groups. | risk Factors:  | interventions: Electroconvulsive therapy (ECT) is the intervention studied. | outcomes: "
+    }
+  },
+  "33209030-6": {
+    "summary": "population: Depression-like behaviors were studied in mice subjected to CUMS. The human population isn't directly addressed, but the study implicates major depressive disorder (MDD) mechanisms. | symptoms: Behavioral changes tied to depression-like symptoms were measured through various tests (e.g., FST, SPT, TST, SIT). Molecular outcomes include reductions in cytokine levels (IL-6, IL-1β, TNF-α, MCP-1), NOS activity, and STAT3 signaling. Thus, both behavioral improvements and molecular shifts are considered measurable effects of miR-532-5p overexpression. | risk Factors: Chronic unpredictable mild stress (CUMS) is identified as a trigger for depression-like behaviors in mice. Molecularly, reduced expression of miR-532-5p and increased inflammation markers (IL-6, IL-1β, TNF-α, MCP-1) and nitric oxide synthase (NOS) are associated with depression-like behaviors. | interventions: Overexpression of miR-532-5p is highlighted as a therapeutic intervention that alleviates depression-like behaviors. This is achieved by suppressing inflammation (cytokine levels and NOS expression) and inhibiting STAT3 activation. | outcomes: Behavioral tests (FST, SPT, TST, SIT) were used to assess depression-like behaviors, and molecular assays tracked changes in inflammatory markers and STAT3 signaling.",
+    "categorized": {
+      "population": [
+        "Depression-like behaviors were studied in mice subjected to CUMS. The human population isn't directly addressed, but the study implicates major depressive disorder (MDD) mechanisms.",
+        "",
+        "Since the abstract does not specify a human demographic or population in focus, I noted this lack of specificity and limited the results to the animal model."
+      ],
+      "symptoms": [
+        "Behavioral changes tied to depression-like symptoms were measured through various tests (e.g., FST, SPT, TST, SIT). Molecular outcomes include reductions in cytokine levels (IL-6, IL-1β, TNF-α, MCP-1), NOS activity, and STAT3 signaling. Thus, both behavioral improvements and molecular shifts are considered measurable effects of miR-532-5p overexpression.",
+        "This study implicates chronic stress and neuroinflammatory processes in depression-like behaviors in mice, suggesting miR-532-5p as a protective factor that alleviates symptoms by targeting STAT3 and reducing inflammation. The intervention—miR-532-5p overexpression—highlights potential therapeutic avenues for depression. However, the study focuses solely on mice, leaving its direct applicability to humans unspecified."
+      ],
+      "riskFactors": [
+        "Chronic unpredictable mild stress (CUMS) is identified as a trigger for depression-like behaviors in mice. Molecularly, reduced expression of miR-532-5p and increased inflammation markers (IL-6, IL-1β, TNF-α, MCP-1) and nitric oxide synthase (NOS) are associated with depression-like behaviors.",
+        "",
+        "The abstract mentions chronic unpredictable mild stress (CUMS) as the primary trigger used to induce depression-like behaviors in mice. It further links reduced levels of miR-532-5p in the hippocampus as a molecular marker of these behaviors. Additionally, increased inflammatory responses (elevated IL-6, IL-1β, TNF-α, MCP-1, and inducible NOS) are identified as risk factors associated with depression-like behaviors."
+      ],
+      "interventions": [
+        "Overexpression of miR-532-5p is highlighted as a therapeutic intervention that alleviates depression-like behaviors. This is achieved by suppressing inflammation (cytokine levels and NOS expression) and inhibiting STAT3 activation.",
+        "",
+        "The abstract describes overexpression of miR-532-5p as an intervention that reduces depression-like behaviors in mice. Mechanistically, miR-532-5p targets STAT3 and suppresses inflammation (lower cytokine levels and inducible NOS expression). This suggests its potential as a therapeutic target for MDD. The intervention seems primarily molecular, aimed at modulating gene expression."
+      ],
+      "outcomes": [
+        "Behavioral tests (FST, SPT, TST, SIT) were used to assess depression-like behaviors, and molecular assays tracked changes in inflammatory markers and STAT3 signaling.",
+        ""
+      ],
+      "summaryFallback": "population: Depression-like behaviors were studied in mice subjected to CUMS. The human population isn't directly addressed, but the study implicates major depressive disorder (MDD) mechanisms. | symptoms: Behavioral changes tied to depression-like symptoms were measured through various tests (e.g., FST, SPT, TST, SIT). Molecular outcomes include reductions in cytokine levels (IL-6, IL-1β, TNF-α, MCP-1), NOS activity, and STAT3 signaling. Thus, both behavioral improvements and molecular shifts are considered measurable effects of miR-532-5p overexpression. | risk Factors: Chronic unpredictable mild stress (CUMS) is identified as a trigger for depression-like behaviors in mice. Molecularly, reduced expression of miR-532-5p and increased inflammation markers (IL-6, IL-1β, TNF-α, MCP-1) and nitric oxide synthase (NOS) are associated with depression-like behaviors. | interventions: Overexpression of miR-532-5p is highlighted as a therapeutic intervention that alleviates depression-like behaviors. This is achieved by suppressing inflammation (cytokine levels and NOS expression) and inhibiting STAT3 activation. | outcomes: Behavioral tests (FST, SPT, TST, SIT) were used to assess depression-like behaviors, and molecular assays tracked changes in inflammatory markers and STAT3 signaling."
+    }
+  },
+  "32298167-7": {
+    "summary": "population: The study examines mothers and their children in the U.S., specifically related to the 2017 birth cohort, covering the period from conception to 5 years postpartum. | risk Factors: The study focuses on untreated perinatal mood and anxiety disorders (PMADs) as the primary factor causing economic and health-related burdens for mothers and their children. | interventions: There are no specific interventions or treatments mentioned in the abstract, though the conclusions suggest the importance of reducing the prevalence of untreated PMADs. | outcomes: Key outcomes measured include the $14 billion economic cost associated with untreated PMADs, broken down by impacts on maternal productivity, preterm births, and maternal health expenditures. Children incurred 35% of costs, while mothers incurred 65%.",
+    "categorized": {
+      "population": [
+        "The study examines mothers and their children in the U.S., specifically related to the 2017 birth cohort, covering the period from conception to 5 years postpartum.",
+        "2. Who is the population studied?"
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "The study focuses on untreated perinatal mood and anxiety disorders (PMADs) as the primary factor causing economic and health-related burdens for mothers and their children.",
+        "1. What are the causes, triggers, or risk factors?",
+        "The abstract explicitly discusses untreated PMADs (perinatal mood and anxiety disorders) as the central issue. By identifying these as the focus of the economic burden analysis, it implies that untreated PMADs are a major risk factor affecting maternal and child health outcomes—and that their treatment could mitigate these costs. However, the abstract does not provide details on biological, environmental, or social causes behind PMADs.",
+        "While the study thoroughly discusses the economic outcomes, it does not mention specific interventions, psychological/medical treatments, or strategies for addressing PMADs. Additionally, it does not cite explicit psychological or environmental risk factors contributing to PMADs, nor does it analyze long-term health outcomes for mothers or children beyond economic costs."
+      ],
+      "interventions": [
+        "There are no specific interventions or treatments mentioned in the abstract, though the conclusions suggest the importance of reducing the prevalence of untreated PMADs.",
+        "3. What interventions or treatments are mentioned?",
+        "No particular interventions or treatments are detailed in the abstract. However, the conclusion makes a case for reducing the prevalence of untreated PMADs, implying the importance of preventive measures or early treatment, though specific strategies are not described."
+      ],
+      "outcomes": [
+        "Key outcomes measured include the $14 billion economic cost associated with untreated PMADs, broken down by impacts on maternal productivity, preterm births, and maternal health expenditures. Children incurred 35% of costs, while mothers incurred 65%.",
+        "4. What outcomes or effects are measured?",
+        "The study quantifies the economic burden as $14 billion for the 2017 birth cohort, highlighting specific cost areas such as maternal productivity losses (largest), preterm births, and other health expenditures. The breakdown of the burden between mothers (65%) and children (35%) is also a key outcome. These findings illustrate the widespread and multi-faceted impact of untreated PMADs on both families and society."
+      ],
+      "summaryFallback": "population: The study examines mothers and their children in the U.S., specifically related to the 2017 birth cohort, covering the period from conception to 5 years postpartum. | risk Factors: The study focuses on untreated perinatal mood and anxiety disorders (PMADs) as the primary factor causing economic and health-related burdens for mothers and their children. | interventions: There are no specific interventions or treatments mentioned in the abstract, though the conclusions suggest the importance of reducing the prevalence of untreated PMADs. | outcomes: Key outcomes measured include the $14 billion economic cost associated with untreated PMADs, broken down by impacts on maternal productivity, preterm births, and maternal health expenditures. Children incurred 35% of costs, while mothers incurred 65%."
+    }
+  },
+  "32268978-8": {
+    "summary": "population:  | risk Factors:  | interventions:  | outcomes: The study focuses on Executive Function Deficits (EFD) accompanying depression in older adults, which are associated with poor outcomes.",
+    "categorized": {
+      "population": [
+        "",
+        "Older adults (geriatric population) with depression and co-occurring EFD.",
+        "Side effects included facial muscle twitching (11 patients), headaches (10 patients), and stimulation discomfort (4 patients).",
+        "small sample size (13 participants) and lack of a sham comparator group.",
+        "1. The abstract explicitly mentions Executive Function Deficits (EFD) as being a key issue accompanying depression and contributing to poor outcomes in older adults. This establishes EFD as the associated risk factor and older adults as the target population. I extracted this information from the problem statement of the abstract.",
+        "small sample size (13 participants) and lack of a sham comparator, as these impact the generalizability and robustness of the findings."
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "",
+        "Improvement based on the Flanker Inhibitory Control and Attention Test (mean change of -7.73 points). I marked these as the primary outcomes of interest because they assess the two targeted domains of the study (depression and EFD)."
+      ],
+      "interventions": [
+        "",
+        "The intervention used was Intermittent Theta Burst Stimulation (iTBS), administered bilaterally over the dorsolateral prefrontal cortex for four weeks.",
+        "2. The intervention is clearly noted as iTBS delivered bilaterally over the dorsolateral prefrontal cortex for four weeks. I identified this by noting how the treatment was described in terms of its administration method and duration.",
+        "facial muscle twitching, headaches, and stimulation discomfort. I included all three, as they appear relevant to evaluating the safety of the intervention."
+      ],
+      "outcomes": [
+        "The study focuses on Executive Function Deficits (EFD) accompanying depression in older adults, which are associated with poor outcomes.",
+        "",
+        "",
+        "Improvement was reported using the Montgomery-Asberg Depression Scale (mean change of 11.82 points)."
+      ],
+      "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: The study focuses on Executive Function Deficits (EFD) accompanying depression in older adults, which are associated with poor outcomes."
+    }
+  },
+  "32176572-9": {
+    "summary": "population:  | risk Factors:  | interventions: The study focuses on adult zebrafish, an animal model used to investigate mechanisms of anxiety and potential interventions. | outcomes: The study tested the effects of *Coriandrum sativum* extract (CSE) at varying doses (25, 50, or 100 mg/kg) and compared its anxiolytic effects to clonazepam, a conventional anti-anxiety medication.",
+    "categorized": {
+      "population": [
+        "",
+        "Identifying the population",
+        "Since the study does not refer to humans or specific human demographics (e.g., children, older adults), I concluded the population is limited to zebrafish.",
+        "The abstract does not mention specific human populations, risk factors outside the experimental setup, or long-term outcomes of these interventions. It focuses entirely on zebrafish and the immediate effects of the exposure and treatment."
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "",
+        "Novelty and alarm substance exposure caused decreased locomotion and behavioral changes in zebrafish, indicative of anxiety-like responses.",
+        "Identifying causes, triggers, and risk factors",
+        "The study provides evidence that *Coriandrum sativum* extract displays anxiolytic effects comparable to clonazepam in adult zebrafish exposed to anxiogenic stimuli. Causes include novelty and alarm substance exposure, whereas the intervention (CSE) effectively mitigates anxiety-like behavioral changes. Zebrafish serve as an animal model in this research, with outcomes measured via locomotion and light/dark zone behavior. Outcomes equate to immediate anxiety relief, suggesting future potential for plant-based treatments, though human relevance and long-term impacts remain unexplored."
+      ],
+      "interventions": [
+        "The study focuses on adult zebrafish, an animal model used to investigate mechanisms of anxiety and potential interventions.",
+        "",
+        "Determining interventions or treatments",
+        "",
+        "Both interventions were intended to mitigate anxiety-like behaviors.",
+        "The abstract highlights the effective anxiolytic properties of CSE, suggesting it may hold promise as a pharmacological intervention for anxiety disorders.",
+        "Additionally, while the abstract mentions undesirable side effects of conventional anxiety treatments, it does not elaborate on whether CSE has been tested for side effects in zebrafish or other models."
+      ],
+      "outcomes": [
+        "The study tested the effects of *Coriandrum sativum* extract (CSE) at varying doses (25, 50, or 100 mg/kg) and compared its anxiolytic effects to clonazepam, a conventional anti-anxiety medication.",
+        "",
+        "Both CSE and clonazepam prevented the anxiogenic effects of alarm substance exposure in the light/dark test.",
+        "Examining outcomes or effects"
+      ],
+      "summaryFallback": "population:  | risk Factors:  | interventions: The study focuses on adult zebrafish, an animal model used to investigate mechanisms of anxiety and potential interventions. | outcomes: The study tested the effects of *Coriandrum sativum* extract (CSE) at varying doses (25, 50, or 100 mg/kg) and compared its anxiolytic effects to clonazepam, a conventional anti-anxiety medication."
+    }
+  },
+  "32298279-10": {
+    "summary": "population: South African adolescents. | risk Factors: Anxiety proneness (AP) as distinct from trauma exposure is associated with physiological changes, including lower circulating levels of DHEAs (a hormone linked to the HPA axis) and higher leukocyte glucocorticoid receptor (GR) expression. The findings suggest anxiety may uniquely influence health profiles, independent of trauma. | interventions: No interventions or treatments were discussed. | outcomes: Physiological markers (DHEAs levels, glucocorticoid receptor expression, leukocyte functional capacity) were analyzed in connection with trauma exposure and anxiety proneness. Psychological measures of anxiety (CASI and STAI-T scores) were also correlated with DHEAs levels.",
+    "categorized": {
+      "population": [
+        "South African adolescents.",
+        "",
+        "The abstract explicitly states the population as \"South African adolescent volunteers.\""
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "Anxiety proneness (AP) as distinct from trauma exposure is associated with physiological changes, including lower circulating levels of DHEAs (a hormone linked to the HPA axis) and higher leukocyte glucocorticoid receptor (GR) expression. The findings suggest anxiety may uniquely influence health profiles, independent of trauma.",
+        ""
+      ],
+      "interventions": [
+        "No interventions or treatments were discussed.",
+        "",
+        "The abstract lacks mention of any interventions or treatments for anxiety or trauma exposure. This suggests the study was observational rather than interventional.",
+        "The abstract omits any mention of interventions or treatments, as well as longer-term outcomes like mental health improvement or recovery."
+      ],
+      "outcomes": [
+        "Physiological markers (DHEAs levels, glucocorticoid receptor expression, leukocyte functional capacity) were analyzed in connection with trauma exposure and anxiety proneness. Psychological measures of anxiety (CASI and STAI-T scores) were also correlated with DHEAs levels.",
+        "",
+        "Outcomes measured included multiple physiological markers (e.g., DHEAs levels, glucocorticoid receptor expression) and leukocyte functional capacity, designed to distinguish between the effects of trauma and anxiety.",
+        "I combined the physiological data (lower DHEAs and increased glucocorticoid sensitivity) and psychological measures (CASI and STAI-T) to conclude that anxiety proneness may have distinct health effects separate from trauma."
+      ],
+      "summaryFallback": "population: South African adolescents. | risk Factors: Anxiety proneness (AP) as distinct from trauma exposure is associated with physiological changes, including lower circulating levels of DHEAs (a hormone linked to the HPA axis) and higher leukocyte glucocorticoid receptor (GR) expression. The findings suggest anxiety may uniquely influence health profiles, independent of trauma. | interventions: No interventions or treatments were discussed. | outcomes: Physiological markers (DHEAs levels, glucocorticoid receptor expression, leukocyte functional capacity) were analyzed in connection with trauma exposure and anxiety proneness. Psychological measures of anxiety (CASI and STAI-T scores) were also correlated with DHEAs levels."
+    }
+  },
+  "35186257-11": {
+    "summary": "population: Patients with treatment-resistant depression (TRD). | risk Factors: The abstract does not explicitly state causes or triggers for depression but focuses on treatment-resistant depression (TRD), which is a subset characterized by lack of response to conventional treatments. | interventions: Sevoflurane, an inhaled anesthetic, was tested as a potential treatment for TRD. It was described as feasible, well tolerated, and producing rapid and durable antidepressant effects. | outcomes: The patient experienced significant antidepressant effects, few adverse effects, and improvements in neurocognitive functioning.",
+    "categorized": {
+      "population": [
+        "Patients with treatment-resistant depression (TRD).",
+        "Identify focus of the abstract: The abstract looks specifically at treatment-resistant depression and investigates the feasibility of using sevoflurane as a novel intervention. The mention of TRD indicates a population that does not respond to conventional treatments.",
+        "Analyze outcomes: Key reported outcomes include rapid and durable antidepressant effects, minimal adverse effects, and improvements in neurocognitive functioning. These effects suggest potential clinical benefits for TRD patients.",
+        "The abstract explores sevoflurane as a potential treatment for patients with treatment-resistant depression (TRD), reporting rapid and durable antidepressant effects, few adverse effects, and neurocognitive improvements in a case report. While promising, the findings are preliminary, and further clinical trials are needed to confirm the intervention’s safety and efficacy. Causes or triggers of depression and broader demographic details were not discussed."
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "The abstract does not explicitly state causes or triggers for depression but focuses on treatment-resistant depression (TRD), which is a subset characterized by lack of response to conventional treatments.",
+        "Extract risk factors or causes: The abstract does not discuss specific causes or triggers for depression but implies that TRD is the focus due to its challenging treatment landscape."
+      ],
+      "interventions": [
+        "Sevoflurane, an inhaled anesthetic, was tested as a potential treatment for TRD. It was described as feasible, well tolerated, and producing rapid and durable antidepressant effects.",
+        "Evaluate interventions or treatments: The core intervention studied is sevoflurane, highlighted for its faster onset/offset and better safety profile compared to other inhaled anesthetics. Its antidepressant effects, feasibility, tolerability, and safety were measured in a case report."
+      ],
+      "outcomes": [
+        "The patient experienced significant antidepressant effects, few adverse effects, and improvements in neurocognitive functioning."
+      ],
+      "summaryFallback": "population: Patients with treatment-resistant depression (TRD). | risk Factors: The abstract does not explicitly state causes or triggers for depression but focuses on treatment-resistant depression (TRD), which is a subset characterized by lack of response to conventional treatments. | interventions: Sevoflurane, an inhaled anesthetic, was tested as a potential treatment for TRD. It was described as feasible, well tolerated, and producing rapid and durable antidepressant effects. | outcomes: The patient experienced significant antidepressant effects, few adverse effects, and improvements in neurocognitive functioning."
+    }
+  },
+  "33011857-12": {
+    "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "",
+        "The study was conducted on mice, explicitly mentioning three strains. No reference to human subjects or specific human demographics like age, gender, or life stage (e.g., adolescents, postpartum women) is present.",
+        "The abstract gives a clear picture of MGO's role as a neurotoxic agent inducing depression-like behavior and cognitive impairments in mice, with bupropion identified as a potential intervention to counteract these effects. Missing elements include studies in human populations and long-term effects of interventions."
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "",
+        "Behavioral assessments (tail suspension test for depression-like behavior; Y maze for working memory) show deficits and perturbations caused by MGO. Neurochemical analysis shows reductions in dopamine/serotonin levels and changes to DARPP32 phosphorylation.",
+        "",
+        "MGO is introduced as an endogenous toxin linked to aging, Alzheimer's disease, and inflammation. The abstract emphasizes its impact on glyoxalase, thioredoxin, and glutathione systems in cell culture, but in vivo experiments show no major changes in these systems. Behavioral and biological changes (e.g., depression-like behavior, memory impairments, reduced dopamine/serotonin levels) are heavily linked to MGO administration. This shows its potential risk factor role in inducing neuropsychiatric deficits."
+      ],
+      "interventions": [
+        "",
+        "Co-treatment with bupropion (a dopamine/noradrenaline reuptake inhibitor, 10 mg/kg) reverses depression-like behavior, working memory impairment, and restores serotonin/dopamine levels in the cerebral cortex.",
+        "",
+        "co-treatment with bupropion (dopamine/noradrenaline reuptake inhibitor) was able to reverse behavioral deficits and restore neurotransmitter levels, identifying it as an effective therapeutic option against MGO-induced toxicity."
+      ],
+      "outcomes": [
+        "",
+        "",
+        "Behavioral tests (tail suspension and Y maze) were used to measure depression-like states and working memory impairments. Neurochemical outcomes included changes in serotonin and dopamine levels in the cerebral cortex, as well as DARPP32 phosphorylation, suggesting a mechanistic effect of MGO on signaling pathways relevant for mood and cognition."
+      ],
+      "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "32787890-13": {
+    "summary": "population: Chinese high school students, specifically Grade 7 students who were tracked in Grade 8. | symptoms: Persistent depressive symptoms in Chinese high school students were significantly associated with having siblings, non-intact family status, poor family functioning, and lower levels of positive youth development. Conversely, remission from depressive symptoms was more likely among students whose fathers had higher educational qualifications (bachelor's degree or higher). | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "Chinese high school students, specifically Grade 7 students who were tracked in Grade 8.",
+        "",
+        "These factors were extracted directly from the abstract, as they were statistically identified predictors of ongoing depression in the sample.",
+        "This outcome data directly reflects the success and timing of remission among the population studied."
+      ],
+      "symptoms": [
+        "Persistent depressive symptoms in Chinese high school students were significantly associated with having siblings, non-intact family status, poor family functioning, and lower levels of positive youth development. Conversely, remission from depressive symptoms was more likely among students whose fathers had higher educational qualifications (bachelor's degree or higher).",
+        "Promoting positive youth development and improving family functioning were highlighted as promising strategies to prevent or reduce depressive symptoms.",
+        "46.4% of students categorized as depressed remained depressed after one year.",
+        "53.6% recovered from depression after one year.",
+        "The abstract mentions multiple demographic and psychosocial factors tied to persistent depressive symptoms:",
+        "Students whose fathers had higher educational qualifications were more likely to recover from depressive symptoms. This was explicitly stated in the abstract as a significant predictor.",
+        "The study measured the persistence and remission rates of depressive symptoms over a one-year span. The data showed that:",
+        "46.4% of students remained depressed (persistent symptoms).",
+        "53.6% recovered (remitted symptoms)."
+      ],
+      "riskFactors": [
+        "",
+        "",
+        "The abstract does not mention specific clinical interventions (e.g., therapy, medication), nor does it elaborate on how positive youth development or family functioning can be operationalized. Additionally, it does not provide detailed information about the mechanisms behind these risk factors or protective factors."
+      ],
+      "interventions": [
+        "",
+        "While no specific clinical treatments are discussed, the abstract highlights two actionable areas: promoting positive youth development and improving family functioning. These are stated as strategies to prevent or alleviate depression in adolescents."
+      ],
+      "outcomes": [
+        "",
+        ""
+      ],
+      "summaryFallback": "population: Chinese high school students, specifically Grade 7 students who were tracked in Grade 8. | symptoms: Persistent depressive symptoms in Chinese high school students were significantly associated with having siblings, non-intact family status, poor family functioning, and lower levels of positive youth development. Conversely, remission from depressive symptoms was more likely among students whose fathers had higher educational qualifications (bachelor's degree or higher). | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "33987517-14": {
+    "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "The abstract explicitly mentions child and parental anxiety as key contributors to CPSP in pediatric patients. It further highlights related psychological states, including anxiety sensitivity, catastrophizing, pain anxiety, and fear of pain, which are linked to the worsening of acute and chronic postsurgical pain.",
+        "",
+        "The population is clearly identified as children and adolescents who have undergone surgery. This is stated both in the background section and in the description of pediatric acute and chronic postsurgical pain."
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "",
+        ""
+      ],
+      "interventions": [
+        "",
+        "Potential interventions to reduce children's and parents' preoperative anxiety are discussed.",
+        "Specific interventions or treatments for anxiety reduction are not detailed, and the abstract emphasizes a need for further research rather than presenting conclusive intervention strategies.",
+        "",
+        "The abstract references interventions aimed at reducing children's and parents' preoperative anxiety but does not detail these interventions specifically. The discussion on interventions appears to be exploratory rather than providing conclusive evidence.",
+        "The abstract does not mention specific interventions or therapeutic methods tested for preoperative anxiety or CPSP management. It also emphasizes gaps in research, indicating that existing understanding is insufficient for conclusive diagnosis and treatment."
+      ],
+      "outcomes": [
+        "",
+        "",
+        "The effects of CPSP are detailed as pain-related disability, poor sleep, school absence, decreased activities, greater medication use, longer recovery time, and fear of future medical care. These outcomes underscore the broad negative impact of CPSP on the lives of children and adolescents."
+      ],
+      "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "33128108-15": {
+    "summary": "population: HIV healthcare providers in Guangxi, China (total sample: 1029). | risk Factors: COVID-19-related stressors are identified as contributors to depression and anxiety among HIV healthcare providers. The relationship is moderated by coping behaviors. | interventions: Coping management is suggested as a beneficial intervention for mitigating mental health problems. | outcomes: Depression (13.31% prevalence) and anxiety (6.61% prevalence) are the primary mental health outcomes measured. Coping behaviors were found to buffer the negative effects of stressors on mental health.",
+    "categorized": {
+      "population": [
+        "HIV healthcare providers in Guangxi, China (total sample: 1029).",
+        "",
+        "The abstract specifies that the study was conducted among HIV healthcare providers in Guangxi, China, with a total sample size of 1029 participants. This makes the population explicitly defined as healthcare providers working in HIV-focused settings during the COVID-19 pandemic.",
+        "Although no formal intervention was implemented within the study, coping behaviors are highlighted as a protective factor. The authors recommend interventions targeting coping management as a potential strategy to support mental health in this population.",
+        "Based on these elements, I structured the summary to reflect the causes (COVID-19-related stressors), the population (HIV healthcare providers), the suggested intervention (coping management), and the measured outcomes (depression and anxiety prevalence, with emphasis on buffering effects)."
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "COVID-19-related stressors are identified as contributors to depression and anxiety among HIV healthcare providers. The relationship is moderated by coping behaviors.",
+        "",
+        "This establishes the stressor as the key risk factor affecting mental health."
+      ],
+      "interventions": [
+        "Coping management is suggested as a beneficial intervention for mitigating mental health problems.",
+        "",
+        "It does not discuss long-term outcomes or compare interventions beyond coping management."
+      ],
+      "outcomes": [
+        "Depression (13.31% prevalence) and anxiety (6.61% prevalence) are the primary mental health outcomes measured. Coping behaviors were found to buffer the negative effects of stressors on mental health.",
+        "The abstract explicitly mentions that COVID-19-related stressors are significant contributors to depression and anxiety. The path analyses show both a direct negative impact of stressors and an interaction effect when combined with coping behaviors.",
+        "",
+        "The study measures depression and anxiety as its key mental health outcomes, with specific prevalence rates of 13.31% for depression and 6.61% for anxiety. The main finding is that coping behaviors buffered (i.e., reduced) the harmful effects of COVID-19-related stress on these mental health problems."
+      ],
+      "summaryFallback": "population: HIV healthcare providers in Guangxi, China (total sample: 1029). | risk Factors: COVID-19-related stressors are identified as contributors to depression and anxiety among HIV healthcare providers. The relationship is moderated by coping behaviors. | interventions: Coping management is suggested as a beneficial intervention for mitigating mental health problems. | outcomes: Depression (13.31% prevalence) and anxiety (6.61% prevalence) are the primary mental health outcomes measured. Coping behaviors were found to buffer the negative effects of stressors on mental health."
+    }
+  },
+  "32790975-16": {
+    "summary": "population: Post-stroke depression is linked to oxidative stress and reduced endogenous antioxidant activity in patients recovering from ischemic strokes. | symptoms: Effectiveness was measured via improvements in depressive symptoms and oxidative stress parameters. | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "Post-stroke depression is linked to oxidative stress and reduced endogenous antioxidant activity in patients recovering from ischemic strokes.",
+        "",
+        "The study focuses on patients with post-stroke depression, specifically those recovering from ischemic strokes.",
+        "10 ml/day intravenously for 10 days (with adjustments for diabetes patients using saline or glucose solution).",
+        "",
+        "The abstract specifically mentions \"60 patients with post-stroke depression.\" The nature of their condition (post-stroke, ischemic stroke) directly identifies the study's population as individuals recovering from ischemic strokes who are experiencing depression. Thus, the demographic focus is adult stroke patients with depressive symptoms.",
+        "The abstract explains that the severity of post-stroke depression correlates with oxidative stress parameters and deficient endogenous antioxidant activity. While the underlying stroke event is the primary trigger, oxidative stress plays a significant role as a contributing mechanism. This establishes oxidative stress as a risk factor in this population’s depression.",
+        "By systematically analyzing each sentence in the abstract and grouping information by category (population, cause, intervention, outcomes), the summary preserves the structured findings of the study."
+      ],
+      "symptoms": [
+        "Effectiveness was measured via improvements in depressive symptoms and oxidative stress parameters.",
+        "A widely used medication aimed at reducing depressive symptoms."
+      ],
+      "riskFactors": [
+        "",
+        ""
+      ],
+      "interventions": [
+        "",
+        "",
+        "The combination therapy of fluvoxamine and cytoflavin was found to be more effective for treating post-stroke depression than fluvoxamine alone.",
+        "",
+        "",
+        "Designed to address oxidative stress mechanisms and boost endogenous antioxidant activity.",
+        "The combination therapy (both fluvoxamine and cytoflavin) and fluvoxamine monotherapy were compared to assess the effectiveness of these interventions.",
+        "The abstract reports that combination therapy (antidepressants + antioxidants) was more effective than antidepressant monotherapy. This conclusion was based on comparative assessments of depressive disorder severity and oxidative stress parameters post-treatment. These two distinct areas—psychological (depression severity) and biochemical (oxidative stress markers)—served as the measured outcomes.",
+        "The abstract does not provide demographic breakdowns such as age, gender, or other characteristics beyond ischemic stroke-related depression. It also lacks details on long-term outcomes or follow-up beyond the 3-month treatment period."
+      ],
+      "outcomes": [
+        "",
+        ""
+      ],
+      "summaryFallback": "population: Post-stroke depression is linked to oxidative stress and reduced endogenous antioxidant activity in patients recovering from ischemic strokes. | symptoms: Effectiveness was measured via improvements in depressive symptoms and oxidative stress parameters. | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "32011849-17": {
+    "summary": "population: The study involves animal models (rats) and in-vitro cell experiments, so no specific human demographic is studied in this abstract. | symptoms: Neuroinflammation plays a key role in depression, as shown in a model using lipopolysaccharide (LPS) to induce depression-like symptoms in rats and PC12 nerve cells. | risk Factors:  | interventions:  | outcomes: Low-dose ketamine is identified as an effective and rapid antidepressant, potentially working through the activation of the α7 nicotinic acetylcholine receptors (α7 nAChRs).",
+    "categorized": {
+      "population": [
+        "The study involves animal models (rats) and in-vitro cell experiments, so no specific human demographic is studied in this abstract.",
+        "",
+        "The abstract clearly states this is an animal study (rats) combined with in-vitro experiments (PC12 nerve cells), implying the findings are preclinical rather than specific to human populations.",
+        "The study provides evidence that ketamine rapidly alleviates depression symptoms in preclinical models by targeting neuroinflammation through the cholinergic anti-inflammatory pathway mediated by α7 nAChRs. However, the findings are not yet validated in specific human populations."
+      ],
+      "symptoms": [
+        "Neuroinflammation plays a key role in depression, as shown in a model using lipopolysaccharide (LPS) to induce depression-like symptoms in rats and PC12 nerve cells.",
+        "Behavioral improvements (indicative of reduced depression-like symptoms) and changes in synaptic plasticity were measured after ketamine administration."
+      ],
+      "riskFactors": [
+        "",
+        "The abstract mentions the role of neuroinflammation in depression, specifically induced via lipopolysaccharide (LPS). It does not mention social, genetic, or psychological causes, keeping the focus on biological mechanisms.",
+        "From this, neuroinflammation surfaces as a key risk factor for depression in this study."
+      ],
+      "interventions": [
+        "",
+        "",
+        "Low-dose ketamine is emphasized as the main treatment studied, with rapid antidepressant effects linked to neuroprotection through α7 nicotinic acetylcholine receptors.",
+        "GTS-21 is also mentioned as an agonist of the same receptor, mimicking ketamine’s effects, suggesting it could be a potential alternative intervention."
+      ],
+      "outcomes": [
+        "Low-dose ketamine is identified as an effective and rapid antidepressant, potentially working through the activation of the α7 nicotinic acetylcholine receptors (α7 nAChRs).",
+        "GTS-21, an agonist of α7 nAChRs, produced similar protective effects to ketamine.",
+        "An α7 nAChR antagonist (MLA) and α7 nAChR-siRNA were used to interfere with ketamine’s anti-inflammatory activity, showing ketamine’s neuroprotective effects depend on this pathway.",
+        "Ketamine’s antidepressant effects are linked to improvements in behavior, synaptic plasticity, anti-inflammatory activity, and neuronal integrity (observed through changes in Nissl bodies in rat neuronal cells).",
+        "MLA and α7 nAChR-siRNA were used to block ketamine’s effects, confirming ketamine’s dependency on the α7 nAChR-mediated cholinergic anti-inflammatory pathway.",
+        "",
+        "Additionally, anti-inflammatory activity and effects on neuronal cells via Nissl body integrity were observed, linking neuroprotection to antidepressant outcomes."
+      ],
+      "summaryFallback": "population: The study involves animal models (rats) and in-vitro cell experiments, so no specific human demographic is studied in this abstract. | symptoms: Neuroinflammation plays a key role in depression, as shown in a model using lipopolysaccharide (LPS) to induce depression-like symptoms in rats and PC12 nerve cells. | risk Factors:  | interventions:  | outcomes: Low-dose ketamine is identified as an effective and rapid antidepressant, potentially working through the activation of the α7 nicotinic acetylcholine receptors (α7 nAChRs)."
+    }
+  },
+  "32539491-18": {
+    "summary": "population: The population consists of 203 patients with treatment-resistant depression (TRD) receiving repeat-dose IV ketamine in community-based clinics. | symptoms: This is assessed based on adverse events (like drowsiness, dizziness, nausea) and the severity of dissociation symptoms. While dissociation was a notable effect initially, it stabilized, suggesting it did not hinder continued treatment. | risk Factors: The study does not specify direct causes, triggers, or risk factors for depression but focuses on treatment-resistant depression (TRD) and its management with intravenous (IV) ketamine. | interventions: The intervention studied is repeat-dose intravenous (IV) ketamine. | outcomes: ",
+    "categorized": {
+      "population": [
+        "The population consists of 203 patients with treatment-resistant depression (TRD) receiving repeat-dose IV ketamine in community-based clinics.",
+        "Evaluated through hemodynamic (blood pressure) changes. 44.3% of patients experienced treatment-emergent hypertension, with 12% requiring pharmacological intervention.",
+        "Assessed based on adverse events (e.g., drowsiness, dizziness, dissociation, nausea) and dissociation symptom severity using the Clinician-Administered Dissociative States Scale. Less than 5% of patients withdrew due to tolerability concerns.",
+        "The study is centered on patients with treatment-resistant depression (TRD), identifying this as the population under study. It evaluates the use of IV ketamine in this demographic, specifically examining its safety and tolerability.",
+        "The abstract does not delve into the causes, triggers, or risk factors for depression itself but focuses on those with TRD. TRD implies that standard treatments for depression have failed, highlighting the population's unique challenges.",
+        "3. Who is the population studied?",
+        "The population is clearly defined as 203 TRD patients receiving IV ketamine in community-based clinics. This demographic is significant as it represents individuals with severe depression who have not responded to conventional therapies.",
+        "This is operationalized as hemodynamic changes, particularly blood pressure levels. The abstract notes that transient hypertension occurred in 44.3% of patients, with 12% requiring further pharmacological management.",
+        "The study concludes that IV ketamine is safe and well-tolerated in a real-world, community-based setting for TRD patients. Although hypertension and dissociation are reported side effects, these were transient or non-limiting.",
+        "By synthesizing these details, I arrived at a structured summary of the key findings and their relevance to depression treatment, focusing on population, intervention, and outcomes."
+      ],
+      "symptoms": [
+        "This is assessed based on adverse events (like drowsiness, dizziness, nausea) and the severity of dissociation symptoms. While dissociation was a notable effect initially, it stabilized, suggesting it did not hinder continued treatment."
+      ],
+      "riskFactors": [
+        "The study does not specify direct causes, triggers, or risk factors for depression but focuses on treatment-resistant depression (TRD) and its management with intravenous (IV) ketamine.",
+        "2. What causes, triggers, or risk factors are mentioned?",
+        "Common issues were noted, but none were severe enough to cause substantial dropouts (tolerability concerns led to less than 5% withdrawals). Importantly, no instances of psychosis, mania, or new suicidality were seen."
+      ],
+      "interventions": [
+        "The intervention studied is repeat-dose intravenous (IV) ketamine.",
+        "Most severe after the first infusion but stabilized with subsequent infusions and did not limit treatment.",
+        "IV ketamine is deemed safe and well-tolerated in community-based TRD treatment, with no cases of psychosis, mania, or new-onset suicidality reported.",
+        "4. What interventions or treatments are mentioned?",
+        "The intervention being studied is repeat-dose IV ketamine. No other treatments or therapies are considered in this abstract."
+      ],
+      "outcomes": [
+        "",
+        "Drowsiness (56.4%), dizziness (45.2%), dissociation (35.6%), and nausea (13.3%).",
+        "5. What outcomes or effects are measured?"
+      ],
+      "summaryFallback": "population: The population consists of 203 patients with treatment-resistant depression (TRD) receiving repeat-dose IV ketamine in community-based clinics. | symptoms: This is assessed based on adverse events (like drowsiness, dizziness, nausea) and the severity of dissociation symptoms. While dissociation was a notable effect initially, it stabilized, suggesting it did not hinder continued treatment. | risk Factors: The study does not specify direct causes, triggers, or risk factors for depression but focuses on treatment-resistant depression (TRD) and its management with intravenous (IV) ketamine. | interventions: The intervention studied is repeat-dose intravenous (IV) ketamine. | outcomes: "
+    }
+  },
+  "30552507-19": {
+    "summary": "population: Major depressive disorder (MDD) is linked to suicidal susceptibility. An aberrant cortico-striato-thalamo-cortical (CSTC) circuitry is hypothesized to contribute to high suicidal risk in MDD patients. Specifically, weaker cross-frequency coupling (alpha-to-gamma phase-amplitude coupling) between the right caudate and left thalamus indicates caudothalamic dysfunction, which may result in executive dysfunction and impaired working memory, elevating suicide risk. | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "Major depressive disorder (MDD) is linked to suicidal susceptibility. An aberrant cortico-striato-thalamo-cortical (CSTC) circuitry is hypothesized to contribute to high suicidal risk in MDD patients. Specifically, weaker cross-frequency coupling (alpha-to-gamma phase-amplitude coupling) between the right caudate and left thalamus indicates caudothalamic dysfunction, which may result in executive dysfunction and impaired working memory, elevating suicide risk.",
+        "",
+        "The population includes 27 patients with MDD (subdivided into high suicide risk and low suicide risk groups) and 25 healthy controls. The focus appears to be adults diagnosed with MDD.",
+        "No direct interventions or treatments were tested in this study. The focus was on identifying potential neuroimaging biomarkers for suicidality in MDD patients.",
+        "Weaker coupling between the right caudate and left thalamus correlates with increased suicidal risk in MDD patients. The study proposes caudothalamic dysfunction as a possible neuroimaging biomarker of suicide risk in depression.",
+        "",
+        "The study explicitly mentions that 27 patients with MDD were assessed, along with 25 healthy controls for comparison. It differentiates between high-risk and low-risk MDD groups based on suicide risk (evaluated using NGASR scores). This information points to adults with MDD being the studied demographic, as no specific age group (e.g., adolescents, older adults) was mentioned.",
+        "The outcome measured is the phase-amplitude coupling (PAC) between brain regions and its association with suicidal risk. High-risk MDD patients had significantly weaker coupling between the right caudate and left thalamus compared to low-risk MDD patients and healthy controls. This finding supports the proposal that caudothalamic dysfunction might serve as a neuroimaging biomarker."
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "",
+        "",
+        "The abstract discusses suicidal susceptibility in major depressive disorder and ties it to dysfunction in the CSTC circuitry. I identified the weakened alpha-to-gamma coupling in the right caudate and left thalamus as a core abnormality linked to this susceptibility. This dysfunction seems to impair executive functioning and working memory, contributing to increased suicide risk. These causal relationships were repeated and emphasized, making them the central focus of the findings.",
+        "The abstract does not describe any interventions or therapeutic approaches. It solely focuses on examining brain connectivity using neuroimaging (MEG) to identify possible biomarkers for suicide risk, and this is clearly stated."
+      ],
+      "interventions": [
+        "",
+        "",
+        "Given these observations, I've summarized the abstract by breaking down its claims piece by piece and focusing on explicit details, while noting the absence of interventions or categorical demographic specificity."
+      ],
+      "outcomes": [
+        "",
+        ""
+      ],
+      "summaryFallback": "population: Major depressive disorder (MDD) is linked to suicidal susceptibility. An aberrant cortico-striato-thalamo-cortical (CSTC) circuitry is hypothesized to contribute to high suicidal risk in MDD patients. Specifically, weaker cross-frequency coupling (alpha-to-gamma phase-amplitude coupling) between the right caudate and left thalamus indicates caudothalamic dysfunction, which may result in executive dysfunction and impaired working memory, elevating suicide risk. | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "32584897-20": {
+    "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "",
+        "The abstract specifies that the study included 1014 Spanish adults, with no focus on specific subgroups like adolescents or older adults. Based on this, the population can be summarized broadly as \"Spanish adults.\""
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "",
+        "",
+        "The abstract explicitly states that the perception of threat from COVID-19 positively correlates with negative affect and moods such as sadness-depression, anxiety, and anger-hostility. This indicates that cognitive perception plays a large role as a trigger for emotional distress."
+      ],
+      "interventions": [
+        "",
+        "No specific interventions were examined or mentioned, but the study suggests the importance of understanding emotional and cognitive effects in order to develop coping measures.",
+        "",
+        "The abstract does not mention any specific interventions or treatments being tested or applied. However, it highlights the need for coping measures to address the emotional and cognitive effects observed. Since this is more of a recommendation than a concrete intervention, I noted its absence.",
+        "My structured summary reflects the abstract's key points without extrapolating beyond provided data. When information (such as interventions) was missing, I highlighted its absence instead of guessing. My chain-of-thought reasoning outlines how I extracted and categorized each piece of information directly from the text."
+      ],
+      "outcomes": [
+        "",
+        "Negative affect (e.g., anxiety, depression, irritation) and heightened perception of threat were identified as measurable outcomes, with a focus on their reciprocal relationship.",
+        "",
+        "The abstract identifies outcomes such as negative affect (e.g., depression, anxiety, irritation) and heightened perception of threat. These outcomes form the basis of the study's conclusions about the emotional and cognitive impact of exceptionally stressful situations like the COVID-19 pandemic."
+      ],
+      "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "32290813-21": {
+    "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "The study focuses on *childbearing women during pregnancy and postpartum*. Specifically, the cohort included 309 consecutive women sampled at four time points: early pregnancy (booking), late pregnancy (36 weeks), early postpartum (6 weeks), and late postpartum (26 weeks).",
+        "",
+        "The abstract specifies that this is a study of *childbearing women during the perinatal period*—this includes pregnancy and postpartum stages. Evidence comes from the mention of time points (booking, 36 weeks pregnant, 6 weeks postpartum, and 26 weeks postpartum). Therefore, it is clear this population is maternity-focused.",
+        "The abstract centers on improving screening methods for perinatal depression in childbearing women through comparison of PHQ-2 and EPDS. Outcomes focus on sensitivity and specificity, with a recommendation for using a dichotomous yes/no alternative method to maximize case identification. Further research in broader maternity populations is needed. This reasoning accounts for each specific part of the structured summary above and highlights gaps in the provided information."
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "",
+        "The abstract does not directly discuss specific causes, triggers, or risk factors for perinatal depression. Instead, it focuses on methods of detecting depression during the perinatal period.",
+        "PHQ-2 (≥3) scoring method missed a significant number of at-risk women.",
+        "",
+        "The abstract does not directly attribute specific causes or triggers to perinatal depression but emphasizes challenges in detecting women at risk during pregnancy or postpartum. I concluded that risk factors were not explicitly discussed as they were outside the study's focus.",
+        "Missed many at-risk women due to poor sensitivity but had high specificity.",
+        "The authors ultimately recommend adopting the alternative method for better identification of at-risk individuals. Consistency in question wording and response formats is also emphasized for improved future outcomes.",
+        "There was no mention of risk factors tied to depression itself, nor interventions like therapy or pharmacological treatments. I noted this explicitly in the summary to acknowledge the abstract’s limitation."
+      ],
+      "interventions": [
+        "",
+        "",
+        "The abstract exclusively examines the accuracy of *screening tools* (PHQ-2 alternatives and EPDS) as methods to identify depression. I concluded interventions like medication or therapy were not covered since the focus is on diagnostic tools."
+      ],
+      "outcomes": [
+        "",
+        "",
+        "",
+        "sensitivity (ability to detect true positives) and specificity (ability to rule out false positives)."
+      ],
+      "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "32802590-22": {
+    "summary": "population: Patients with heart failure (no further demographic information provided). | symptoms: Reduction in depression severity (PHQ-9 score changes) and subjective improvements in depression symptoms. | risk Factors: The paper focuses on depression in individuals with heart failure (HF) and does not specifically isolate other risk factors for depression beyond the HF diagnosis itself. | interventions: Six interventions were identified: antidepressant medications, collaborative care, psychotherapy (primarily cognitive behavioral therapy, CBT), exercise, education, and other nonpharmacological approaches. | outcomes: Among antidepressants, only paroxetine was found effective; other SSRIs were no better than placebo. Collaborative care and CBT showed consistent benefits, particularly in reducing PHQ-9 scores—a widely used depression-measuring tool.",
+    "categorized": {
+      "population": [
+        "Patients with heart failure (no further demographic information provided).",
+        "Collaborative care and cognitive behavioral therapy were among the most effective interventions for depression in HF patients, while antidepressants and other strategies had mixed or limited efficacy.",
+        "",
+        "The population studied is \"heart failure patients,\" as stated repeatedly. There is no mention of specific demographics such as age, gender, or other subgroups.",
+        "The abstract lacks demographic specifics about the heart failure patients and does not clarify subpopulations such as age groups or socioeconomic factors.",
+        "By combining these observations, I logically arrived at the summary highlighting HF patients as the population studied, the effectiveness of collaborative care and CBT, and the mixed evidence for other interventions like exercise and education."
+      ],
+      "symptoms": [
+        "Reduction in depression severity (PHQ-9 score changes) and subjective improvements in depression symptoms.",
+        "The primary outcome mentioned is depression symptom improvement measured through PHQ-9. The abstract highlights reductions in PHQ-9 scores as evidence of success for certain interventions, with additional mention of subjective symptom improvements resulting from psychotherapy."
+      ],
+      "riskFactors": [
+        "The paper focuses on depression in individuals with heart failure (HF) and does not specifically isolate other risk factors for depression beyond the HF diagnosis itself.",
+        "",
+        "The abstract does not focus on isolating causes or risk factors for depression, but it explicitly connects a diagnosis of heart failure (HF) to depression. This suggests HF is the underlying medical condition in focus.",
+        "Causes or risk factors beyond HF are not discussed explicitly."
+      ],
+      "interventions": [
+        "Six interventions were identified: antidepressant medications, collaborative care, psychotherapy (primarily cognitive behavioral therapy, CBT), exercise, education, and other nonpharmacological approaches.",
+        "Psychotherapy—especially CBT—showed significant improvements.",
+        "Evidence for the effectiveness of exercise, education, and other nonpharmacological interventions was mixed.",
+        "",
+        "antidepressant medications, collaborative care, psychotherapy (cognitive behavioral therapy), exercise, education, and other nonpharmacological methods.",
+        "Interventions like exercise and education had mixed evidence, meaning their efficacy was not conclusively shown across the reviewed studies."
+      ],
+      "outcomes": [
+        "Among antidepressants, only paroxetine was found effective; other SSRIs were no better than placebo. Collaborative care and CBT showed consistent benefits, particularly in reducing PHQ-9 scores—a widely used depression-measuring tool.",
+        ""
+      ],
+      "summaryFallback": "population: Patients with heart failure (no further demographic information provided). | symptoms: Reduction in depression severity (PHQ-9 score changes) and subjective improvements in depression symptoms. | risk Factors: The paper focuses on depression in individuals with heart failure (HF) and does not specifically isolate other risk factors for depression beyond the HF diagnosis itself. | interventions: Six interventions were identified: antidepressant medications, collaborative care, psychotherapy (primarily cognitive behavioral therapy, CBT), exercise, education, and other nonpharmacological approaches. | outcomes: Among antidepressants, only paroxetine was found effective; other SSRIs were no better than placebo. Collaborative care and CBT showed consistent benefits, particularly in reducing PHQ-9 scores—a widely used depression-measuring tool."
+    }
+  },
+  "33086078-23": {
+    "summary": "population: People with no depressive symptoms at baseline across a variety of demographics, although specific details about age or other demographic characteristics are not provided. | symptoms: Impaired mobility, particularly slow gait speed, is a predictive factor for the onset of depressive symptoms. | risk Factors:  | interventions: No specific interventions or treatments are mentioned in the abstract. | outcomes: ",
+    "categorized": {
+      "population": [
+        "People with no depressive symptoms at baseline across a variety of demographics, although specific details about age or other demographic characteristics are not provided.",
+        "",
+        "The abstract specifies the target population as individuals with no depressive symptoms at baseline, ensuring the focus is on incident depression. The population is described broadly, and the studies included follow-up periods of 12 months to 16 years. However, the abstract does not provide specific demographic details, such as age groups (e.g., older adults or adolescents), gender, or socioeconomic background, so the population focus remains broad and general.",
+        "This systematic review identifies impaired mobility, specifically slow gait speed, as a predictive risk factor for depressive symptoms. It studies populations initially free of depression but does not specify demographic subgroups. While no interventions were discussed, outcomes were measured as the onset of depressive symptoms across varying follow-up periods. The findings suggest gait speed as an important physical predictor for depression risk over time."
+      ],
+      "symptoms": [
+        "Impaired mobility, particularly slow gait speed, is a predictive factor for the onset of depressive symptoms.",
+        "Incident depression or depressive symptoms over a follow-up period ranging from 12 months to 16 years.",
+        "The abstract explicitly states that impaired mobility, especially slow gait speed, is associated with a higher risk of developing depressive symptoms. This link is quantitatively confirmed by a pooled odds ratio (OR = 1.93) indicating nearly double the likelihood of depressive symptoms in individuals with slow gait speed.",
+        "The primary outcome measured is the onset of depressive symptoms or depression during the follow-up periods of the studies reviewed. This is consistently emphasized as the focus of the meta-analysis."
+      ],
+      "riskFactors": [
+        "",
+        "From this information, it can be inferred that mobility impairments may represent a physical precursor or risk factor for depression."
+      ],
+      "interventions": [
+        "No specific interventions or treatments are mentioned in the abstract.",
+        "",
+        "There is no mention of interventions or treatments in the abstract. The emphasis is solely on identifying a predictive relationship between mobility impairments and depression."
+      ],
+      "outcomes": [
+        ""
+      ],
+      "summaryFallback": "population: People with no depressive symptoms at baseline across a variety of demographics, although specific details about age or other demographic characteristics are not provided. | symptoms: Impaired mobility, particularly slow gait speed, is a predictive factor for the onset of depressive symptoms. | risk Factors:  | interventions: No specific interventions or treatments are mentioned in the abstract. | outcomes: "
+    }
+  },
+  "33015831-24": {
+    "summary": "population:  | symptoms: The abstract does not specifically discuss the causes, triggers, or risk factors for depression or anxiety. However, it mentions *psychogenic nonepileptic seizures (PNES)* with comorbid symptoms of depression and anxiety. | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "The population in focus is *veterans* diagnosed with PNES, treated remotely via telehealth.",
+        "",
+        "Veterans are identified as the target population, explicitly stated alongside their diagnosis of PNES. Their treatment is delivered via telehealth, addressing the problem of access to care.",
+        "Although the abstract does not discuss causes or risk factors in detail, its focus is intervention efficacy and access rather than etiology. The outcomes and population specifics are clearly articulated.",
+        "In summary, I derived the structured summary from clear information about the population and intervention, supplemented by detailed statistical outcomes provided in the abstract. Missing pieces (like explicit causes) were acknowledged as absent rather than inferred without evidence."
+      ],
+      "symptoms": [
+        "The abstract does not specifically discuss the causes, triggers, or risk factors for depression or anxiety. However, it mentions *psychogenic nonepileptic seizures (PNES)* with comorbid symptoms of depression and anxiety.",
+        "The abstract primarily focuses on interventions and outcomes for PNES but does not elaborate on the specific causes or risk factors of depression or anxiety. However, PNES itself is indicated to have comorbid symptoms of depression and anxiety. This implies a connection but does not discuss direct causes.",
+        "a manual-based psychotherapy treatment informed by CBT, delivered remotely over 12 weekly sessions through clinical video telehealth (CVT). This treatment is tailored to address PNES and comorbid symptoms."
+      ],
+      "riskFactors": [
+        "",
+        ""
+      ],
+      "interventions": [
+        "",
+        "A 12-session *manual-based psychotherapy treatment* informed by cognitive behavioral therapy (CBT) delivered through *clinical video telehealth (CVT)*.",
+        "Psychotherapy provided via telehealth for PNES is a viable and effective option nationwide, reducing seizure frequency and improving comorbid depression, anxiety, and overall quality of life.",
+        "",
+        "The data suggest broad benefits from telehealth psychotherapy for PNES, including mental health improvements."
+      ],
+      "outcomes": [
+        "",
+        "",
+        "",
+        "Both seizure-related and mental health outcomes are measured. Key findings include:"
+      ],
+      "summaryFallback": "population:  | symptoms: The abstract does not specifically discuss the causes, triggers, or risk factors for depression or anxiety. However, it mentions *psychogenic nonepileptic seizures (PNES)* with comorbid symptoms of depression and anxiety. | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "32905958-25": {
+    "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "Adults in the United States, with specific emphasis on young adults (18–25 years), were the population studied. Secondary focus on adults under age 50.",
+        ""
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "",
+        "",
+        "The abstract also suggests that global world events and their media coverage may act as triggers for rising anxiety levels, providing environmental/contextual risk factors beyond individual sociodemographic characteristics.",
+        "No biological, genetic, or clinical causes of anxiety are discussed."
+      ],
+      "interventions": [
+        "",
+        "The abstract suggests “prophylactic measures” to bolster healthy coping or improve treatment-seeking behaviors but does not specify any particular intervention or treatment.",
+        "",
+        "The abstract briefly mentions \"prophylactic measures\" (i.e., preventive actions) to encourage healthier coping mechanisms and treatment-seeking behaviors due to the rising prevalence of anxiety. However, it does not provide detail on specific interventions, such as types of therapy, medication, or public health initiatives.",
+        "Specific therapeutic modalities (e.g., cognitive-behavioral therapy, medication) or public health interventions are not described."
+      ],
+      "outcomes": [
+        "",
+        "",
+        "The key outcome measured was the prevalence of past-month anxiety, assessed annually from 2008–2018."
+      ],
+      "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "32560531-26": {
+    "summary": "population:  | symptoms: Body composition parameters (e.g., body mass, fat tissue mass, minerals, abdominal circumference) are correlated with depressive symptoms. | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "",
+        "The study focuses on women in the perimenopausal period, explicitly comparing women with type 2 diabetes to healthy women. This is stated in the abstract, making the target population clear."
+      ],
+      "symptoms": [
+        "Body composition parameters (e.g., body mass, fat tissue mass, minerals, abdominal circumference) are correlated with depressive symptoms.",
+        "Depressive symptoms were correlated with body composition parameters.",
+        "It also highlights correlations between body composition parameters (e.g., fat tissue mass, abdominal circumference) and depressive symptoms, suggesting these are risk factors or triggers.",
+        "The outcomes measured include the correlation between body composition parameters and depressive symptoms, as well as the comparative quality of life between diabetic and healthy women. It is explicitly noted that diabetic women had poorer quality of life and that healthy women showed a tendency to link body composition with depression severity."
+      ],
+      "riskFactors": [
+        "",
+        "",
+        "The abstract mentions that hormonal deficiencies during menopause result in depression and reduced quality of life. Therefore, hormonal changes are deemed a key cause."
+      ],
+      "interventions": [
+        "",
+        "",
+        "No interventions or treatments are described in the abstract. The focus is primarily on the relationships between menopause, depression, quality of life, and body composition."
+      ],
+      "outcomes": [
+        "",
+        ""
+      ],
+      "summaryFallback": "population:  | symptoms: Body composition parameters (e.g., body mass, fat tissue mass, minerals, abdominal circumference) are correlated with depressive symptoms. | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "32714472-27": {
+    "summary": "population: This study used adult male mice (C57/BL6), and the abstract also makes reference to previous studies in humans with treatment-resistant depression. | symptoms: Immobility time in mice during a forced swim test was used as a behavioral proxy for depressive-like symptoms. Propofol-treated mice showed no statistically significant difference in immobility time compared to saline-treated controls after 24 hours. | risk Factors: Not directly addressed—this study focuses on evaluating a potential treatment rather than identifying specific causes or risk factors. | interventions: Propofol (an intravenous anesthetic) was evaluated for its potential antidepressant effects, specifically whether the effects are sustained 24 hours post-administration. | outcomes: Propofol had shown short-term antidepressant-like effects in previous studies but did not exhibit sustained effects after 24 hours in this rodent model.",
+    "categorized": {
+      "population": [
+        "This study used adult male mice (C57/BL6), and the abstract also makes reference to previous studies in humans with treatment-resistant depression.",
+        "Determine the population studied",
+        "The rodent study uses adult male mice (C57/BL6) as the experimental population. Additionally, the abstract references prior human research involving individuals with treatment-resistant depression, indicating a secondary focus on this human demographic."
+      ],
+      "symptoms": [
+        "Immobility time in mice during a forced swim test was used as a behavioral proxy for depressive-like symptoms. Propofol-treated mice showed no statistically significant difference in immobility time compared to saline-treated controls after 24 hours.",
+        "The abstract evaluates propofol, an intravenous anesthetic, as a potential treatment for depression. The focus is on its impact on immobility time in rodents during a forced swim test (a behavioral measure of depressive-like symptoms) and its potential antidepressant properties in humans."
+      ],
+      "riskFactors": [
+        "Not directly addressed—this study focuses on evaluating a potential treatment rather than identifying specific causes or risk factors.",
+        "Identify causes/triggers/risk factors for depression or anxiety",
+        "The abstract does not explore causes, triggers, or risk factors for depression or anxiety. Instead, it discusses treatment-resistant depression—a condition characterized by poor response to conventional antidepressants.",
+        "Some information (e.g., specific risk factors, direct analysis in humans) is absent, as this abstract is centered on animal research rather than broader clinical investigation of depression or anxiety causes."
+      ],
+      "interventions": [
+        "Propofol (an intravenous anesthetic) was evaluated for its potential antidepressant effects, specifically whether the effects are sustained 24 hours post-administration.",
+        "Analyze the intervention or treatment studied",
+        "The abstract points to prior studies where propofol showed short-term antidepressant effects in rodents and humans with treatment-resistant depression. Suggestions are made to further research propofol's antidepressant potential despite the lack of sustained effects observed in this study."
+      ],
+      "outcomes": [
+        "Propofol had shown short-term antidepressant-like effects in previous studies but did not exhibit sustained effects after 24 hours in this rodent model.",
+        "The abstract focuses on evaluating the antidepressant-like effects of Propofol, particularly whether its effects are sustained for 24 hours, based on findings from a mouse model and references to prior human studies.",
+        "Extract outcomes or effects measured",
+        "The primary outcome in mice was immobility time during a forced swim test, a measure of despair-like behavior. The study found no statistically significant difference in immobility time between the propofol-treated and saline-treated groups after 24 hours."
+      ],
+      "summaryFallback": "population: This study used adult male mice (C57/BL6), and the abstract also makes reference to previous studies in humans with treatment-resistant depression. | symptoms: Immobility time in mice during a forced swim test was used as a behavioral proxy for depressive-like symptoms. Propofol-treated mice showed no statistically significant difference in immobility time compared to saline-treated controls after 24 hours. | risk Factors: Not directly addressed—this study focuses on evaluating a potential treatment rather than identifying specific causes or risk factors. | interventions: Propofol (an intravenous anesthetic) was evaluated for its potential antidepressant effects, specifically whether the effects are sustained 24 hours post-administration. | outcomes: Propofol had shown short-term antidepressant-like effects in previous studies but did not exhibit sustained effects after 24 hours in this rodent model."
+    }
+  },
+  "32657166-28": {
+    "summary": "population: The abstract does not specify the demographic focus; it refers to a depression model, which is likely animal-based (commonly rodents in preclinical research). | symptoms: The primary interventions are Chrysanthemum morifolium (Chr) and its active components—Naringenin (Nar) and Apigenin (Api)—used individually and collectively. These are evaluated for their ability to ameliorate depression-like symptoms. Nar is highlighted as having potential as a substitute for Chr, while Api's anti-depressant effects are compared to those of a positive control drug (likely a known antidepressant). | risk Factors: Depression-like behavior was induced in the study model using corticosterone, simulating the biochemical changes linked to depression. | interventions: Traditional Chinese medicine (TCM) components Chrysanthemum morifolium (Chr) and its active compounds—Naringenin (Nar) and Apigenin (Api)—were evaluated for their anti-depressant effects. | outcomes: Chr/Nar/Api showed anti-depressant effects by:",
+    "categorized": {
+      "population": [
+        "The abstract does not specify the demographic focus; it refers to a depression model, which is likely animal-based (commonly rodents in preclinical research).",
+        "The study does not specify if human clinical populations or specific demographic categories (e.g., adolescents, older adults) were included; likely preclinical research using a depression model.",
+        "",
+        "The abstract describes a depression model but does not detail whether this is a human population or animal research. Based on the context (e.g., use of corticosterone induction and metabolomics analysis), it is highly likely the study used animal subjects typically employed in experimental depression paradigms.",
+        "The abstract does not specify the population demographic (e.g., age, gender, or clinical human sample), suggesting this is preclinical research. It also does not explore long-term outcomes or the impact of Chr/Nar/Api beyond the immediate experimental context."
+      ],
+      "symptoms": [
+        "The primary interventions are Chrysanthemum morifolium (Chr) and its active components—Naringenin (Nar) and Apigenin (Api)—used individually and collectively. These are evaluated for their ability to ameliorate depression-like symptoms. Nar is highlighted as having potential as a substitute for Chr, while Api's anti-depressant effects are compared to those of a positive control drug (likely a known antidepressant)."
+      ],
+      "riskFactors": [
+        "Depression-like behavior was induced in the study model using corticosterone, simulating the biochemical changes linked to depression.",
+        "",
+        "The abstract mentions corticosterone as the inducer of depression-like behavior, which is a well-established method in animal studies to simulate the biochemical environment of stress-related depression. Stress and corticosterone overproduction are known triggers in both preclinical models and human depression."
+      ],
+      "interventions": [
+        "Traditional Chinese medicine (TCM) components Chrysanthemum morifolium (Chr) and its active compounds—Naringenin (Nar) and Apigenin (Api)—were evaluated for their anti-depressant effects.",
+        ""
+      ],
+      "outcomes": [
+        "Chr/Nar/Api showed anti-depressant effects by:",
+        "The study does not mention any long-term effects or outcomes beyond the biochemical and behavioral measurements during the experiment.",
+        "",
+        "Behavioral indicators of depression (likely related to activity levels and despair-like behavior) and biochemical changes were assessed. The results demonstrated anti-depressant efficacy via the modulation of multiple metabolic pathways, including tryptophan metabolism, energy-related cycles (citrate cycle), and amino acid metabolism (phenylalanine, arginine, etc.)."
+      ],
+      "summaryFallback": "population: The abstract does not specify the demographic focus; it refers to a depression model, which is likely animal-based (commonly rodents in preclinical research). | symptoms: The primary interventions are Chrysanthemum morifolium (Chr) and its active components—Naringenin (Nar) and Apigenin (Api)—used individually and collectively. These are evaluated for their ability to ameliorate depression-like symptoms. Nar is highlighted as having potential as a substitute for Chr, while Api's anti-depressant effects are compared to those of a positive control drug (likely a known antidepressant). | risk Factors: Depression-like behavior was induced in the study model using corticosterone, simulating the biochemical changes linked to depression. | interventions: Traditional Chinese medicine (TCM) components Chrysanthemum morifolium (Chr) and its active compounds—Naringenin (Nar) and Apigenin (Api)—were evaluated for their anti-depressant effects. | outcomes: Chr/Nar/Api showed anti-depressant effects by:"
+    }
+  },
+  "32815779-29": {
+    "summary": "population: Six men with autism, aged 23–52 years old. | symptoms: The impact and consequences of social anxiety symptoms and coping strategies are major focuses. Specific outcomes or effects measured include \"chronicity,\" \"impact,\" and the effectiveness of coping strategies. | risk Factors: The study investigates why individuals with autism perceive they develop social anxiety (SA) and identifies \"causal influences for SA\" and \"anxiety-provoking social situations\" as relevant themes. However, specific detailed causes or triggers are not mentioned in the abstract. | interventions: The study identifies \"interventions\" as one of the themes but does not explicitly detail specific treatments or strategies in the abstract. | outcomes: Outcomes or measured effects are mentioned broadly (e.g., impact, coping) but are not quantitatively or qualitatively detailed.",
+    "categorized": {
+      "population": [
+        "Six men with autism, aged 23–52 years old.",
+        "The study population was clearly identified as six male adults with autism, aged 23–52 years. This is stated explicitly.",
+        "The abstract provides a broad overview of themes investigated in the study of social anxiety among men with autism but lacks specifics about causes, treatments, and detailed outcomes. The focus is on generating insights into the lived experiences and perceptions of social anxiety within this population."
+      ],
+      "symptoms": [
+        "The impact and consequences of social anxiety symptoms and coping strategies are major focuses. Specific outcomes or effects measured include \"chronicity,\" \"impact,\" and the effectiveness of coping strategies.",
+        "The thematic analysis uncovered seven overarching themes, including causes, anxiety-provoking situations, symptoms, chronicity, coping, impact, and interventions. While these categories suggest areas of focus, the abstract does not describe specific causes, detailed interventions, or measured outcomes beyond general references to these themes.",
+        "The stated outcomes focus on the \"impact and consequences of symptoms\" (social anxiety's effects on individuals with autism) and the utility of coping strategies, though exact metrics or assessed impacts are not described."
+      ],
+      "riskFactors": [
+        "The study investigates why individuals with autism perceive they develop social anxiety (SA) and identifies \"causal influences for SA\" and \"anxiety-provoking social situations\" as relevant themes. However, specific detailed causes or triggers are not mentioned in the abstract.",
+        "Detailed causes or risk factors for social anxiety in individuals with autism are not explicitly outlined, only that they were explored as a theme."
+      ],
+      "interventions": [
+        "The study identifies \"interventions\" as one of the themes but does not explicitly detail specific treatments or strategies in the abstract.",
+        "Although \"coping\" and \"interventions\" are named, further studies are recommended to develop targeted interventions, implying that specific actionable treatments or recommendations are not yet fully established.",
+        "Specific interventions or treatments are not described in the abstract."
+      ],
+      "outcomes": [
+        "Outcomes or measured effects are mentioned broadly (e.g., impact, coping) but are not quantitatively or qualitatively detailed."
+      ],
+      "summaryFallback": "population: Six men with autism, aged 23–52 years old. | symptoms: The impact and consequences of social anxiety symptoms and coping strategies are major focuses. Specific outcomes or effects measured include \"chronicity,\" \"impact,\" and the effectiveness of coping strategies. | risk Factors: The study investigates why individuals with autism perceive they develop social anxiety (SA) and identifies \"causal influences for SA\" and \"anxiety-provoking social situations\" as relevant themes. However, specific detailed causes or triggers are not mentioned in the abstract. | interventions: The study identifies \"interventions\" as one of the themes but does not explicitly detail specific treatments or strategies in the abstract. | outcomes: Outcomes or measured effects are mentioned broadly (e.g., impact, coping) but are not quantitatively or qualitatively detailed."
+    }
+  },
+  "32276239-30": {
+    "summary": "population: The study focuses on clients with moderate to severe depression, with therapists categorized into student therapists and clinical trial therapists. | symptoms: Student therapists achieved outcomes comparable to clinical trial therapists for client-reported depressive symptom change but fell short when measured with interviewer-evaluated depression scores. | risk Factors: The abstract does not explicitly discuss causes, triggers, or risk factors for depression. It focuses on outcomes from cognitive therapy and therapist-related differences. | interventions: Cognitive Therapy (CT) for depression, delivered using the same treatment manual and duration. | outcomes: ",
+    "categorized": {
+      "population": [
+        "The study focuses on clients with moderate to severe depression, with therapists categorized into student therapists and clinical trial therapists.",
+        "The abstract specifies that clients with moderate to severe depression were the focus. No further demographic details such as age, gender, or specific subgroups (e.g., adolescents, postpartum individuals) are mentioned."
+      ],
+      "symptoms": [
+        "Student therapists achieved outcomes comparable to clinical trial therapists for client-reported depressive symptom change but fell short when measured with interviewer-evaluated depression scores.",
+        "The abstract states that student therapists delivered comparable outcomes to clinical trial therapists regarding client-reported depressive symptom change but performed less favorably on an interviewer-evaluated depression measure.",
+        "Cognitive Therapy provided by student therapists can achieve comparable outcomes to clinical trial therapists for depressive symptom change, therapeutic alliance, and CT skills. However, dropout rates are higher among clients of student therapists, indicating a need for additional research in this area."
+      ],
+      "riskFactors": [
+        "The abstract does not explicitly discuss causes, triggers, or risk factors for depression. It focuses on outcomes from cognitive therapy and therapist-related differences.",
+        "The abstract centers on a comparison of cognitive therapy outcomes for depression provided by student therapists and clinical trial therapists. It does not delve into causes or risk factors for depression itself but focuses on the efficacy of treatment delivery by different types of therapists.",
+        "The abstract does not provide information about specific risk factors for depression but suggests that student therapists can achieve similar treatment outcomes. It also highlights dropout as a potential area needing further research."
+      ],
+      "interventions": [
+        "Cognitive Therapy (CT) for depression, delivered using the same treatment manual and duration.",
+        "Cognitive therapy (CT) was used as the treatment method in the study. This is explicitly mentioned, and the abstract states that the same treatment manual and duration were applied, ensuring consistency in intervention."
+      ],
+      "outcomes": [
+        "",
+        ""
+      ],
+      "summaryFallback": "population: The study focuses on clients with moderate to severe depression, with therapists categorized into student therapists and clinical trial therapists. | symptoms: Student therapists achieved outcomes comparable to clinical trial therapists for client-reported depressive symptom change but fell short when measured with interviewer-evaluated depression scores. | risk Factors: The abstract does not explicitly discuss causes, triggers, or risk factors for depression. It focuses on outcomes from cognitive therapy and therapist-related differences. | interventions: Cognitive Therapy (CT) for depression, delivered using the same treatment manual and duration. | outcomes: "
+    }
+  },
+  "32045409-31": {
+    "summary": "population: Adolescents aged 13-15 years enrolled in grade 9 at government-run secondary schools in Bihar, India. | risk Factors: The abstract suggests that poor school climate, bullying, violence victimization, and violence perpetration are linked to depression and other health outcomes among adolescents. These factors may exacerbate mental health issues and negatively impact overall adolescent well-being. | interventions:  | outcomes: The study measured:",
+    "categorized": {
+      "population": [
+        "Adolescents aged 13-15 years enrolled in grade 9 at government-run secondary schools in Bihar, India.",
+        "",
+        "adolescents aged 13-15 years enrolled in grade 9 at government secondary schools in Bihar, India, during the 2015-2016 academic year. This information is explicit and requires no guesswork."
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "The abstract suggests that poor school climate, bullying, violence victimization, and violence perpetration are linked to depression and other health outcomes among adolescents. These factors may exacerbate mental health issues and negatively impact overall adolescent well-being.",
+        "",
+        "The abstract does not investigate or specify causes of depression/anxiety beyond the implied link to school climate and interpersonal violence. It focuses more on intervention effects."
+      ],
+      "interventions": [
+        "",
+        "SEHER intervention delivered by a lay counsellor (SEHER Mitra [SM]) had significant positive effects on school climate and mental health outcomes.",
+        "SEHER intervention delivered by teachers (Teacher as SEHER Mitra [TSM]) showed no consistent benefits compared to standard classroom-based Adolescence Education Program (AEP).",
+        "The lay counsellor-led intervention exhibited incremental benefits, with greater improvements at the 17-month follow-up compared to the 8-month follow-up.",
+        "",
+        "",
+        "The abstract also highlights stronger effects at the 17-month follow-up, indicating extended benefits of the lay counsellor-based intervention.",
+        "The lay counsellor-led intervention (SM) showed meaningful improvements in school climate and adolescent health metrics (depression, bullying, violence prevention). Teacher-led interventions (TSM) lacked consistent effectiveness, suggesting the importance of professionalized, non-teacher-based delivery mechanisms for mental health interventions."
+      ],
+      "outcomes": [
+        "The study measured:",
+        "School climate (primary outcome).",
+        "Depression (secondary outcome, improvement observed as lower adjusted mean difference).",
+        "Attitude toward gender equity (secondary outcome, improvement noted).",
+        "The abstract links poor school climate, bullying, violence victimization, and violence perpetration as factors that contribute negatively to adolescent health outcomes, including depression. This is directly inferred from the study’s focus on improving school climate and its secondary outcomes such as depression and violence-related metrics.",
+        "Effective in improving school climate, reducing depression, bullying, violence victimization, and violence perpetration.",
+        "",
+        "The primary outcome (school climate) was measured using the Beyond Blue School Climate Questionnaire (BBSCQ), with significant improvements in the SM group.",
+        "Changes in secondary outcomes included reduced depression, improved attitudes toward gender equity, decreased bullying frequency, and lower odds of violence victimization and perpetration—all outcomes showing significant improvement in the SM group but not the TSM group. These were measured quantitatively using adjusted mean differences or odds ratios.",
+        "It does not mention whether specific subgroups (e.g., students with pre-existing mental health conditions) were analyzed for differential outcomes."
+      ],
+      "summaryFallback": "population: Adolescents aged 13-15 years enrolled in grade 9 at government-run secondary schools in Bihar, India. | risk Factors: The abstract suggests that poor school climate, bullying, violence victimization, and violence perpetration are linked to depression and other health outcomes among adolescents. These factors may exacerbate mental health issues and negatively impact overall adolescent well-being. | interventions:  | outcomes: The study measured:"
+    }
+  },
+  "32850269-32": {
+    "summary": "population:  | symptoms: No specific interventions or treatments for depression or anxiety are noted. The primary focus of the abstract is on understanding the immunological mechanism, rather than discussing how to address the psychiatric symptoms. | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "The abstract does not specify a particular population or demographic being studied but does refer to \"studied patients\" with depression and anxiety in the context of pancreatic cancer.",
+        "",
+        "Although the abstract mentions \"studied patients,\" it does not specify any particular group, such as adolescents, older adults, or postpartum individuals. It focuses broadly on depression and anxiety in people diagnosed with pancreatic cancer, without narrowing the demographic scope."
+      ],
+      "symptoms": [
+        "No specific interventions or treatments for depression or anxiety are noted. The primary focus of the abstract is on understanding the immunological mechanism, rather than discussing how to address the psychiatric symptoms."
+      ],
+      "riskFactors": [
+        "",
+        ""
+      ],
+      "interventions": [
+        "",
+        "No specific interventions or treatments for depression or anxiety are mentioned in the abstract.",
+        "",
+        "Depression and anxiety are recognized as preceding pancreatic cancer diagnosis. However, the abstract notes that researchers have been reluctant to propose these psychiatric conditions as screening tools or early markers of pancreatic cancer due to their non-specific nature. The outcome being measured is the association between depression/anxiety and pancreatic cancer rather than prevention or treatment results.",
+        "In conclusion, my summary is rooted in extracting explicit statements directly from the abstract regarding the association, mechanisms, and clinical implications. Where information is absent (e.g., specific interventions or demographic focus), I note it plainly based on the abstract's content."
+      ],
+      "outcomes": [
+        "",
+        "The abstract directly links major depression to pancreatic cancer as a \"well-known\" association, explaining that this relationship is likely due to the dysregulation of inflammatory cytokines (particularly IL-6). These inflammatory changes classify depression as a paraneoplastic syndrome, meaning it arises as a secondary effect of the cancer. By identifying IL-6 as central to the process, the abstract suggests a biological mechanism behind the association between depression and pancreatic cancer.",
+        ""
+      ],
+      "summaryFallback": "population:  | symptoms: No specific interventions or treatments for depression or anxiety are noted. The primary focus of the abstract is on understanding the immunological mechanism, rather than discussing how to address the psychiatric symptoms. | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "32915660-33": {
+    "summary": "population: Fathers in the postpartum period (specifically around the time of childbirth). | symptoms: Low awareness of symptoms, reluctance to seek help, and changes in the use of depressive language post-childbirth are associated with postpartum depression (PPD) in fathers. | risk Factors: Fathers at risk of PPD were identified with a recall score of 0.82 based on predictive models using discussion topic features derived from prepartum Reddit posts. | interventions: No specific treatments are mentioned; however, predictive models based on social media markers may serve as early detection tools to support interventions during the prepartum period. | outcomes: ",
+    "categorized": {
+      "population": [
+        "Fathers in the postpartum period (specifically around the time of childbirth).",
+        "",
+        "The abstract clearly identifies fathers during the postpartum period as the population focus. The study specifically examines behavior spanning six months around the birth of their child, which is within the timeframe relevant to postpartum depression.",
+        "I started by identifying explicit mentions of causes or triggers of PPD, which included social and behavioral factors like low awareness and language changes post-childbirth. Next, I noted the population focus (fathers in the postpartum period) based on direct statements in the abstract. Then, I examined interventions or treatment details; while no medical or psychotherapeutic interventions were mentioned, the predictive models were identified as tools for early detection, which could support future interventions. Finally, I analyzed measurable outcomes, finding that predictive accuracy (recall score of 0.82) was the key metric of interest."
+      ],
+      "symptoms": [
+        "Low awareness of symptoms, reluctance to seek help, and changes in the use of depressive language post-childbirth are associated with postpartum depression (PPD) in fathers.",
+        "The abstract explicitly mentions that low awareness of depressive symptoms and reluctance to seek help are contributing factors to late identification of PPD in fathers. Additionally, the study highlights that changes in language indicative of depressive symptomatology post-childbirth can be associated with PPD risk. These linguistic and emotional markers act as observable triggers for identifying at-risk individuals."
+      ],
+      "riskFactors": [
+        "Fathers at risk of PPD were identified with a recall score of 0.82 based on predictive models using discussion topic features derived from prepartum Reddit posts.",
+        "",
+        "While no active treatments or interventions are explicitly mentioned, the development and use of predictive models are described as tools for early identification. The abstract suggests the applicability of these models in personalized, preventative support tools for fathers during the prepartum period, indirectly pointing at interventions aimed at early detection and support for at-risk fathers.",
+        "The primary outcome discussed in the abstract is the ability to predict fathers at risk of PPD using prepartum Reddit data. The study identifies discussion topics as the most effective feature for prediction, achieving a recall score of 0.82. This highlights a promising avenue for using passive online data in detecting mental health risks."
+      ],
+      "interventions": [
+        "No specific treatments are mentioned; however, predictive models based on social media markers may serve as early detection tools to support interventions during the prepartum period.",
+        ""
+      ],
+      "outcomes": [
+        ""
+      ],
+      "summaryFallback": "population: Fathers in the postpartum period (specifically around the time of childbirth). | symptoms: Low awareness of symptoms, reluctance to seek help, and changes in the use of depressive language post-childbirth are associated with postpartum depression (PPD) in fathers. | risk Factors: Fathers at risk of PPD were identified with a recall score of 0.82 based on predictive models using discussion topic features derived from prepartum Reddit posts. | interventions: No specific treatments are mentioned; however, predictive models based on social media markers may serve as early detection tools to support interventions during the prepartum period. | outcomes: "
+    }
+  },
+  "32599612-34": {
+    "summary": "population: Emerging adults (ages not specified, sample size N = 80). | risk Factors: Depression-related drinking in emerging adults is particularly associated with solitary drinking, which is risky and atypical for this age group. The emotional experience of shame mediates the relationship between depression and alcohol craving in solitary contexts. Guilt does not act as a relevant mediator. | interventions: The study suggests the importance of addressing solitary drinking and shame in interventions but does not test or propose specific interventions. | outcomes: Alcohol craving was measured experimentally following a shame induction and alcohol cue exposure. Shame, but not guilt, was identified as a mediator for depression-related solitary drinking.",
+    "categorized": {
+      "population": [
+        "Emerging adults (ages not specified, sample size N = 80).",
+        "The abstract emphasizes comorbid alcohol use and depression, a prevalent issue among emerging adults. Self-medication theory is cited as a framework explaining why individuals with depression may use alcohol to cope with negative emotions. Solitary drinking is highlighted as a particularly risky behavior tied to alcohol misuse in this population. Additionally, shame is identified as the emotional experience that specifically mediates the relationship between depression and alcohol craving in solitary contexts.",
+        "Identifying the population studied",
+        "The study explicitly states its focus is on emerging adults, with a sample size of 80. The term \"emerging adults\" typically refers to individuals in the late teens to mid-20s, though the exact age range is not specified in the abstract. No other demographic subcategories (e.g., gender, socioeconomic status) are mentioned.",
+        "By systematically reviewing the abstract, I extracted the primary cause-effect relationships, identified the focus population, and noted intervention suggestions alongside measured outcomes. Missing details such as specific demographic subcategories and tested interventions were acknowledged clearly."
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "Depression-related drinking in emerging adults is particularly associated with solitary drinking, which is risky and atypical for this age group. The emotional experience of shame mediates the relationship between depression and alcohol craving in solitary contexts. Guilt does not act as a relevant mediator.",
+        "Analyzing the causes, triggers, or risk factors"
+      ],
+      "interventions": [
+        "The study suggests the importance of addressing solitary drinking and shame in interventions but does not test or propose specific interventions.",
+        "Assessing interventions or treatments",
+        "While the abstract does not provide details about tested interventions, it suggests the results should inform interventions that target solitary drinking and shame in emerging adults. This indicates a potential avenue for future therapeutic approaches or prevention strategies.",
+        "The abstract does not provide specificity about the age range within emerging adults, nor does it detail sex or other demographic characteristics. Similarly, while it suggests interventions targeting shame and solitary drinking, it does not describe or test specific treatment methods."
+      ],
+      "outcomes": [
+        "Alcohol craving was measured experimentally following a shame induction and alcohol cue exposure. Shame, but not guilt, was identified as a mediator for depression-related solitary drinking.",
+        "Examining outcomes or effects"
+      ],
+      "summaryFallback": "population: Emerging adults (ages not specified, sample size N = 80). | risk Factors: Depression-related drinking in emerging adults is particularly associated with solitary drinking, which is risky and atypical for this age group. The emotional experience of shame mediates the relationship between depression and alcohol craving in solitary contexts. Guilt does not act as a relevant mediator. | interventions: The study suggests the importance of addressing solitary drinking and shame in interventions but does not test or propose specific interventions. | outcomes: Alcohol craving was measured experimentally following a shame induction and alcohol cue exposure. Shame, but not guilt, was identified as a mediator for depression-related solitary drinking."
+    }
+  },
+  "31529992-35": {
+    "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "",
+        "The abstract specifies adults aged 61±6 years in the Whitehall II cohort, including both men and women. This demographic is explicitly stated without further narrowing (e.g., no mention of adolescents, postpartum populations, etc.)."
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "",
+        "Depression and/or anxiety is associated with increased carotid intima-media thickness (IMT) in women, indicating potential cardiovascular risk.",
+        "Women with both depression/anxiety and dyslipidaemia exhibit the greatest IMT, implicating an elevated risk for cardiovascular disease.",
+        "Carotid intima-media thickness as a marker of cardiovascular disease risk.",
+        "",
+        "The abstract mentions depression/anxiety and dyslipidaemia as potential contributors to increased IMT, a marker of cardiovascular risk. It further highlights a sex-specific difference: depression/anxiety affects IMT in women but not men, while dyslipidaemia impacts IMT in both sexes. This establishes the causes/risk factors surrounding depression/anxiety and cardiovascular health.",
+        "The key measured outcome is carotid intima-media thickness, which is used as a proxy indicator for cardiovascular disease risk. The abstract also highlights the moderating effects of sex and dyslipidaemia, providing nuanced insights into how depression/anxiety interacts with these factors.",
+        "Women are at greater risk when depression/anxiety and dyslipidaemia co-occur, with greater IMT measurements suggesting heightened cardiovascular vulnerability. Men, on the other hand, show an association between dyslipidaemia and IMT but not depression/anxiety, which indicates that risk factors are sex-specific."
+      ],
+      "interventions": [
+        "",
+        "No specific interventions or treatments are mentioned in the abstract.",
+        "",
+        "While the study uses questionnaires and biochemical lipid assessments to evaluate conditions like depression/anxiety and dyslipidaemia, it does not mention any specific therapeutic interventions or treatments aimed at managing these conditions. Hence, this point is omitted.",
+        "By combining these points, the summary captures the abstract's key insights effectively while noting areas where information is missing (e.g., interventions)."
+      ],
+      "outcomes": [
+        "",
+        ""
+      ],
+      "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "31535348-36": {
+    "summary": "population:  | symptoms: HIV diagnosis is identified as a potential trigger for depressive symptoms in those with unipolar depression. | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        "The population includes 26 men and women diagnosed with HIV and either unipolar depression (n=11) or schizophrenia/schizoaffective disorder versus bipolar disorder (n=15).",
+        "The abstract provides clear cause/effect relationships between HIV and specific mental health conditions. For participants with unipolar depression, HIV diagnosis appears to act as a trigger for depressive symptoms. Conversely, for schizophrenia and bipolar disorder, mania and psychosis symptoms are often present before HIV diagnosis.",
+        "",
+        "By breaking down the abstract into its core components (causes, population, interventions, and outcomes), I arrived at this structured summary. Where the abstract lacked specific information (e.g., interventions), I have clearly stated so to avoid making assumptions."
+      ],
+      "symptoms": [
+        "HIV diagnosis is identified as a potential trigger for depressive symptoms in those with unipolar depression.",
+        "Mania and psychosis symptoms often preceded HIV diagnosis in individuals with schizophrenia, schizoaffective disorder, or bipolar disorder."
+      ],
+      "riskFactors": [
+        "",
+        "Shared risk factors include substance use, incarceration, and adverse childhood experiences across all mental illness groups.",
+        "The study focused on the directionality of effects between HIV and mental illness, identifying whether HIV precedes or follows specific mental health conditions. Risk behaviors, physical and mental functioning, and depression were assessed using standardized instruments.",
+        "",
+        "Shared risk factors across groups—substance use, incarceration, and adverse childhood experiences—were explicitly mentioned in the abstract and suggest broader environmental or lifestyle-related risks for both HIV and mental illness.",
+        "The outcomes measured include the directionality of effects between HIV and mental illness. Standardized instruments were employed to assess risk behaviors, physical and mental functioning, and depression, but the abstract does not specify concrete results beyond identifying causal patterns."
+      ],
+      "interventions": [
+        "",
+        "The abstract does not specifically mention interventions or treatments.",
+        "",
+        "The abstract does not discuss any specific interventions or treatments. It instead emphasizes understanding causal pathways and directionality, which could inform anticipatory guidance for healthcare professionals and policymakers."
+      ],
+      "outcomes": [
+        "",
+        ""
+      ],
+      "summaryFallback": "population:  | symptoms: HIV diagnosis is identified as a potential trigger for depressive symptoms in those with unipolar depression. | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "31794908-37": {
+    "summary": "population: Elderly participants from Dijon, France (median age 80.6 years, 64% women). | symptoms: RLS symptoms and treatment were briefly evaluated, but the abstract does not indicate interventions for psychiatric disorders. | risk Factors: Restless legs syndrome (RLS) was associated with generalized anxiety disorder (GAD) and comorbid GAD-depression, but not major depressive disorder (MDD) or dysthymia. | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "Elderly participants from Dijon, France (median age 80.6 years, 64% women).",
+        "",
+        "The abstract clearly defines the population as 1493 elderly participants (median age 80.6 years, 64% women) from Dijon, France.",
+        "This step highlights the novel contribution of the study to understanding how RLS interacts with psychiatric comorbidities in elderly populations."
+      ],
+      "symptoms": [
+        "RLS symptoms and treatment were briefly evaluated, but the abstract does not indicate interventions for psychiatric disorders.",
+        "RLS was associated with specific symptoms of GAD (worry most days and feeling tense).",
+        "RLS was linked to depression-related factors, including depressed affect, somatic symptoms, and positive affect.",
+        "It highlights specific criterion symptoms linked to GAD (worry and tension), as well as depression-related factors like somatic symptoms and affect disturbances.",
+        "The abstract briefly notes that RLS symptoms and frequency were assessed, but there is no mention of specific treatments or interventions related to psychiatric disorders like GAD or depression.",
+        "Outcomes included odds ratios for associations between RLS and psychiatric disorders, as well as symptom-specific factors for GAD (e.g., worry) and depression (e.g., depressed affect, somatic symptoms)."
+      ],
+      "riskFactors": [
+        "Restless legs syndrome (RLS) was associated with generalized anxiety disorder (GAD) and comorbid GAD-depression, but not major depressive disorder (MDD) or dysthymia.",
+        "",
+        "In conclusion, the reasoning process involved systematically extracting information on causes, demographic focus, interventions, and outcomes while reconciling the findings with prior research claims. The abstract provided detailed associations but left gaps regarding specific treatments for the studied disorders."
+      ],
+      "interventions": [
+        "",
+        "As interventions were not addressed in detail, this section remains absent from the findings."
+      ],
+      "outcomes": [
+        "",
+        "",
+        "The abstract provides precise data on prevalence (8.2%) and statistical associations, ensuring clarity on measurable effects."
+      ],
+      "summaryFallback": "population: Elderly participants from Dijon, France (median age 80.6 years, 64% women). | symptoms: RLS symptoms and treatment were briefly evaluated, but the abstract does not indicate interventions for psychiatric disorders. | risk Factors: Restless legs syndrome (RLS) was associated with generalized anxiety disorder (GAD) and comorbid GAD-depression, but not major depressive disorder (MDD) or dysthymia. | interventions:  | outcomes: "
+    }
+  },
+  "33081070-38": {
+    "summary": "population: Secondary mental health issues, including major depression (46.5%), anxiety (40.6%), and low resilience (51.8%), were prevalent in this population. | symptoms: Depressive symptoms, anxiety, resilience, and other measures of psychological distress. | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "Secondary mental health issues, including major depression (46.5%), anxiety (40.6%), and low resilience (51.8%), were prevalent in this population.",
+        "",
+        "Syrian refugees residing in Germany, aged 18-65, with an average age of 32.8 years. About 38.8% of the sample consisted of women.",
+        "exposure to traumatizing events, particularly military- or combat-related trauma (reported by 32.9% of the sample). This is consistent with the refugee population's experiences of displacement due to war and conflict.",
+        "",
+        "The demographic details provided (age range 18-65, average age 32.8 years, and 38.8% women) further clarify the population characteristics.",
+        "The intervention being studied is the self-help app \"Sanadak,\" which targets post-traumatic stress in this refugee population. This suggests a focus on accessible, scalable mental health solutions for refugees who often face barriers to traditional care.",
+        "The abstract lists post-traumatic stress as the primary outcome, assessed using a specific diagnostic scale (PDS-5). Secondary outcomes include measures of depressive symptoms, anxiety levels, resilience scores, and overall psychological distress, providing a multidimensional view of mental health in this population."
+      ],
+      "symptoms": [
+        "Depressive symptoms, anxiety, resilience, and other measures of psychological distress."
+      ],
+      "riskFactors": [
+        "",
+        ""
+      ],
+      "interventions": [
+        "",
+        "",
+        "While the abstract provides substantial detail on baseline mental health characteristics and the intervention (\"Sanadak\"), it does not elaborate on the effectiveness of the app or intervention outcomes, as this appears to be a recruitment/baseline-focused analysis.",
+        "By piecing together these components, the structured summary captures the essence of the study while noting key gaps in the information provided (e.g., lack of intervention results)."
+      ],
+      "outcomes": [
+        "",
+        "Post-traumatic stress using the Post-traumatic Diagnostic Scale for DSM-5/PDS-5.",
+        ""
+      ],
+      "summaryFallback": "population: Secondary mental health issues, including major depression (46.5%), anxiety (40.6%), and low resilience (51.8%), were prevalent in this population. | symptoms: Depressive symptoms, anxiety, resilience, and other measures of psychological distress. | risk Factors:  | interventions:  | outcomes: "
+    }
+  },
+  "32885897-39": {
+    "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+    "categorized": {
+      "population": [
+        "",
+        ""
+      ],
+      "symptoms": [],
+      "riskFactors": [
+        "",
+        "The study identifies several risk factors for anxiety and depression in carers during the COVID-19 pandemic, including:",
+        "",
+        "The abstract directly states that stricter lockdown measures impaired mental health, especially among carers. Specific risk factors mentioned include higher stress levels and reduced social support, both of which are linked to worse mental health outcomes.",
+        "This abstract provides clear evidence of severe mental health impacts among carers, particularly those supporting individuals with intellectual disabilities during the pandemic. Risk factors include strict lockdown measures, heightened stress, and lack of social support, while outcomes include elevated anxiety, depression, and maladaptive coping styles."
+      ],
+      "interventions": [
+        "",
+        "No specific interventions or treatments are discussed in the abstract.",
+        "",
+        "There is no mention of interventions or treatments, either in terms of mental health support provided or suggested during the study."
+      ],
+      "outcomes": [
+        "",
+        "Mental health impacts for carers of individuals with intellectual disabilities were 2–3 times greater than pre-pandemic levels.",
+        "A positive correlation was found between stress levels and adverse mental health outcomes.",
+        "Psychological impacts like defeat/entrapment and a wish fulfillment coping style are highlighted, suggesting coping mechanisms play a role too.",
+        "",
+        "Higher levels of anxiety, depression, and coping mechanisms (e.g., defeat/entrapment and wish fulfillment) are reported as outcomes, explicitly noted in comparison to pre-pandemic levels. The finding that carers of individuals with intellectual disabilities experienced these effects at 2–3 times greater levels provides an important metric.",
+        "The mention of a positive correlation between stress and mental health impacts further clarifies the relationship between stress levels and adverse outcomes."
+      ],
+      "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+    }
+  }
+}

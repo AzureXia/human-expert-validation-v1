@@ -1,0 +1,942 @@
+{
+  "qa": {
+    "responses": {
+      "qa_reflects": {
+        "counts": {
+          "yes_sure": 7,
+          "items": 2,
+          "no_sure": 2,
+          "yes_unsure": 1
+        },
+        "records": [
+          {
+            "timestamp": "2025-09-24T10:11:46.186Z",
+            "dataset": "qa",
+            "questionId": "qa_reflects",
+            "answer": "yes",
+            "sure": true,
+            "itemId": "18710785-2",
+            "pmid": "18710785",
+            "title": "Association between physical illnesses and depressive symptoms requiring hospitalization in suicide victims.",
+            "journal": "Psychiatry research",
+            "year": "2008",
+            "classification": "YES",
+            "content": {
+              "question": "Which physical disease categories are associated with a lifetime history of depression in female suicide victims, and how might this differ from male suicide victims?",
+              "answer": "In females: endocrine, nervous, circulatory, genitourinary, skin, musculoskeletal, injuries/poisonings, pregnancy-related, and infectious diseases. In males: nervous, circulatory, respiratory, musculoskeletal, injuries/poisonings, and infectious diseases.",
+              "explanation": "The abstract identifies gender-specific associations between depression and physical diseases, with females showing broader comorbidity patterns, including endocrine and pregnancy-related issues, while males have narrower associations."
+            }
+          },
+          {
+            "timestamp": "2025-09-24T10:31:31.769Z",
+            "dataset": "qa",
+            "questionId": "qa_reflects",
+            "answer": "no",
+            "sure": true,
+            "itemId": "18710785-2",
+            "pmid": "18710785",
+            "title": "Association between physical illnesses and depressive symptoms requiring hospitalization in suicide victims.",
+            "journal": "Psychiatry research",
+            "year": "2008",
+            "classification": "YES",
+            "content": {
+              "question": "Which physical disease categories are associated with a lifetime history of depression in female suicide victims, and how might this differ from male suicide victims?",
+              "answer": "In females: endocrine, nervous, circulatory, genitourinary, skin, musculoskeletal, injuries/poisonings, pregnancy-related, and infectious diseases. In males: nervous, circulatory, respiratory, musculoskeletal, injuries/poisonings, and infectious diseases.",
+              "explanation": "The abstract identifies gender-specific associations between depression and physical diseases, with females showing broader comorbidity patterns, including endocrine and pregnancy-related issues, while males have narrower associations."
+            }
+          },
+          {
+            "timestamp": "2025-09-24T12:27:03.878Z",
+            "dataset": "qa",
+            "questionId": "qa_reflects",
+            "answer": "yes",
+            "sure": false,
+            "itemId": "18661116-1",
+            "pmid": "18661116",
+            "title": "Transcranial magnetic stimulation for comorbid depression in anorexia].",
+            "journal": "Der Nervenarzt",
+            "year": "2008",
+            "classification": "YES",
+            "content": {
+              "question": "What treatment approach could be considered for a 24-year-old anorexic patient with comorbid depression when psychopharmacotherapy is contraindicated due to poor physical condition, and what strategy might prevent relapse?",
+              "answer": "Repetitive transcranial magnetic stimulation (rTMS) with a maintenance protocol to sustain remission.",
+              "explanation": "The abstract describes rTMS as effective for treating depression in an anorexic patient when medication was contraindicated. Relapse occurred after initial cycles, but remission was sustained with a maintenance rTMS protocol."
+            }
+          },
+          {
+            "timestamp": "2025-09-24T12:27:05.668Z",
+            "dataset": "qa",
+            "questionId": "qa_reflects",
+            "answer": "yes",
+            "sure": true,
+            "itemId": "18661116-1",
+            "pmid": "18661116",
+            "title": "Transcranial magnetic stimulation for comorbid depression in anorexia].",
+            "journal": "Der Nervenarzt",
+            "year": "2008",
+            "classification": "YES",
+            "content": {
+              "question": "What treatment approach could be considered for a 24-year-old anorexic patient with comorbid depression when psychopharmacotherapy is contraindicated due to poor physical condition, and what strategy might prevent relapse?",
+              "answer": "Repetitive transcranial magnetic stimulation (rTMS) with a maintenance protocol to sustain remission.",
+              "explanation": "The abstract describes rTMS as effective for treating depression in an anorexic patient when medication was contraindicated. Relapse occurred after initial cycles, but remission was sustained with a maintenance rTMS protocol."
+            }
+          },
+          {
+            "timestamp": "2025-09-24T12:34:35.598Z",
+            "dataset": "qa",
+            "questionId": "qa_reflects",
+            "answer": "no",
+            "sure": true,
+            "itemId": "18842304-0",
+            "pmid": "18842304",
+            "title": "Do major depressive disorder and dysthymic disorder confer differential risk for suicide?",
+            "journal": "Journal of affective disorders",
+            "year": "2008",
+            "classification": "YES",
+            "content": {
+              "question": "Which specific depressive disorder significantly increases the likelihood of higher suicide risk, even after controlling for comorbid Axis I and Axis II diagnoses?",
+              "answer": "Recurrent major depressive disorder (MDD).",
+              "explanation": "The abstract states that recurrent MDD tripled the likelihood of being assigned to the higher suicide risk cluster, making it the only depressive illness significantly predictive of elevated suicide risk."
+            }
+          },
+          {
+            "timestamp": "2025-09-24T14:44:23.732Z",
+            "dataset": "qa",
+            "questionId": "qa_reflects",
+            "answer": "yes",
+            "sure": true,
+            "itemId": "18842304-0",
+            "pmid": "18842304",
+            "title": "Do major depressive disorder and dysthymic disorder confer differential risk for suicide?",
+            "journal": "Journal of affective disorders",
+            "year": "2008",
+            "classification": "YES",
+            "content": {
+              "question": "Which specific depressive disorder significantly increases the likelihood of higher suicide risk, even after controlling for comorbid Axis I and Axis II diagnoses?",
+              "answer": "Recurrent major depressive disorder (MDD).",
+              "explanation": "The abstract states that recurrent MDD tripled the likelihood of being assigned to the higher suicide risk cluster, making it the only depressive illness significantly predictive of elevated suicide risk."
+            }
+          },
+          {
+            "timestamp": "2025-09-24T15:44:50.998Z",
+            "dataset": "qa",
+            "questionId": "qa_reflects",
+            "answer": "yes",
+            "sure": true,
+            "itemId": "18842304-0",
+            "pmid": "18842304",
+            "title": "Do major depressive disorder and dysthymic disorder confer differential risk for suicide?",
+            "journal": "Journal of affective disorders",
+            "year": "2008",
+            "classification": "YES",
+            "content": {
+              "question": "Which specific depressive disorder significantly increases the likelihood of higher suicide risk, even after controlling for comorbid Axis I and Axis II diagnoses?",
+              "answer": "Recurrent major depressive disorder (MDD).",
+              "explanation": "The abstract states that recurrent MDD tripled the likelihood of being assigned to the higher suicide risk cluster, making it the only depressive illness significantly predictive of elevated suicide risk."
+            }
+          },
+          {
+            "timestamp": "2025-09-25T19:36:57.512Z",
+            "dataset": "qa",
+            "questionId": "qa_reflects",
+            "answer": "yes",
+            "sure": true,
+            "itemId": "18842304-0",
+            "pmid": "18842304",
+            "title": "Do major depressive disorder and dysthymic disorder confer differential risk for suicide?",
+            "journal": "Journal of affective disorders",
+            "year": "2008",
+            "classification": "YES",
+            "content": {
+              "question": "Which specific depressive disorder significantly increases the likelihood of higher suicide risk, even after controlling for comorbid Axis I and Axis II diagnoses?",
+              "answer": "Recurrent major depressive disorder (MDD).",
+              "explanation": "The abstract states that recurrent MDD tripled the likelihood of being assigned to the higher suicide risk cluster, making it the only depressive illness significantly predictive of elevated suicide risk."
+            }
+          }
+        ]
+      },
+      "qa_quality": {
+        "counts": {
+          "yes_sure": 3,
+          "items": 1,
+          "no_sure": 2
+        },
+        "records": [
+          {
+            "timestamp": "2025-09-24T10:11:38.810Z",
+            "dataset": "qa",
+            "questionId": "qa_quality",
+            "answer": "yes",
+            "sure": true,
+            "itemId": "18661116-1",
+            "pmid": "18661116",
+            "title": "[Transcranial magnetic stimulation for comorbid depression in anorexia].",
+            "journal": "Der Nervenarzt",
+            "year": "2008",
+            "classification": "YES",
+            "content": {
+              "question": "What treatment approach could be considered for a 24-year-old anorexic patient with comorbid depression when psychopharmacotherapy is contraindicated due to poor physical condition, and what strategy might prevent relapse?",
+              "answer": "Repetitive transcranial magnetic stimulation (rTMS) with a maintenance protocol to sustain remission.",
+              "explanation": "The abstract describes rTMS as effective for treating depression in an anorexic patient when medication was contraindicated. Relapse occurred after initial cycles, but remission was sustained with a maintenance rTMS protocol."
+            }
+          },
+          {
+            "timestamp": "2025-09-24T12:34:33.781Z",
+            "dataset": "qa",
+            "questionId": "qa_quality",
+            "answer": "no",
+            "sure": true,
+            "itemId": "18842304-0",
+            "pmid": "18842304",
+            "title": "Do major depressive disorder and dysthymic disorder confer differential risk for suicide?",
+            "journal": "Journal of affective disorders",
+            "year": "2008",
+            "classification": "YES",
+            "content": {
+              "question": "Which specific depressive disorder significantly increases the likelihood of higher suicide risk, even after controlling for comorbid Axis I and Axis II diagnoses?",
+              "answer": "Recurrent major depressive disorder (MDD).",
+              "explanation": "The abstract states that recurrent MDD tripled the likelihood of being assigned to the higher suicide risk cluster, making it the only depressive illness significantly predictive of elevated suicide risk."
+            }
+          },
+          {
+            "timestamp": "2025-09-24T14:35:05.845Z",
+            "dataset": "qa",
+            "questionId": "qa_quality",
+            "answer": "yes",
+            "sure": true,
+            "itemId": "18842304-0",
+            "pmid": "18842304",
+            "title": "Do major depressive disorder and dysthymic disorder confer differential risk for suicide?",
+            "journal": "Journal of affective disorders",
+            "year": "2008",
+            "classification": "YES",
+            "content": {
+              "question": "Which specific depressive disorder significantly increases the likelihood of higher suicide risk, even after controlling for comorbid Axis I and Axis II diagnoses?",
+              "answer": "Recurrent major depressive disorder (MDD).",
+              "explanation": "The abstract states that recurrent MDD tripled the likelihood of being assigned to the higher suicide risk cluster, making it the only depressive illness significantly predictive of elevated suicide risk."
+            }
+          },
+          {
+            "timestamp": "2025-09-24T14:35:08.157Z",
+            "dataset": "qa",
+            "questionId": "qa_quality",
+            "answer": "no",
+            "sure": true,
+            "itemId": "18661116-1",
+            "pmid": "18661116",
+            "title": "Transcranial magnetic stimulation for comorbid depression in anorexia].",
+            "journal": "Der Nervenarzt",
+            "year": "2008",
+            "classification": "YES",
+            "content": {
+              "question": "What treatment approach could be considered for a 24-year-old anorexic patient with comorbid depression when psychopharmacotherapy is contraindicated due to poor physical condition, and what strategy might prevent relapse?",
+              "answer": "Repetitive transcranial magnetic stimulation (rTMS) with a maintenance protocol to sustain remission.",
+              "explanation": "The abstract describes rTMS as effective for treating depression in an anorexic patient when medication was contraindicated. Relapse occurred after initial cycles, but remission was sustained with a maintenance rTMS protocol."
+            }
+          }
+        ]
+      }
+    },
+    "compare": {},
+    "compareAudit": [],
+    "reviewedItems": {
+      "18661116-1": {
+        "qa_quality": {
+          "timestamp": "2025-09-24T14:35:08.157Z",
+          "dataset": "qa",
+          "questionId": "qa_quality",
+          "answer": "no",
+          "sure": true,
+          "itemId": "18661116-1",
+          "pmid": "18661116",
+          "title": "Transcranial magnetic stimulation for comorbid depression in anorexia].",
+          "journal": "Der Nervenarzt",
+          "year": "2008",
+          "classification": "YES",
+          "content": {
+            "question": "What treatment approach could be considered for a 24-year-old anorexic patient with comorbid depression when psychopharmacotherapy is contraindicated due to poor physical condition, and what strategy might prevent relapse?",
+            "answer": "Repetitive transcranial magnetic stimulation (rTMS) with a maintenance protocol to sustain remission.",
+            "explanation": "The abstract describes rTMS as effective for treating depression in an anorexic patient when medication was contraindicated. Relapse occurred after initial cycles, but remission was sustained with a maintenance rTMS protocol."
+          }
+        },
+        "qa_reflects": {
+          "timestamp": "2025-09-24T12:27:05.668Z",
+          "dataset": "qa",
+          "questionId": "qa_reflects",
+          "answer": "yes",
+          "sure": true,
+          "itemId": "18661116-1",
+          "pmid": "18661116",
+          "title": "Transcranial magnetic stimulation for comorbid depression in anorexia].",
+          "journal": "Der Nervenarzt",
+          "year": "2008",
+          "classification": "YES",
+          "content": {
+            "question": "What treatment approach could be considered for a 24-year-old anorexic patient with comorbid depression when psychopharmacotherapy is contraindicated due to poor physical condition, and what strategy might prevent relapse?",
+            "answer": "Repetitive transcranial magnetic stimulation (rTMS) with a maintenance protocol to sustain remission.",
+            "explanation": "The abstract describes rTMS as effective for treating depression in an anorexic patient when medication was contraindicated. Relapse occurred after initial cycles, but remission was sustained with a maintenance rTMS protocol."
+          }
+        }
+      },
+      "18710785-2": {
+        "qa_reflects": {
+          "timestamp": "2025-09-24T10:31:31.769Z",
+          "dataset": "qa",
+          "questionId": "qa_reflects",
+          "answer": "no",
+          "sure": true,
+          "itemId": "18710785-2",
+          "pmid": "18710785",
+          "title": "Association between physical illnesses and depressive symptoms requiring hospitalization in suicide victims.",
+          "journal": "Psychiatry research",
+          "year": "2008",
+          "classification": "YES",
+          "content": {
+            "question": "Which physical disease categories are associated with a lifetime history of depression in female suicide victims, and how might this differ from male suicide victims?",
+            "answer": "In females: endocrine, nervous, circulatory, genitourinary, skin, musculoskeletal, injuries/poisonings, pregnancy-related, and infectious diseases. In males: nervous, circulatory, respiratory, musculoskeletal, injuries/poisonings, and infectious diseases.",
+            "explanation": "The abstract identifies gender-specific associations between depression and physical diseases, with females showing broader comorbidity patterns, including endocrine and pregnancy-related issues, while males have narrower associations."
+          }
+        }
+      },
+      "18842304-0": {
+        "qa_quality": {
+          "timestamp": "2025-09-24T14:35:05.845Z",
+          "dataset": "qa",
+          "questionId": "qa_quality",
+          "answer": "yes",
+          "sure": true,
+          "itemId": "18842304-0",
+          "pmid": "18842304",
+          "title": "Do major depressive disorder and dysthymic disorder confer differential risk for suicide?",
+          "journal": "Journal of affective disorders",
+          "year": "2008",
+          "classification": "YES",
+          "content": {
+            "question": "Which specific depressive disorder significantly increases the likelihood of higher suicide risk, even after controlling for comorbid Axis I and Axis II diagnoses?",
+            "answer": "Recurrent major depressive disorder (MDD).",
+            "explanation": "The abstract states that recurrent MDD tripled the likelihood of being assigned to the higher suicide risk cluster, making it the only depressive illness significantly predictive of elevated suicide risk."
+          }
+        },
+        "qa_reflects": {
+          "timestamp": "2025-09-25T19:36:57.512Z",
+          "dataset": "qa",
+          "questionId": "qa_reflects",
+          "answer": "yes",
+          "sure": true,
+          "itemId": "18842304-0",
+          "pmid": "18842304",
+          "title": "Do major depressive disorder and dysthymic disorder confer differential risk for suicide?",
+          "journal": "Journal of affective disorders",
+          "year": "2008",
+          "classification": "YES",
+          "content": {
+            "question": "Which specific depressive disorder significantly increases the likelihood of higher suicide risk, even after controlling for comorbid Axis I and Axis II diagnoses?",
+            "answer": "Recurrent major depressive disorder (MDD).",
+            "explanation": "The abstract states that recurrent MDD tripled the likelihood of being assigned to the higher suicide risk cluster, making it the only depressive illness significantly predictive of elevated suicide risk."
+          }
+        }
+      }
+    }
+  },
+  "extracted": {
+    "responses": {
+      "extracted_accuracy": {
+        "counts": {
+          "yes_sure": 5,
+          "items": 1,
+          "yes_unsure": 1
+        },
+        "records": [
+          {
+            "timestamp": "2025-09-24T11:24:56.531Z",
+            "dataset": "extracted",
+            "questionId": "extracted_accuracy",
+            "answer": "yes",
+            "sure": true,
+            "itemId": "38090695-0",
+            "pmid": "38090695",
+            "title": "Overcoming treatment gaps in the management of depression with non-pharmacological adjunctive strategies.",
+            "journal": "Frontiers in psychiatry",
+            "year": "",
+            "classification": "YES",
+            "content": {
+              "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+              "fields": {
+                "population": [
+                  "",
+                  "General population, as the abstract mentions that depression affects 4.4% of the world's population, not specifying a particular demographic.",
+                  "",
+                  "The abstract states that depression impacts 4.4% of the global population and does not narrow its focus to a specific demographic group (e.g., adolescents, older adults). Therefore, I concluded that the population is general.",
+                  "If the abstract had omitted the population, interventions, or outcomes, I would explicitly note these gaps. However, sufficient information on these aspects was provided."
+                ],
+                "symptoms": [],
+                "riskFactors": [
+                  "",
+                  "Treatment gaps in depression caused by side effects, partial remission, treatment resistance, and limited availability of psychotherapy.",
+                  "",
+                  "The article discusses issues contributing to the treatment gap in depression, such as side effects from medications, difficulties achieving remission, treatment resistance, and limited access to psychotherapy. These are indirect causes or barriers that exacerbate depression."
+                ],
+                "interventions": [
+                  "",
+                  "Existing therapies can be optimized by combining pharmacological treatments with non-pharmaceutical methods such as:",
+                  "Low-intensity psychological interventions",
+                  "Improvements in treatment effectiveness.",
+                  "Reduction in the treatment gap through prevention and awareness efforts.",
+                  "",
+                  "Non-pharmaceutical interventions are highlighted, including low-intensity psychological interventions, online tools, and lifestyle changes. The abstract emphasizes combining these methods with existing pharmacological treatments to enhance outcomes. Prevention strategies, like mental health awareness programs and life skill education, are also mentioned.",
+                  "The abstract suggests that the interventions aim to improve the overall effectiveness of treatments and address the treatment gap. Additionally, prevention strategies aim to promote positive mental health and reduce undiagnosed cases."
+                ],
+                "outcomes": [
+                  "",
+                  ""
+                ],
+                "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+              },
+              "rawSections": [
+                {
+                  "heading": "Summary",
+                  "bullets": [
+                    "Summary:",
+                    "Main Findings:",
+                    "1. Causes/Triggers/Risk Factors:",
+                    "Treatment gaps in depression caused by side effects, partial remission, treatment resistance, and limited availability of psychotherapy.",
+                    "2. Population in Focus:",
+                    "General population, as the abstract mentions that depression affects 4.4% of the world's population, not specifying a particular demographic.",
+                    "3. Interventions/Treatments:",
+                    "Existing therapies can be optimized by combining pharmacological treatments with non-pharmaceutical methods such as:",
+                    "Low-intensity psychological interventions",
+                    "Online self-help tools",
+                    "Lifestyle medicine",
+                    "Prevention strategies include awareness programs and teaching life skills for maintaining mental health.",
+                    "4. Outcomes/Effects Measured:",
+                    "Improvements in treatment effectiveness.",
+                    "Reduction in the treatment gap through prevention and awareness efforts.",
+                    "--",
+                    "Chain-of-Thought Reasoning:",
+                    "1. Identify Causes/Triggers/Risk Factors:",
+                    "The article discusses issues contributing to the treatment gap in depression, such as side effects from medications, difficulties achieving remission, treatment resistance, and limited access to psychotherapy. These are indirect causes or barriers that exacerbate depression.",
+                    "2. Determine Population in Focus:",
+                    "The abstract states that depression impacts 4.4% of the global population and does not narrow its focus to a specific demographic group (e.g., adolescents, older adults). Therefore, I concluded that the population is general.",
+                    "3. Extract Information on Interventions/Treatments:",
+                    "Non-pharmaceutical interventions are highlighted, including low-intensity psychological interventions, online tools, and lifestyle changes. The abstract emphasizes combining these methods with existing pharmacological treatments to enhance outcomes. Prevention strategies, like mental health awareness programs and life skill education, are also mentioned.",
+                    "4. Find Outcomes/Evidence Mentioned:",
+                    "The abstract suggests that the interventions aim to improve the overall effectiveness of treatments and address the treatment gap. Additionally, prevention strategies aim to promote positive mental health and reduce undiagnosed cases.",
+                    "5. Omission Handling:",
+                    "If the abstract had omitted the population, interventions, or outcomes, I would explicitly note these gaps. However, sufficient information on these aspects was provided.",
+                    "By synthesizing all this information, the structured summary captures the essence of the abstract without assuming data not explicitly stated."
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "timestamp": "2025-09-24T11:24:59.554Z",
+            "dataset": "extracted",
+            "questionId": "extracted_accuracy",
+            "answer": "yes",
+            "sure": true,
+            "itemId": "32387133-1",
+            "pmid": "32387133",
+            "title": "N<sup>6</sup>-Methyladenosine Modification of Fatty Acid Amide Hydrolase Messenger RNA in Circular RNA STAG1-Regulated Astrocyte Dysfunction and Depressive-like Behaviors.",
+            "journal": "Biological psychiatry",
+            "year": "2020",
+            "classification": "YES",
+            "content": {
+              "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+              "fields": {
+                "population": [
+                  "",
+                  "mice subjected to chronic unpredictable stress (animal model for MDD) and humans diagnosed with MDD (via peripheral blood analysis).",
+                  "Identify the population studied.",
+                  "",
+                  "2. Humans diagnosed with MDD, where peripheral blood samples were analyzed to confirm decreased circSTAG1 levels."
+                ],
+                "symptoms": [],
+                "riskFactors": [
+                  "",
+                  "Parse the abstract for causes or triggers of MDD.",
+                  "The abstract describes decreased levels of circSTAG1 in chronic stress-exposed mouse brains and human blood as a contributing factor to depression. Chronic unpredictable stress and corticosterone are identified as biochemical triggers leading to astrocyte dysfunction, which is tied to depressive-like behaviors. Dysregulation of m<sup6</supA methylation is presented as another mechanistic contributor."
+                ],
+                "interventions": [
+                  "",
+                  "Review for interventions or treatments.",
+                  "Overexpression of circSTAG1 (via lentiviral microinjection into the mouse hippocampus) is explicitly described as an intervention. The therapeutic mechanism involves altering m<sup6</supA methylation by interacting with ALKBH5, which regulates FAAH mRNA degradation and subsequent astrocyte health.",
+                  "The abstract does not specify additional demographics, such as age or any other specific human subgroup in the study of MDD. Furthermore, no mention of standard pharmacological treatments or comprehensive human clinical trials is noted."
+                ],
+                "outcomes": [
+                  "",
+                  "Positive effects include attenuated depressive-like behaviors (as measured by sucrose preference, forced swim, and tail suspension tests) and reduced astrocyte dysfunction/loss.",
+                  "Examine the measured outcomes.",
+                  "Behavioral outcomes in mice include improvements in sucrose preference, forced swim, and tail suspension tests—all standard measures of depression-like behaviors.",
+                  "Cellular outcomes involve attenuated astrocyte dysfunction and loss.",
+                  "Molecular outcomes include increased m<sup6</supA methylation, decreased FAAH mRNA levels, and improved astrocyte viability in vitro."
+                ],
+                "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+              },
+              "rawSections": [
+                {
+                  "heading": "Summary",
+                  "bullets": [
+                    "Structured Summary:",
+                    "1. Causes, Triggers, or Risk Factors:",
+                    "Decreased levels of circular RNA STAG1 (circSTAG1) in the hippocampus and peripheral blood are linked to major depressive disorder (MDD).",
+                    "Chronic stress and corticosterone-induced astrocyte dysfunction are key contributors to depressive-like behaviors.",
+                    "Dysregulated m<sup6</supA methylation, particularly involving the degradation of FAAH messenger RNA in astrocytes, is implicated in MDD mechanisms.",
+                    "2. Population/Demographic:",
+                    "The study focuses on two populations: mice subjected to chronic unpredictable stress (animal model for MDD) and humans diagnosed with MDD (via peripheral blood analysis).",
+                    "3. Interventions/Treatments:",
+                    "Overexpression of circSTAG1 through lentiviral microinjection into mouse hippocampus reduced depressive-like behaviors and astrocyte dysfunction.",
+                    "circSTAG1 appears to target m<sup6</supA methylation pathways by interacting with ALKBH5 (an RNA demethylase), influencing FAAH mRNA stability and astrocyte viability.",
+                    "4. Outcomes/Effects:",
+                    "Positive effects include attenuated depressive-like behaviors (as measured by sucrose preference, forced swim, and tail suspension tests) and reduced astrocyte dysfunction/loss.",
+                    "Overexpression of circSTAG1 restored astrocyte health and altered m<sup6</supA methylation, providing evidence for its therapeutic potential.",
+                    "--",
+                    "Chain of Thought Reasoning:",
+                    "Step 1: Parse the abstract for causes or triggers of MDD.",
+                    "The abstract describes decreased levels of circSTAG1 in chronic stress-exposed mouse brains and human blood as a contributing factor to depression. Chronic unpredictable stress and corticosterone are identified as biochemical triggers leading to astrocyte dysfunction, which is tied to depressive-like behaviors. Dysregulation of m<sup6</supA methylation is presented as another mechanistic contributor.",
+                    "Step 2: Identify the population studied.",
+                    "The abstract mentions two populations:",
+                    "1. Mice exposed to chronic unpredictable stress, a well-established animal model for inducing depressive-like behaviors.",
+                    "2. Humans diagnosed with MDD, where peripheral blood samples were analyzed to confirm decreased circSTAG1 levels.",
+                    "Step 3: Review for interventions or treatments.",
+                    "Overexpression of circSTAG1 (via lentiviral microinjection into the mouse hippocampus) is explicitly described as an intervention. The therapeutic mechanism involves altering m<sup6</supA methylation by interacting with ALKBH5, which regulates FAAH mRNA degradation and subsequent astrocyte health.",
+                    "Step 4: Examine the measured outcomes.",
+                    "Behavioral outcomes in mice include improvements in sucrose preference, forced swim, and tail suspension tests—all standard measures of depression-like behaviors.",
+                    "Cellular outcomes involve attenuated astrocyte dysfunction and loss.",
+                    "Molecular outcomes include increased m<sup6</supA methylation, decreased FAAH mRNA levels, and improved astrocyte viability in vitro.",
+                    "Step 5: Compile the findings into a structured summary.",
+                    "Synthesizing from the above, the abstract reveals circSTAG1 as a key player in suppressing depressive-like behaviors and astrocyte dysfunction, highlights its therapeutic potential, and ties mechanistic insights to m<sup6</supA methylation.",
+                    "Step 6: Address unmentioned components.",
+                    "The abstract does not specify additional demographics, such as age or any other specific human subgroup in the study of MDD. Furthermore, no mention of standard pharmacological treatments or comprehensive human clinical trials is noted."
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "timestamp": "2025-09-24T14:46:09.317Z",
+            "dataset": "extracted",
+            "questionId": "extracted_accuracy",
+            "answer": "yes",
+            "sure": true,
+            "itemId": "38090695-0",
+            "pmid": "38090695",
+            "title": "Overcoming treatment gaps in the management of depression with non-pharmacological adjunctive strategies.",
+            "journal": "Frontiers in psychiatry",
+            "year": "",
+            "classification": "YES",
+            "content": {
+              "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+              "fields": {
+                "population": [
+                  "",
+                  "General population, as the abstract mentions that depression affects 4.4% of the world's population, not specifying a particular demographic.",
+                  "",
+                  "The abstract states that depression impacts 4.4% of the global population and does not narrow its focus to a specific demographic group (e.g., adolescents, older adults). Therefore, I concluded that the population is general.",
+                  "If the abstract had omitted the population, interventions, or outcomes, I would explicitly note these gaps. However, sufficient information on these aspects was provided."
+                ],
+                "symptoms": [],
+                "riskFactors": [
+                  "",
+                  "Treatment gaps in depression caused by side effects, partial remission, treatment resistance, and limited availability of psychotherapy.",
+                  "",
+                  "The article discusses issues contributing to the treatment gap in depression, such as side effects from medications, difficulties achieving remission, treatment resistance, and limited access to psychotherapy. These are indirect causes or barriers that exacerbate depression."
+                ],
+                "interventions": [
+                  "",
+                  "Existing therapies can be optimized by combining pharmacological treatments with non-pharmaceutical methods such as:",
+                  "Low-intensity psychological interventions",
+                  "Improvements in treatment effectiveness.",
+                  "Reduction in the treatment gap through prevention and awareness efforts.",
+                  "",
+                  "Non-pharmaceutical interventions are highlighted, including low-intensity psychological interventions, online tools, and lifestyle changes. The abstract emphasizes combining these methods with existing pharmacological treatments to enhance outcomes. Prevention strategies, like mental health awareness programs and life skill education, are also mentioned.",
+                  "The abstract suggests that the interventions aim to improve the overall effectiveness of treatments and address the treatment gap. Additionally, prevention strategies aim to promote positive mental health and reduce undiagnosed cases."
+                ],
+                "outcomes": [
+                  "",
+                  ""
+                ],
+                "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+              },
+              "rawSections": [
+                {
+                  "heading": "Summary",
+                  "bullets": [
+                    "Summary:",
+                    "Main Findings:",
+                    "1. Causes/Triggers/Risk Factors:",
+                    "Treatment gaps in depression caused by side effects, partial remission, treatment resistance, and limited availability of psychotherapy.",
+                    "2. Population in Focus:",
+                    "General population, as the abstract mentions that depression affects 4.4% of the world's population, not specifying a particular demographic.",
+                    "3. Interventions/Treatments:",
+                    "Existing therapies can be optimized by combining pharmacological treatments with non-pharmaceutical methods such as:",
+                    "Low-intensity psychological interventions",
+                    "Online self-help tools",
+                    "Lifestyle medicine",
+                    "Prevention strategies include awareness programs and teaching life skills for maintaining mental health.",
+                    "4. Outcomes/Effects Measured:",
+                    "Improvements in treatment effectiveness.",
+                    "Reduction in the treatment gap through prevention and awareness efforts.",
+                    "--",
+                    "Chain-of-Thought Reasoning:",
+                    "1. Identify Causes/Triggers/Risk Factors:",
+                    "The article discusses issues contributing to the treatment gap in depression, such as side effects from medications, difficulties achieving remission, treatment resistance, and limited access to psychotherapy. These are indirect causes or barriers that exacerbate depression.",
+                    "2. Determine Population in Focus:",
+                    "The abstract states that depression impacts 4.4% of the global population and does not narrow its focus to a specific demographic group (e.g., adolescents, older adults). Therefore, I concluded that the population is general.",
+                    "3. Extract Information on Interventions/Treatments:",
+                    "Non-pharmaceutical interventions are highlighted, including low-intensity psychological interventions, online tools, and lifestyle changes. The abstract emphasizes combining these methods with existing pharmacological treatments to enhance outcomes. Prevention strategies, like mental health awareness programs and life skill education, are also mentioned.",
+                    "4. Find Outcomes/Evidence Mentioned:",
+                    "The abstract suggests that the interventions aim to improve the overall effectiveness of treatments and address the treatment gap. Additionally, prevention strategies aim to promote positive mental health and reduce undiagnosed cases.",
+                    "5. Omission Handling:",
+                    "If the abstract had omitted the population, interventions, or outcomes, I would explicitly note these gaps. However, sufficient information on these aspects was provided.",
+                    "By synthesizing all this information, the structured summary captures the essence of the abstract without assuming data not explicitly stated."
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "timestamp": "2025-09-25T19:37:47.754Z",
+            "dataset": "extracted",
+            "questionId": "extracted_accuracy",
+            "answer": "yes",
+            "sure": false,
+            "itemId": "38090695-0",
+            "pmid": "38090695",
+            "title": "Overcoming treatment gaps in the management of depression with non-pharmacological adjunctive strategies.",
+            "journal": "Frontiers in psychiatry",
+            "year": "",
+            "classification": "YES",
+            "content": {
+              "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+              "fields": {
+                "population": [
+                  "",
+                  "General population, as the abstract mentions that depression affects 4.4% of the world's population, not specifying a particular demographic.",
+                  "",
+                  "The abstract states that depression impacts 4.4% of the global population and does not narrow its focus to a specific demographic group (e.g., adolescents, older adults). Therefore, I concluded that the population is general.",
+                  "If the abstract had omitted the population, interventions, or outcomes, I would explicitly note these gaps. However, sufficient information on these aspects was provided."
+                ],
+                "symptoms": [],
+                "riskFactors": [
+                  "",
+                  "Treatment gaps in depression caused by side effects, partial remission, treatment resistance, and limited availability of psychotherapy.",
+                  "",
+                  "The article discusses issues contributing to the treatment gap in depression, such as side effects from medications, difficulties achieving remission, treatment resistance, and limited access to psychotherapy. These are indirect causes or barriers that exacerbate depression."
+                ],
+                "interventions": [
+                  "",
+                  "Existing therapies can be optimized by combining pharmacological treatments with non-pharmaceutical methods such as:",
+                  "Low-intensity psychological interventions",
+                  "Improvements in treatment effectiveness.",
+                  "Reduction in the treatment gap through prevention and awareness efforts.",
+                  "",
+                  "Non-pharmaceutical interventions are highlighted, including low-intensity psychological interventions, online tools, and lifestyle changes. The abstract emphasizes combining these methods with existing pharmacological treatments to enhance outcomes. Prevention strategies, like mental health awareness programs and life skill education, are also mentioned.",
+                  "The abstract suggests that the interventions aim to improve the overall effectiveness of treatments and address the treatment gap. Additionally, prevention strategies aim to promote positive mental health and reduce undiagnosed cases."
+                ],
+                "outcomes": [
+                  "",
+                  ""
+                ],
+                "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+              },
+              "rawSections": [
+                {
+                  "heading": "Summary",
+                  "bullets": [
+                    "Summary:",
+                    "Main Findings:",
+                    "1. Causes/Triggers/Risk Factors:",
+                    "Treatment gaps in depression caused by side effects, partial remission, treatment resistance, and limited availability of psychotherapy.",
+                    "2. Population in Focus:",
+                    "General population, as the abstract mentions that depression affects 4.4% of the world's population, not specifying a particular demographic.",
+                    "3. Interventions/Treatments:",
+                    "Existing therapies can be optimized by combining pharmacological treatments with non-pharmaceutical methods such as:",
+                    "Low-intensity psychological interventions",
+                    "Online self-help tools",
+                    "Lifestyle medicine",
+                    "Prevention strategies include awareness programs and teaching life skills for maintaining mental health.",
+                    "4. Outcomes/Effects Measured:",
+                    "Improvements in treatment effectiveness.",
+                    "Reduction in the treatment gap through prevention and awareness efforts.",
+                    "--",
+                    "Chain-of-Thought Reasoning:",
+                    "1. Identify Causes/Triggers/Risk Factors:",
+                    "The article discusses issues contributing to the treatment gap in depression, such as side effects from medications, difficulties achieving remission, treatment resistance, and limited access to psychotherapy. These are indirect causes or barriers that exacerbate depression.",
+                    "2. Determine Population in Focus:",
+                    "The abstract states that depression impacts 4.4% of the global population and does not narrow its focus to a specific demographic group (e.g., adolescents, older adults). Therefore, I concluded that the population is general.",
+                    "3. Extract Information on Interventions/Treatments:",
+                    "Non-pharmaceutical interventions are highlighted, including low-intensity psychological interventions, online tools, and lifestyle changes. The abstract emphasizes combining these methods with existing pharmacological treatments to enhance outcomes. Prevention strategies, like mental health awareness programs and life skill education, are also mentioned.",
+                    "4. Find Outcomes/Evidence Mentioned:",
+                    "The abstract suggests that the interventions aim to improve the overall effectiveness of treatments and address the treatment gap. Additionally, prevention strategies aim to promote positive mental health and reduce undiagnosed cases.",
+                    "5. Omission Handling:",
+                    "If the abstract had omitted the population, interventions, or outcomes, I would explicitly note these gaps. However, sufficient information on these aspects was provided.",
+                    "By synthesizing all this information, the structured summary captures the essence of the abstract without assuming data not explicitly stated."
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "timestamp": "2026-02-09T18:49:33.992Z",
+            "reviewer": "anonymous",
+            "dataset": "extracted",
+            "questionId": "extracted_accuracy",
+            "answer": "yes",
+            "sure": true,
+            "itemId": "38090695-0",
+            "pmid": "38090695",
+            "title": "Overcoming treatment gaps in the management of depression with non-pharmacological adjunctive strategies.",
+            "journal": "Frontiers in psychiatry",
+            "year": "",
+            "classification": "YES",
+            "content": {
+              "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+              "fields": {
+                "population": [
+                  "",
+                  "General population, as the abstract mentions that depression affects 4.4% of the world's population, not specifying a particular demographic.",
+                  "",
+                  "The abstract states that depression impacts 4.4% of the global population and does not narrow its focus to a specific demographic group (e.g., adolescents, older adults). Therefore, I concluded that the population is general.",
+                  "If the abstract had omitted the population, interventions, or outcomes, I would explicitly note these gaps. However, sufficient information on these aspects was provided."
+                ],
+                "symptoms": [],
+                "riskFactors": [
+                  "",
+                  "Treatment gaps in depression caused by side effects, partial remission, treatment resistance, and limited availability of psychotherapy.",
+                  "",
+                  "The article discusses issues contributing to the treatment gap in depression, such as side effects from medications, difficulties achieving remission, treatment resistance, and limited access to psychotherapy. These are indirect causes or barriers that exacerbate depression."
+                ],
+                "interventions": [
+                  "",
+                  "Existing therapies can be optimized by combining pharmacological treatments with non-pharmaceutical methods such as:",
+                  "Low-intensity psychological interventions",
+                  "Improvements in treatment effectiveness.",
+                  "Reduction in the treatment gap through prevention and awareness efforts.",
+                  "",
+                  "Non-pharmaceutical interventions are highlighted, including low-intensity psychological interventions, online tools, and lifestyle changes. The abstract emphasizes combining these methods with existing pharmacological treatments to enhance outcomes. Prevention strategies, like mental health awareness programs and life skill education, are also mentioned.",
+                  "The abstract suggests that the interventions aim to improve the overall effectiveness of treatments and address the treatment gap. Additionally, prevention strategies aim to promote positive mental health and reduce undiagnosed cases."
+                ],
+                "outcomes": [
+                  "",
+                  ""
+                ],
+                "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+              },
+              "rawSections": [
+                {
+                  "heading": "Summary",
+                  "bullets": [
+                    "Summary:",
+                    "Main Findings:",
+                    "1. Causes/Triggers/Risk Factors:",
+                    "Treatment gaps in depression caused by side effects, partial remission, treatment resistance, and limited availability of psychotherapy.",
+                    "2. Population in Focus:",
+                    "General population, as the abstract mentions that depression affects 4.4% of the world's population, not specifying a particular demographic.",
+                    "3. Interventions/Treatments:",
+                    "Existing therapies can be optimized by combining pharmacological treatments with non-pharmaceutical methods such as:",
+                    "Low-intensity psychological interventions",
+                    "Online self-help tools",
+                    "Lifestyle medicine",
+                    "Prevention strategies include awareness programs and teaching life skills for maintaining mental health.",
+                    "4. Outcomes/Effects Measured:",
+                    "Improvements in treatment effectiveness.",
+                    "Reduction in the treatment gap through prevention and awareness efforts.",
+                    "--",
+                    "Chain-of-Thought Reasoning:",
+                    "1. Identify Causes/Triggers/Risk Factors:",
+                    "The article discusses issues contributing to the treatment gap in depression, such as side effects from medications, difficulties achieving remission, treatment resistance, and limited access to psychotherapy. These are indirect causes or barriers that exacerbate depression.",
+                    "2. Determine Population in Focus:",
+                    "The abstract states that depression impacts 4.4% of the global population and does not narrow its focus to a specific demographic group (e.g., adolescents, older adults). Therefore, I concluded that the population is general.",
+                    "3. Extract Information on Interventions/Treatments:",
+                    "Non-pharmaceutical interventions are highlighted, including low-intensity psychological interventions, online tools, and lifestyle changes. The abstract emphasizes combining these methods with existing pharmacological treatments to enhance outcomes. Prevention strategies, like mental health awareness programs and life skill education, are also mentioned.",
+                    "4. Find Outcomes/Evidence Mentioned:",
+                    "The abstract suggests that the interventions aim to improve the overall effectiveness of treatments and address the treatment gap. Additionally, prevention strategies aim to promote positive mental health and reduce undiagnosed cases.",
+                    "5. Omission Handling:",
+                    "If the abstract had omitted the population, interventions, or outcomes, I would explicitly note these gaps. However, sufficient information on these aspects was provided.",
+                    "By synthesizing all this information, the structured summary captures the essence of the abstract without assuming data not explicitly stated."
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "compare": {},
+    "compareAudit": [],
+    "reviewedItems": {
+      "38090695-0": {
+        "extracted_accuracy": {
+          "timestamp": "2026-02-09T18:49:33.992Z",
+          "reviewer": "anonymous",
+          "dataset": "extracted",
+          "questionId": "extracted_accuracy",
+          "answer": "yes",
+          "sure": true,
+          "itemId": "38090695-0",
+          "pmid": "38090695",
+          "title": "Overcoming treatment gaps in the management of depression with non-pharmacological adjunctive strategies.",
+          "journal": "Frontiers in psychiatry",
+          "year": "",
+          "classification": "YES",
+          "content": {
+            "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+            "fields": {
+              "population": [
+                "",
+                "General population, as the abstract mentions that depression affects 4.4% of the world's population, not specifying a particular demographic.",
+                "",
+                "The abstract states that depression impacts 4.4% of the global population and does not narrow its focus to a specific demographic group (e.g., adolescents, older adults). Therefore, I concluded that the population is general.",
+                "If the abstract had omitted the population, interventions, or outcomes, I would explicitly note these gaps. However, sufficient information on these aspects was provided."
+              ],
+              "symptoms": [],
+              "riskFactors": [
+                "",
+                "Treatment gaps in depression caused by side effects, partial remission, treatment resistance, and limited availability of psychotherapy.",
+                "",
+                "The article discusses issues contributing to the treatment gap in depression, such as side effects from medications, difficulties achieving remission, treatment resistance, and limited access to psychotherapy. These are indirect causes or barriers that exacerbate depression."
+              ],
+              "interventions": [
+                "",
+                "Existing therapies can be optimized by combining pharmacological treatments with non-pharmaceutical methods such as:",
+                "Low-intensity psychological interventions",
+                "Improvements in treatment effectiveness.",
+                "Reduction in the treatment gap through prevention and awareness efforts.",
+                "",
+                "Non-pharmaceutical interventions are highlighted, including low-intensity psychological interventions, online tools, and lifestyle changes. The abstract emphasizes combining these methods with existing pharmacological treatments to enhance outcomes. Prevention strategies, like mental health awareness programs and life skill education, are also mentioned.",
+                "The abstract suggests that the interventions aim to improve the overall effectiveness of treatments and address the treatment gap. Additionally, prevention strategies aim to promote positive mental health and reduce undiagnosed cases."
+              ],
+              "outcomes": [
+                "",
+                ""
+              ],
+              "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+            },
+            "rawSections": [
+              {
+                "heading": "Summary",
+                "bullets": [
+                  "Summary:",
+                  "Main Findings:",
+                  "1. Causes/Triggers/Risk Factors:",
+                  "Treatment gaps in depression caused by side effects, partial remission, treatment resistance, and limited availability of psychotherapy.",
+                  "2. Population in Focus:",
+                  "General population, as the abstract mentions that depression affects 4.4% of the world's population, not specifying a particular demographic.",
+                  "3. Interventions/Treatments:",
+                  "Existing therapies can be optimized by combining pharmacological treatments with non-pharmaceutical methods such as:",
+                  "Low-intensity psychological interventions",
+                  "Online self-help tools",
+                  "Lifestyle medicine",
+                  "Prevention strategies include awareness programs and teaching life skills for maintaining mental health.",
+                  "4. Outcomes/Effects Measured:",
+                  "Improvements in treatment effectiveness.",
+                  "Reduction in the treatment gap through prevention and awareness efforts.",
+                  "--",
+                  "Chain-of-Thought Reasoning:",
+                  "1. Identify Causes/Triggers/Risk Factors:",
+                  "The article discusses issues contributing to the treatment gap in depression, such as side effects from medications, difficulties achieving remission, treatment resistance, and limited access to psychotherapy. These are indirect causes or barriers that exacerbate depression.",
+                  "2. Determine Population in Focus:",
+                  "The abstract states that depression impacts 4.4% of the global population and does not narrow its focus to a specific demographic group (e.g., adolescents, older adults). Therefore, I concluded that the population is general.",
+                  "3. Extract Information on Interventions/Treatments:",
+                  "Non-pharmaceutical interventions are highlighted, including low-intensity psychological interventions, online tools, and lifestyle changes. The abstract emphasizes combining these methods with existing pharmacological treatments to enhance outcomes. Prevention strategies, like mental health awareness programs and life skill education, are also mentioned.",
+                  "4. Find Outcomes/Evidence Mentioned:",
+                  "The abstract suggests that the interventions aim to improve the overall effectiveness of treatments and address the treatment gap. Additionally, prevention strategies aim to promote positive mental health and reduce undiagnosed cases.",
+                  "5. Omission Handling:",
+                  "If the abstract had omitted the population, interventions, or outcomes, I would explicitly note these gaps. However, sufficient information on these aspects was provided.",
+                  "By synthesizing all this information, the structured summary captures the essence of the abstract without assuming data not explicitly stated."
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "32387133-1": {
+        "extracted_accuracy": {
+          "timestamp": "2025-09-24T11:24:59.554Z",
+          "dataset": "extracted",
+          "questionId": "extracted_accuracy",
+          "answer": "yes",
+          "sure": true,
+          "itemId": "32387133-1",
+          "pmid": "32387133",
+          "title": "N<sup>6</sup>-Methyladenosine Modification of Fatty Acid Amide Hydrolase Messenger RNA in Circular RNA STAG1-Regulated Astrocyte Dysfunction and Depressive-like Behaviors.",
+          "journal": "Biological psychiatry",
+          "year": "2020",
+          "classification": "YES",
+          "content": {
+            "summary": "population:  | risk Factors:  | interventions:  | outcomes: ",
+            "fields": {
+              "population": [
+                "",
+                "mice subjected to chronic unpredictable stress (animal model for MDD) and humans diagnosed with MDD (via peripheral blood analysis).",
+                "Identify the population studied.",
+                "",
+                "2. Humans diagnosed with MDD, where peripheral blood samples were analyzed to confirm decreased circSTAG1 levels."
+              ],
+              "symptoms": [],
+              "riskFactors": [
+                "",
+                "Parse the abstract for causes or triggers of MDD.",
+                "The abstract describes decreased levels of circSTAG1 in chronic stress-exposed mouse brains and human blood as a contributing factor to depression. Chronic unpredictable stress and corticosterone are identified as biochemical triggers leading to astrocyte dysfunction, which is tied to depressive-like behaviors. Dysregulation of m<sup6</supA methylation is presented as another mechanistic contributor."
+              ],
+              "interventions": [
+                "",
+                "Review for interventions or treatments.",
+                "Overexpression of circSTAG1 (via lentiviral microinjection into the mouse hippocampus) is explicitly described as an intervention. The therapeutic mechanism involves altering m<sup6</supA methylation by interacting with ALKBH5, which regulates FAAH mRNA degradation and subsequent astrocyte health.",
+                "The abstract does not specify additional demographics, such as age or any other specific human subgroup in the study of MDD. Furthermore, no mention of standard pharmacological treatments or comprehensive human clinical trials is noted."
+              ],
+              "outcomes": [
+                "",
+                "Positive effects include attenuated depressive-like behaviors (as measured by sucrose preference, forced swim, and tail suspension tests) and reduced astrocyte dysfunction/loss.",
+                "Examine the measured outcomes.",
+                "Behavioral outcomes in mice include improvements in sucrose preference, forced swim, and tail suspension tests—all standard measures of depression-like behaviors.",
+                "Cellular outcomes involve attenuated astrocyte dysfunction and loss.",
+                "Molecular outcomes include increased m<sup6</supA methylation, decreased FAAH mRNA levels, and improved astrocyte viability in vitro."
+              ],
+              "summaryFallback": "population:  | risk Factors:  | interventions:  | outcomes: "
+            },
+            "rawSections": [
+              {
+                "heading": "Summary",
+                "bullets": [
+                  "Structured Summary:",
+                  "1. Causes, Triggers, or Risk Factors:",
+                  "Decreased levels of circular RNA STAG1 (circSTAG1) in the hippocampus and peripheral blood are linked to major depressive disorder (MDD).",
+                  "Chronic stress and corticosterone-induced astrocyte dysfunction are key contributors to depressive-like behaviors.",
+                  "Dysregulated m<sup6</supA methylation, particularly involving the degradation of FAAH messenger RNA in astrocytes, is implicated in MDD mechanisms.",
+                  "2. Population/Demographic:",
+                  "The study focuses on two populations: mice subjected to chronic unpredictable stress (animal model for MDD) and humans diagnosed with MDD (via peripheral blood analysis).",
+                  "3. Interventions/Treatments:",
+                  "Overexpression of circSTAG1 through lentiviral microinjection into mouse hippocampus reduced depressive-like behaviors and astrocyte dysfunction.",
+                  "circSTAG1 appears to target m<sup6</supA methylation pathways by interacting with ALKBH5 (an RNA demethylase), influencing FAAH mRNA stability and astrocyte viability.",
+                  "4. Outcomes/Effects:",
+                  "Positive effects include attenuated depressive-like behaviors (as measured by sucrose preference, forced swim, and tail suspension tests) and reduced astrocyte dysfunction/loss.",
+                  "Overexpression of circSTAG1 restored astrocyte health and altered m<sup6</supA methylation, providing evidence for its therapeutic potential.",
+                  "--",
+                  "Chain of Thought Reasoning:",
+                  "Step 1: Parse the abstract for causes or triggers of MDD.",
+                  "The abstract describes decreased levels of circSTAG1 in chronic stress-exposed mouse brains and human blood as a contributing factor to depression. Chronic unpredictable stress and corticosterone are identified as biochemical triggers leading to astrocyte dysfunction, which is tied to depressive-like behaviors. Dysregulation of m<sup6</supA methylation is presented as another mechanistic contributor.",
+                  "Step 2: Identify the population studied.",
+                  "The abstract mentions two populations:",
+                  "1. Mice exposed to chronic unpredictable stress, a well-established animal model for inducing depressive-like behaviors.",
+                  "2. Humans diagnosed with MDD, where peripheral blood samples were analyzed to confirm decreased circSTAG1 levels.",
+                  "Step 3: Review for interventions or treatments.",
+                  "Overexpression of circSTAG1 (via lentiviral microinjection into the mouse hippocampus) is explicitly described as an intervention. The therapeutic mechanism involves altering m<sup6</supA methylation by interacting with ALKBH5, which regulates FAAH mRNA degradation and subsequent astrocyte health.",
+                  "Step 4: Examine the measured outcomes.",
+                  "Behavioral outcomes in mice include improvements in sucrose preference, forced swim, and tail suspension tests—all standard measures of depression-like behaviors.",
+                  "Cellular outcomes involve attenuated astrocyte dysfunction and loss.",
+                  "Molecular outcomes include increased m<sup6</supA methylation, decreased FAAH mRNA levels, and improved astrocyte viability in vitro.",
+                  "Step 5: Compile the findings into a structured summary.",
+                  "Synthesizing from the above, the abstract reveals circSTAG1 as a key player in suppressing depressive-like behaviors and astrocyte dysfunction, highlights its therapeutic potential, and ties mechanistic insights to m<sup6</supA methylation.",
+                  "Step 6: Address unmentioned components.",
+                  "The abstract does not specify additional demographics, such as age or any other specific human subgroup in the study of MDD. Furthermore, no mention of standard pharmacological treatments or comprehensive human clinical trials is noted."
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
