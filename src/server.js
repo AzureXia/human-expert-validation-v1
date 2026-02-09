@@ -775,7 +775,8 @@ function aggregateSummary(datasetKey, reviewer = 'anonymous') {
   };
 
   for (const questionId of Object.keys(store.responses || {})) {
-    const latest = latestRecordsForQuestion(questionId);
+    const latest = latestRecordsForQuestion(questionId)
+      .sort((a, b) => String(a.timestamp || '').localeCompare(String(b.timestamp || '')));
     const counts = latest.reduce((acc, rec) => {
       const key = `${rec.answer}_${rec.sure ? 'sure' : 'unsure'}`;
       acc[key] = (acc[key] || 0) + 1;
