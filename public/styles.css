@@ -408,7 +408,7 @@ body {
 }
 
 .modal-card.large {
-  width: min(880px, 92vw);
+  width: min(1060px, 94vw);
   max-height: 80vh;
   overflow-y: auto;
 }
