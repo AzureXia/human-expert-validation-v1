@@ -296,31 +296,56 @@ function stripMarkdown(text) {
 }
 
 function parseExtractionSummary(raw) {
-  const text = stripMarkdown(raw || '').replace(/\r/g, '').trim();
+  const original = String(raw || '').replace(/\r/g, '').trim();
   const sections = {};
-  const lines = text.split('\n');
+  const lines = original.split('\n');
   let current = 'Summary';
   sections[current] = [];
-  for (const line of lines) {
-    const trimmed = stripMarkdown(line);
-    if (!trimmed) continue;
-    const headingMatch = trimmed.match(/^[-*]?\s*\*\*(.+?)\*\*\s*:?.*$/);
-    const hashMatch = trimmed.match(/^#{2,}\s*(.+?)\s*:?$/);
-    if (headingMatch) {
-      current = headingMatch[1].trim();
-      if (!sections[current]) sections[current] = [];
-      continue;
-    }
-    if (hashMatch) {
-      current = hashMatch[1].trim();
-      if (!sections[current]) sections[current] = [];
-      continue;
-    }
+
+  const setHeading = (heading) => {
+    const cleaned = stripMarkdown(heading || '').trim();
+    if (!cleaned) return;
+    current = cleaned;
     if (!sections[current]) sections[current] = [];
-    sections[current].push(trimmed.replace(/^[-*]\s*/, ''));
+  };
+
+  for (const line of lines) {
+    const rawLine = String(line || '').trim();
+    if (!rawLine) continue;
+
+    const hashMatch = rawLine.match(/^#{2,}\s*(.+?)\s*:?\s*$/);
+    if (hashMatch) {
+      setHeading(hashMatch[1]);
+      continue;
+    }
+
+    const boldMatch = rawLine.match(/^(?:[-*]|\d+\.)?\s*\*\*(.+?)\*\*\s*:?\s*$/);
+    if (boldMatch) {
+      setHeading(boldMatch[1]);
+      continue;
+    }
+
+    const numberedHeadingMatch = rawLine.match(/^\d+\.\s*([^:]{2,120})\s*:\s*$/);
+    if (numberedHeadingMatch) {
+      setHeading(numberedHeadingMatch[1]);
+      continue;
+    }
+
+    const plainHeadingMatch = rawLine.match(/^([A-Za-z][A-Za-z0-9 /_-]{2,80})\s*:\s*$/);
+    if (plainHeadingMatch) {
+      setHeading(plainHeadingMatch[1]);
+      continue;
+    }
+
+    let cleaned = stripMarkdown(rawLine);
+    cleaned = cleaned.replace(/^[-*]\s*/, '').replace(/^\d+\.\s*/, '').trim();
+    if (!cleaned) continue;
+    sections[current] = sections[current] || [];
+    sections[current].push(cleaned);
   }
+
   const normalized = Object.entries(sections).map(([heading, bullets]) => ({ heading, bullets }));
-  return { raw: text, sections: normalized };
+  return { raw: stripMarkdown(original), sections: normalized };
 }
 
 function categorizeExtraction(parsed) {
@@ -334,14 +359,16 @@ function categorizeExtraction(parsed) {
   };
 
   const assign = (text, fallbackHeading = '') => {
-    const normalised = `${fallbackHeading} ${text}`.toLowerCase();
+    const cleaned = (text || '').trim();
+    if (!cleaned) return;
+    const normalised = `${fallbackHeading} ${cleaned}`.toLowerCase();
     for (const [key, patterns] of Object.entries(FIELD_KEYWORDS)) {
       if (patterns.some(rx => rx.test(normalised))) {
-        buckets[key].push(text.trim());
+        buckets[key].push(cleaned);
         return;
       }
     }
-    buckets.other.push(text.trim());
+    buckets.other.push(cleaned);
   };
 
   (parsed.sections || []).forEach(section => {
