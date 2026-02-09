@@ -178,11 +178,14 @@ function renderDataStatus() {
 
   const extracted = status.files.extracted;
   const qa = status.files.qa;
+  const extractedFormat = extracted?.structuredColumnsPresent
+    ? 'structured columns'
+    : (extracted?.jsonExtractionColumnsPresent ? 'ex_* JSON columns' : 'gpt_output markdown');
   dataStatusEl.innerHTML = `
     <div class="status-row"><strong>Source dir:</strong> ${escapeHtml(status.sourceDataDir || '')}</div>
     <div class="status-row">
       <strong>Extraction:</strong> ${escapeHtml(formatFileStatus(extracted))}<br>
-      <span class="small muted">${escapeHtml(extracted?.filename || 'extracted_insights.csv')} · ${extracted?.items ?? 0} items · ${extracted?.uniquePmids ?? 0} studies</span>
+      <span class="small muted">${escapeHtml(extracted?.filename || 'extracted_insights.csv')} · ${extracted?.items ?? 0} items · ${extracted?.uniquePmids ?? 0} studies · ${escapeHtml(extractedFormat)}</span>
     </div>
     <div class="status-row">
       <strong>Q&amp;A:</strong> ${escapeHtml(formatFileStatus(qa))}<br>
@@ -537,7 +540,7 @@ function renderItems(items) {
       const rawDetails = document.createElement('details');
       rawDetails.className = 'rationale';
       rawDetails.innerHTML = `
-        <summary>Show raw extraction (with chain-of-thought)</summary>
+        <summary>Show extraction details</summary>
         ${(item.parsed?.sections || []).map(section => `<p><strong>${escapeHtml(section.heading)}</strong><br>${section.bullets.map(b => escapeHtml(b)).join('<br>')}</p>`).join('')}
       `;
       card.appendChild(rawDetails);

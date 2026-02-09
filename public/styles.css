@@ -50,11 +50,12 @@ body {
   width: 360px;
   background: rgba(255, 255, 255, 0.78);
   color: var(--text);
-  padding: 32px 28px;
+  padding: 28px 24px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 20px;
   border-right: 1px solid var(--border);
+  overflow-y: auto;
 }
 
 .sidebar h1,
@@ -158,13 +159,40 @@ body {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 250, 252, 0.85) 100%);
 }
 
+.content-header {
+  margin-bottom: 24px;
+}
+
+.header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.header-text {
+  min-width: 0;
+}
+
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-actions button {
+  white-space: nowrap;
+}
+
 .content-header h2 {
-  margin: 0 0 12px 0;
+  margin: 0 0 10px 0;
   font-size: 1.8rem;
 }
 
 .hint {
-  margin: 0 0 24px 0;
+  margin: 0;
   color: var(--muted);
 }
 
@@ -847,4 +875,6 @@ body {
   .app-shell { flex-direction: column; }
   .sidebar { width: 100%; }
   .content { padding: 20px; }
+  .header-row { flex-direction: column; }
+  .header-actions { justify-content: flex-start; }
 }

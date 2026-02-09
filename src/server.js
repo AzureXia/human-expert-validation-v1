@@ -384,6 +384,78 @@ function categorizeExtraction(parsed) {
   };
 }
 
+function parseJsonArrayCell(raw) {
+  if (!raw) return [];
+  if (Array.isArray(raw)) return raw;
+  if (typeof raw !== 'string') return [];
+  const trimmed = raw.trim();
+  if (!trimmed) return [];
+  try {
+    const parsed = JSON.parse(trimmed);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function dedupeStrings(values) {
+  return Array.from(new Map(values.map(v => [v.toLowerCase(), v])).values());
+}
+
+function buildJsonExtractionParsed(row) {
+  const sections = [];
+  const addSection = (heading, bullets) => {
+    const cleaned = (bullets || []).map(stripMarkdown).map(s => s.trim()).filter(Boolean);
+    sections.push({ heading, bullets: cleaned });
+  };
+
+  if (row.ex_design) addSection('Study design', [row.ex_design]);
+  if (row.ex_justification) addSection('Justification', [row.ex_justification]);
+
+  const symptoms = parseJsonArrayCell(row.ex_symptoms).map(entry => {
+    const term = entry?.term || '';
+    const evidence = entry?.evidence || '';
+    return evidence ? `${term} - ${evidence}` : term;
+  });
+  const population = parseJsonArrayCell(row.ex_population).map(entry => {
+    const term = entry?.term || '';
+    const category = entry?.category ? ` (${entry.category})` : '';
+    const evidence = entry?.evidence || '';
+    const label = `${term}${category}`.trim();
+    return evidence ? `${label} - ${evidence}` : label;
+  });
+  const riskFactors = parseJsonArrayCell(row.ex_risk_factors).map(entry => {
+    const term = entry?.term || '';
+    const direction = entry?.direction ? ` (${entry.direction})` : '';
+    const evidence = entry?.evidence || '';
+    const label = `${term}${direction}`.trim();
+    return evidence ? `${label} - ${evidence}` : label;
+  });
+  const interventions = parseJsonArrayCell(row.ex_interventions).map(entry => {
+    const name = entry?.name || entry?.term || '';
+    const type = entry?.type ? ` (${entry.type})` : '';
+    const comparator = entry?.comparator ? `; comparator: ${entry.comparator}` : '';
+    const evidence = entry?.evidence || '';
+    const label = `${name}${type}${comparator}`.trim();
+    return evidence ? `${label} - ${evidence}` : label;
+  });
+  const outcomes = parseJsonArrayCell(row.ex_outcomes).map(entry => {
+    const metric = entry?.metric || entry?.term || '';
+    const direction = entry?.direction ? ` (${entry.direction})` : '';
+    const evidence = entry?.evidence || '';
+    const label = `${metric}${direction}`.trim();
+    return evidence ? `${label} - ${evidence}` : label;
+  });
+
+  addSection('Population', population);
+  addSection('Symptoms', symptoms);
+  addSection('Risk factors', riskFactors);
+  addSection('Interventions', interventions);
+  addSection('Outcomes', outcomes);
+
+  return { raw: '', sections };
+}
+
 const EXPECTED_SOURCE_FILES = {
   qa: 'qa_pairs.csv',
   extracted: 'extracted_insights.csv'
@@ -465,30 +537,75 @@ async function refreshDatasets() {
     return acc;
   }, {});
 
+  const extractedSample = (extractedLoad.rows || [])[0] || {};
   const structuredColumnsPresent = (extractedLoad.rows || []).length > 0 &&
-    Object.prototype.hasOwnProperty.call(extractedLoad.rows[0], 'population');
+    Object.prototype.hasOwnProperty.call(extractedSample, 'population');
+  const jsonExtractionColumnsPresent = (extractedLoad.rows || []).length > 0 && [
+    'ex_population',
+    'ex_symptoms',
+    'ex_risk_factors',
+    'ex_interventions',
+    'ex_outcomes'
+  ].some(col => Object.prototype.hasOwnProperty.call(extractedSample, col));
 
   const extractedItems = (extractedLoad.rows || []).map((row, idx) => {
-    const parsed = parseExtractionSummary(row.gpt_output);
-    const categorizedFromMarkdown = categorizeExtraction(parsed);
-
     const parseField = (value) => {
       if (!value) return [];
       if (Array.isArray(value)) return value;
       return value.split('||').map(part => stripMarkdown(part)).map(s => s.trim()).filter(Boolean);
     };
 
-    const categorized = structuredColumnsPresent ? {
-      population: parseField(row.population),
-      symptoms: parseField(row.symptoms),
-      riskFactors: parseField(row.risk_factors || row.riskFactors),
-      interventions: parseField(row.interventions),
-      outcomes: parseField(row.outcomes)
-    } : categorizedFromMarkdown;
+    let parsed = null;
+    let categorized = null;
+    let summary = '';
+    let extractionFormat = 'markdown';
 
-    const summary = structuredColumnsPresent
-      ? stripMarkdown(row.structured_summary || row.summary || categorized.summaryFallback)
-      : categorized.summaryFallback;
+    if (structuredColumnsPresent) {
+      extractionFormat = 'structured';
+      parsed = parseExtractionSummary(row.gpt_output);
+      categorized = {
+        population: parseField(row.population),
+        symptoms: parseField(row.symptoms),
+        riskFactors: parseField(row.risk_factors || row.riskFactors),
+        interventions: parseField(row.interventions),
+        outcomes: parseField(row.outcomes)
+      };
+      summary = stripMarkdown(row.structured_summary || row.summary || categorized.summaryFallback);
+    } else if (jsonExtractionColumnsPresent) {
+      extractionFormat = 'json_fields';
+      parsed = buildJsonExtractionParsed(row);
+
+      const pullTerms = (value, key) => (
+        dedupeStrings(parseJsonArrayCell(value)
+          .map(entry => stripMarkdown(entry?.[key] || '').trim())
+          .filter(Boolean))
+      );
+
+      categorized = {
+        population: pullTerms(row.ex_population, 'term'),
+        symptoms: pullTerms(row.ex_symptoms, 'term'),
+        riskFactors: pullTerms(row.ex_risk_factors, 'term'),
+        interventions: dedupeStrings(parseJsonArrayCell(row.ex_interventions)
+          .map(entry => stripMarkdown(entry?.name || entry?.term || '').trim())
+          .filter(Boolean)),
+        outcomes: dedupeStrings(parseJsonArrayCell(row.ex_outcomes)
+          .map(entry => stripMarkdown(entry?.metric || entry?.term || '').trim())
+          .filter(Boolean))
+      };
+      categorized.summaryFallback = [
+        categorized.population?.[0] ? `Population: ${categorized.population[0]}` : null,
+        categorized.symptoms?.[0] ? `Symptoms: ${categorized.symptoms[0]}` : null,
+        categorized.riskFactors?.[0] ? `Risk factors: ${categorized.riskFactors[0]}` : null,
+        categorized.interventions?.[0] ? `Interventions: ${categorized.interventions[0]}` : null,
+        categorized.outcomes?.[0] ? `Outcomes: ${categorized.outcomes[0]}` : null
+      ].filter(Boolean).join(' | ');
+      summary = stripMarkdown(row.ex_justification || row.ex_design || categorized.summaryFallback);
+    } else {
+      extractionFormat = 'markdown';
+      parsed = parseExtractionSummary(row.gpt_output);
+      categorized = categorizeExtraction(parsed);
+      summary = categorized.summaryFallback;
+    }
 
     return {
       id: `${row.pmid || 'unknown'}-${idx}`,
@@ -502,12 +619,14 @@ async function refreshDatasets() {
       sourceIndex: idx,
       parsed,
       categorized,
-      summary
+      summary,
+      extractionFormat
     };
   });
 
   const needsEnrichment = extractedItems.length > 0 &&
     !structuredColumnsPresent &&
+    !jsonExtractionColumnsPresent &&
     process.env.CURATOR_USE_SUMMARY !== '0';
   if (needsEnrichment) {
     await enrichSummaries(extractedItems);
@@ -553,7 +672,8 @@ async function refreshDatasets() {
         rows: extractedLoad.rows.length,
         items: extractedItems.length,
         uniquePmids: new Set(extractedItems.map(it => it.pmid).filter(Boolean)).size,
-        structuredColumnsPresent
+        structuredColumnsPresent,
+        jsonExtractionColumnsPresent
       }
     }
   };

@@ -19,7 +19,7 @@
         </section>
         <section id="admin-panel" class="admin-panel hidden">
           <h2>Admin</h2>
-          <details class="admin-details" open>
+          <details class="admin-details">
             <summary>Upload Validation Files</summary>
             <p class="small muted">
               Workflow: upload your CSV files first. Items = rows. Studies = unique PMIDs.
@@ -27,7 +27,7 @@
             <div class="upload-grid">
               <label class="file-field">
                 Extraction CSV
-                <span class="small muted">expected: extracted_insights.csv</span>
+                <span class="small muted">expected: extracted_insights.csv (also accepts random_50_abstract_extractions.csv format)</span>
                 <input id="upload-extracted" type="file" accept=".csv,text/csv" />
               </label>
               <label class="file-field">
@@ -75,7 +75,6 @@
           <div id="dataset-list"></div>
         </section>
         <section class="controls">
-          <button id="summary-btn" class="secondary">View Summary</button>
           <div class="toggle-row">
             <label class="toggle">
               <input id="unreviewed-toggle" type="checkbox" />
@@ -84,10 +83,6 @@
           </div>
           <div class="search">
             <input id="search-input" type="search" placeholder="Search..." />
-          </div>
-          <div class="download-cta">
-            <button id="download-csv" class="cta">Download results (CSV)</button>
-            <button id="download-json" class="cta ghost">Download results (JSON)</button>
           </div>
           <div class="pagination">
             <button id="prev-page" class="secondary">◀ Prev</button>
@@ -100,8 +95,17 @@
       </aside>
       <main class="content">
         <header class="content-header">
-          <h2 id="dataset-title">Items</h2>
-          <p class="hint">Upload files (admin) then experts review items. Every click is saved immediately so reviewers can pause and resume later.</p>
+          <div class="header-row">
+            <div class="header-text">
+              <h2 id="dataset-title">Items</h2>
+              <p class="hint">Upload files (admin) then experts review items. Every click is saved immediately so reviewers can pause and resume later.</p>
+            </div>
+            <div class="header-actions">
+              <button id="summary-btn" class="secondary">View Summary</button>
+              <button id="download-csv" class="cta">Download results (CSV)</button>
+              <button id="download-json" class="cta ghost">Download results (JSON)</button>
+            </div>
+          </div>
         </header>
         <section id="items" class="item-list"></section>
       </main>
