@@ -9,12 +9,15 @@ import 'dotenv/config';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const SOURCE_DATA_DIR = process.env.SOURCE_DATA_DIR
-  ? path.resolve(process.env.SOURCE_DATA_DIR)
-  : path.join(__dirname, '..', 'data');
+const BUNDLED_DATA_DIR = path.join(__dirname, '..', 'data');
 const RUNTIME_DATA_DIR = process.env.RUNTIME_DATA_DIR
   ? path.resolve(process.env.RUNTIME_DATA_DIR)
-  : SOURCE_DATA_DIR;
+  : BUNDLED_DATA_DIR;
+// If a runtime volume is configured (Railway), default to reading source CSVs from it.
+// Local dev still defaults to the bundled ./data folder unless SOURCE_DATA_DIR is explicitly set.
+const SOURCE_DATA_DIR = process.env.SOURCE_DATA_DIR
+  ? path.resolve(process.env.SOURCE_DATA_DIR)
+  : (process.env.RUNTIME_DATA_DIR ? RUNTIME_DATA_DIR : BUNDLED_DATA_DIR);
 const RESPONSE_PATH = path.join(RUNTIME_DATA_DIR, 'responses.json');
 const SUMMARY_CACHE_PATH = path.join(RUNTIME_DATA_DIR, 'extracted_summaries.json');
 const USERS_PATH = process.env.AUTH_USERS_FILE
@@ -23,6 +26,9 @@ const USERS_PATH = process.env.AUTH_USERS_FILE
 
 if (!fs.existsSync(RUNTIME_DATA_DIR)) {
   fs.mkdirSync(RUNTIME_DATA_DIR, { recursive: true });
+}
+if (!fs.existsSync(SOURCE_DATA_DIR)) {
+  fs.mkdirSync(SOURCE_DATA_DIR, { recursive: true });
 }
 
 const AUTH_COOKIE_NAME = process.env.AUTH_COOKIE_NAME || 'hev_session';
@@ -100,27 +106,77 @@ function verifyPassword(password = '', stored = '') {
   return crypto.timingSafeEqual(left, right);
 }
 
+const AUTH_ADMIN_USERS = new Set((process.env.AUTH_ADMIN_USERS || '')
+  .split(',')
+  .map(normalizeUsername)
+  .filter(Boolean));
+const AUTH_BOOTSTRAP_ADMIN_USERNAME = process.env.AUTH_BOOTSTRAP_ADMIN_USERNAME || 'admin';
+const AUTH_BOOTSTRAP_ADMIN_DISPLAY_NAME = process.env.AUTH_BOOTSTRAP_ADMIN_DISPLAY_NAME || 'Admin';
+const AUTH_BOOTSTRAP_ADMIN_PASSWORD = process.env.AUTH_BOOTSTRAP_ADMIN_PASSWORD || '';
+
+function normalizeRole(rawRole = '') {
+  const role = String(rawRole || '').trim().toLowerCase();
+  return role === 'admin' ? 'admin' : 'expert';
+}
+
 function normalizeUserRecord(raw = {}) {
   const username = normalizeUsername(raw.username);
   if (!username) return null;
   const passwordHash = String(raw.passwordHash || '').trim();
   const password = String(raw.password || '').trim();
   if (!passwordHash && !password) return null;
+  const role = AUTH_ADMIN_USERS.has(username) ? 'admin' : normalizeRole(raw.role);
   return {
     username,
     displayName: String(raw.displayName || username).trim() || username,
-    passwordHash: passwordHash || pbkdf2Hash(password)
+    passwordHash: passwordHash || pbkdf2Hash(password),
+    role
   };
+}
+
+function loadUsersFromFile() {
+  if (!fs.existsSync(USERS_PATH)) return [];
+  try {
+    const parsed = JSON.parse(fs.readFileSync(USERS_PATH, 'utf8'));
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (err) {
+    console.warn('users.json could not be parsed', err);
+    return [];
+  }
+}
+
+function saveUsersToFile(list) {
+  fs.writeFileSync(USERS_PATH, JSON.stringify(list, null, 2), 'utf8');
+}
+
+function ensureBootstrapAdminUser() {
+  // Only bootstrap when env users are not set and file-based users are empty.
+  if (process.env.AUTH_USERS_JSON || process.env.AUTH_USERS) return false;
+  const existing = loadUsersFromFile();
+  if (existing.length > 0) return false;
+  if (!AUTH_BOOTSTRAP_ADMIN_PASSWORD) return false;
+
+  const record = normalizeUserRecord({
+    username: AUTH_BOOTSTRAP_ADMIN_USERNAME,
+    displayName: AUTH_BOOTSTRAP_ADMIN_DISPLAY_NAME,
+    password: AUTH_BOOTSTRAP_ADMIN_PASSWORD,
+    role: 'admin'
+  });
+  if (!record) return false;
+  saveUsersToFile([record]);
+  return true;
 }
 
 function loadAuthUsers() {
   let rawUsers = [];
+  let source = 'none';
   const rawJson = process.env.AUTH_USERS_JSON;
   const rawInline = process.env.AUTH_USERS;
   if (rawJson) {
     try {
       const parsed = JSON.parse(rawJson);
       if (Array.isArray(parsed)) rawUsers = parsed;
+      source = 'env';
     } catch (err) {
       console.warn('AUTH_USERS_JSON could not be parsed', err);
     }
@@ -137,13 +193,10 @@ function loadAuthUsers() {
           password: pair.slice(idx + 1).trim()
         };
       });
-  } else if (fs.existsSync(USERS_PATH)) {
-    try {
-      const parsed = JSON.parse(fs.readFileSync(USERS_PATH, 'utf8'));
-      if (Array.isArray(parsed)) rawUsers = parsed;
-    } catch (err) {
-      console.warn('users.json could not be parsed', err);
-    }
+    source = 'env';
+  } else {
+    rawUsers = loadUsersFromFile();
+    if (rawUsers.length > 0) source = 'file';
   }
 
   const users = new Map();
@@ -152,15 +205,29 @@ function loadAuthUsers() {
     if (!normalized) return;
     users.set(normalized.username, normalized);
   });
-  return users;
+  return { users, source };
 }
 
-const authUsers = loadAuthUsers();
-const authEnabled = !AUTH_BYPASS && authUsers.size > 0;
-if (authEnabled && !AUTH_SECRET) {
+let authUsers = new Map();
+let authUserSource = 'none';
+
+function refreshAuthUsers() {
+  ensureBootstrapAdminUser();
+  const loaded = loadAuthUsers();
+  authUsers = loaded.users;
+  authUserSource = loaded.source;
+}
+
+function isAuthEnabled() {
+  return !AUTH_BYPASS && authUsers.size > 0;
+}
+
+refreshAuthUsers();
+
+if (isAuthEnabled() && !AUTH_SECRET) {
   throw new Error('AUTH_SECRET is required when authentication is enabled.');
 }
-if (!authEnabled) {
+if (!isAuthEnabled()) {
   console.warn('Authentication is disabled. Set AUTH_USERS/AUTH_USERS_JSON and AUTH_SECRET to require login.');
 }
 
@@ -171,7 +238,7 @@ function signSession(payload) {
 }
 
 function readSession(token) {
-  if (!token || !authEnabled) return null;
+  if (!token || !isAuthEnabled()) return null;
   const parts = token.split('.');
   if (parts.length !== 2) return null;
   const [encoded, signature] = parts;
@@ -186,18 +253,29 @@ function readSession(token) {
     if (Date.now() >= payload.exp) return null;
     const user = authUsers.get(normalizeUsername(payload.username));
     if (!user) return null;
-    return { username: user.username, displayName: user.displayName };
+    return { username: user.username, displayName: user.displayName, role: user.role || 'expert' };
   } catch {
     return null;
   }
 }
 
 function getUserFromRequest(req) {
-  if (!authEnabled) {
-    return { username: 'anonymous', displayName: 'Anonymous' };
+  if (!isAuthEnabled()) {
+    return { username: 'anonymous', displayName: 'Anonymous', role: 'anonymous' };
   }
   const cookies = parseCookieHeader(req.headers.cookie || '');
   return readSession(cookies[AUTH_COOKIE_NAME]);
+}
+
+function isAdminUser(user) {
+  return Boolean(user && user.role === 'admin');
+}
+
+function requireAdmin(req, res, next) {
+  if (!isAdminUser(req.user)) {
+    return res.status(403).json({ error: 'Admin access required' });
+  }
+  return next();
 }
 
 const FIELD_KEYWORDS = {
@@ -306,92 +384,182 @@ function categorizeExtraction(parsed) {
   };
 }
 
-const qaRaw = loadCsv('qa_pairs.csv');
-const extractedRaw = loadCsv('extracted_insights.csv');
-const structuredColumnsPresent = extractedRaw.length > 0 &&
-  Object.prototype.hasOwnProperty.call(extractedRaw[0], 'population');
+const EXPECTED_SOURCE_FILES = {
+  qa: 'qa_pairs.csv',
+  extracted: 'extracted_insights.csv'
+};
+
+const EVAL_QUESTION_IDS = {
+  qa: ['qa_reflects', 'qa_quality'],
+  extracted: ['extracted_accuracy']
+};
+
+function readFileStatus(fullPath) {
+  try {
+    const stat = fs.statSync(fullPath);
+    return {
+      path: fullPath,
+      exists: stat.isFile(),
+      sizeBytes: stat.size,
+      mtime: stat.mtime.toISOString()
+    };
+  } catch {
+    return { path: fullPath, exists: false };
+  }
+}
+
+function tryLoadCsv(file) {
+  const full = path.join(SOURCE_DATA_DIR, file);
+  const status = readFileStatus(full);
+  if (!status.exists) {
+    return { rows: [], status, error: 'missing' };
+  }
+  try {
+    const content = fs.readFileSync(full, 'utf8');
+    const rows = parse(content, { columns: true, skip_empty_lines: true });
+    return { rows, status };
+  } catch (err) {
+    return { rows: [], status, error: err?.message || 'parse_failed' };
+  }
+}
 
 function cleanTitle(title = '') {
   return title.replace(/^\s*\[/, '').replace(/\]\s*$/, '').trim();
 }
 
-const qaItems = qaRaw.map((row, idx) => ({
-  id: `${row.pmid || 'unknown'}-${idx}`,
-  pmid: row.pmid,
-  title: cleanTitle(row.title || ''),
-  question: row.qa_question,
-  answer: row.qa_answer,
-  explanation: row.qa_explanation,
-  qa_type: row.qa_type,
-  journal: row.journal,
-  year: row.year,
-  abstract: row.abstract,
-  classification: row.classification,
-  sourceIndex: idx
-}));
+let datasets = {
+  extracted: { key: 'extracted', label: 'Extraction Validation', items: [] },
+  qa: { key: 'qa', label: 'Q&A Validation', items: [], byPmid: {} }
+};
+let datasetIndex = { qa: {}, extracted: {} };
+let dataStatus = {
+  sourceDataDir: SOURCE_DATA_DIR,
+  runtimeDataDir: RUNTIME_DATA_DIR,
+  bundledDataDir: BUNDLED_DATA_DIR,
+  loadedAt: null,
+  files: {}
+};
 
-const qaByPmid = qaItems.reduce((acc, item) => {
-  if (!acc[item.pmid]) acc[item.pmid] = [];
-  acc[item.pmid].push(item);
-  return acc;
-}, {});
+async function refreshDatasets() {
+  const qaLoad = tryLoadCsv(EXPECTED_SOURCE_FILES.qa);
+  const extractedLoad = tryLoadCsv(EXPECTED_SOURCE_FILES.extracted);
 
-const extractedItems = extractedRaw.map((row, idx) => {
-  const parsed = parseExtractionSummary(row.gpt_output);
-  const categorizedFromMarkdown = categorizeExtraction(parsed);
+  const qaItems = (qaLoad.rows || []).map((row, idx) => ({
+    id: `${row.pmid || 'unknown'}-${idx}`,
+    pmid: row.pmid,
+    title: cleanTitle(row.title || ''),
+    question: row.qa_question,
+    answer: row.qa_answer,
+    explanation: row.qa_explanation,
+    qa_type: row.qa_type,
+    journal: row.journal,
+    year: row.year,
+    abstract: row.abstract,
+    classification: row.classification,
+    sourceIndex: idx
+  }));
 
-  const parseField = (value) => {
-    if (!value) return [];
-    if (Array.isArray(value)) return value;
-    return value.split('||').map(part => stripMarkdown(part)).map(s => s.trim()).filter(Boolean);
+  const qaByPmid = qaItems.reduce((acc, item) => {
+    if (!acc[item.pmid]) acc[item.pmid] = [];
+    acc[item.pmid].push(item);
+    return acc;
+  }, {});
+
+  const structuredColumnsPresent = (extractedLoad.rows || []).length > 0 &&
+    Object.prototype.hasOwnProperty.call(extractedLoad.rows[0], 'population');
+
+  const extractedItems = (extractedLoad.rows || []).map((row, idx) => {
+    const parsed = parseExtractionSummary(row.gpt_output);
+    const categorizedFromMarkdown = categorizeExtraction(parsed);
+
+    const parseField = (value) => {
+      if (!value) return [];
+      if (Array.isArray(value)) return value;
+      return value.split('||').map(part => stripMarkdown(part)).map(s => s.trim()).filter(Boolean);
+    };
+
+    const categorized = structuredColumnsPresent ? {
+      population: parseField(row.population),
+      symptoms: parseField(row.symptoms),
+      riskFactors: parseField(row.risk_factors || row.riskFactors),
+      interventions: parseField(row.interventions),
+      outcomes: parseField(row.outcomes)
+    } : categorizedFromMarkdown;
+
+    const summary = structuredColumnsPresent
+      ? stripMarkdown(row.structured_summary || row.summary || categorized.summaryFallback)
+      : categorized.summaryFallback;
+
+    return {
+      id: `${row.pmid || 'unknown'}-${idx}`,
+      pmid: row.pmid,
+      title: cleanTitle(row.title || ''),
+      journal: row.journal,
+      year: row.year,
+      abstract: row.abstract,
+      gpt_output: row.gpt_output,
+      classification: row.classification,
+      sourceIndex: idx,
+      parsed,
+      categorized,
+      summary
+    };
+  });
+
+  const needsEnrichment = extractedItems.length > 0 &&
+    !structuredColumnsPresent &&
+    process.env.CURATOR_USE_SUMMARY !== '0';
+  if (needsEnrichment) {
+    await enrichSummaries(extractedItems);
+  }
+
+  datasets = {
+    extracted: {
+      key: 'extracted',
+      label: 'Extraction Validation',
+      items: extractedItems
+    },
+    qa: {
+      key: 'qa',
+      label: 'Q&A Validation',
+      items: qaItems,
+      byPmid: qaByPmid
+    }
   };
 
-  const categorized = structuredColumnsPresent ? {
-    population: parseField(row.population),
-    symptoms: parseField(row.symptoms),
-    riskFactors: parseField(row.risk_factors || row.riskFactors),
-    interventions: parseField(row.interventions),
-    outcomes: parseField(row.outcomes)
-  } : categorizedFromMarkdown;
+  datasetIndex = Object.fromEntries(Object.values(datasets).map(ds => [
+    ds.key,
+    Object.fromEntries(ds.items.map(item => [item.id, item]))
+  ]));
 
-  const summary = structuredColumnsPresent
-    ? stripMarkdown(row.structured_summary || row.summary || categorized.summaryFallback)
-    : categorized.summaryFallback;
+  dataStatus = {
+    sourceDataDir: SOURCE_DATA_DIR,
+    runtimeDataDir: RUNTIME_DATA_DIR,
+    bundledDataDir: BUNDLED_DATA_DIR,
+    loadedAt: new Date().toISOString(),
+    files: {
+      qa: {
+        filename: EXPECTED_SOURCE_FILES.qa,
+        ...qaLoad.status,
+        error: qaLoad.error || null,
+        rows: qaLoad.rows.length,
+        items: qaItems.length,
+        uniquePmids: new Set(qaItems.map(it => it.pmid).filter(Boolean)).size
+      },
+      extracted: {
+        filename: EXPECTED_SOURCE_FILES.extracted,
+        ...extractedLoad.status,
+        error: extractedLoad.error || null,
+        rows: extractedLoad.rows.length,
+        items: extractedItems.length,
+        uniquePmids: new Set(extractedItems.map(it => it.pmid).filter(Boolean)).size,
+        structuredColumnsPresent
+      }
+    }
+  };
+}
 
-  return {
-  id: `${row.pmid || 'unknown'}-${idx}`,
-  pmid: row.pmid,
-  title: cleanTitle(row.title || ''),
-  journal: row.journal,
-  year: row.year,
-  abstract: row.abstract,
-  gpt_output: row.gpt_output,
-  classification: row.classification,
-  sourceIndex: idx,
-  parsed,
-  categorized,
-  summary
-};
-});
-
-const datasets = {
-  qa: {
-    key: 'qa',
-    label: 'Q&A Validation',
-    items: qaItems,
-    byPmid: qaByPmid
-  },
-  extracted: {
-    key: 'extracted',
-    label: 'Extraction Validation',
-    items: extractedItems
-  }
-};
-
-const datasetIndex = Object.fromEntries(Object.values(datasets).map(ds => [
-  ds.key,
-  Object.fromEntries(ds.items.map(item => [item.id, item]))
-]));
+await refreshDatasets();
 
 async function callAmplify(messages) {
   const apiKey = process.env.AMPLIFY_API_KEY;
@@ -484,17 +652,17 @@ async function enrichSummaries(items) {
   });
 }
 
-const needsEnrichment = !structuredColumnsPresent && process.env.CURATOR_USE_SUMMARY !== '0';
-if (needsEnrichment) {
-  await enrichSummaries(extractedItems);
-}
-
 function normalizeStore(store = {}) {
+  const ensureObj = (value) => (
+    value && typeof value === 'object' && !Array.isArray(value) ? value : {}
+  );
+
   const normalised = {
     responses: store.responses || {},
     compare: store.compare || {},
     compareAudit: Array.isArray(store.compareAudit) ? store.compareAudit : [],
-    reviewedItems: store.reviewedItems || {}
+    reviewedItems: ensureObj(store.reviewedItems),
+    reviewedByUser: ensureObj(store.reviewedByUser)
   };
   for (const [questionId, payload] of Object.entries(normalised.responses)) {
     if (!payload) {
@@ -513,11 +681,28 @@ function normalizeStore(store = {}) {
       payload.records = payload.records || [];
     }
   }
+
+  // Backfill reviewedByUser from the historical audit log when migrating older response stores.
+  if (!store.reviewedByUser) {
+    for (const [questionId, payload] of Object.entries(normalised.responses)) {
+      for (const record of (payload.records || [])) {
+        const reviewer = normalizeUsername(record.reviewer || 'anonymous') || 'anonymous';
+        const itemId = record.itemId;
+        if (!itemId) continue;
+        normalised.reviewedByUser[reviewer] = normalised.reviewedByUser[reviewer] || {};
+        normalised.reviewedByUser[reviewer][itemId] = normalised.reviewedByUser[reviewer][itemId] || {};
+        const existing = normalised.reviewedByUser[reviewer][itemId][questionId];
+        if (!existing || String(existing.timestamp || '') < String(record.timestamp || '')) {
+          normalised.reviewedByUser[reviewer][itemId][questionId] = record;
+        }
+      }
+    }
+  }
   return normalised;
 }
 
 function createEmptyDatasetStore() {
-  return { responses: {}, compare: {}, compareAudit: [], reviewedItems: {} };
+  return { responses: {}, compare: {}, compareAudit: [], reviewedItems: {}, reviewedByUser: {} };
 }
 
 function loadResponses() {
@@ -559,28 +744,58 @@ function ensureQuestionStore(store, questionId) {
   return store.responses[questionId];
 }
 
-function aggregateSummary(datasetKey) {
+function aggregateSummary(datasetKey, reviewer = 'anonymous') {
   const store = responseStore[datasetKey];
   if (!store) {
     return { totalDecisions: 0, reviewed: 0, questionSummaries: {}, compare: {} };
   }
+  const questionIds = EVAL_QUESTION_IDS[datasetKey] || [];
+
+  const reviewerKey = normalizeUsername(reviewer || 'anonymous') || 'anonymous';
+  const reviewerItems = (store.reviewedByUser || {})[reviewerKey] || {};
+  const reviewedByUser = Object.entries(reviewerItems).reduce((acc, [itemId, byQuestion]) => {
+    const done = questionIds.length > 0 && questionIds.every(qid => Boolean(byQuestion?.[qid]));
+    return acc + (done ? 1 : 0);
+  }, 0);
+
   const questionSummaries = {};
   let totalDecisions = 0;
-  for (const [questionId, payload] of Object.entries(store.responses)) {
-    const counts = payload.counts || {};
+
+  const latestRecordsForQuestion = (questionId) => {
+    const out = [];
+    const byUser = store.reviewedByUser || {};
+    for (const user of Object.keys(byUser)) {
+      const byItem = byUser[user] || {};
+      for (const itemId of Object.keys(byItem)) {
+        const rec = byItem[itemId]?.[questionId];
+        if (rec) out.push(rec);
+      }
+    }
+    return out;
+  };
+
+  for (const questionId of Object.keys(store.responses || {})) {
+    const latest = latestRecordsForQuestion(questionId);
+    const counts = latest.reduce((acc, rec) => {
+      const key = `${rec.answer}_${rec.sure ? 'sure' : 'unsure'}`;
+      acc[key] = (acc[key] || 0) + 1;
+      return acc;
+    }, {});
     totalDecisions += Object.values(counts).reduce((a, b) => a + b, 0);
-    const yes = payload.records.filter(r => r.answer === 'yes');
-    const no = payload.records.filter(r => r.answer === 'no');
+    const yes = latest.filter(r => r.answer === 'yes');
+    const no = latest.filter(r => r.answer === 'no');
     questionSummaries[questionId] = {
       counts,
       yes,
       no
     };
   }
-  const reviewed = Object.keys(store.reviewedItems || {}).length;
+  const reviewedGlobal = Object.keys(store.reviewedItems || {}).length;
   return {
     totalDecisions,
-    reviewed,
+    reviewed: reviewedByUser,
+    reviewedByUser,
+    reviewedGlobal,
     questionSummaries,
     compare: store.compare || {}
   };
@@ -593,22 +808,29 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 app.get('/api/healthz', (_req, res) => {
   res.json({
     ok: true,
-    authEnabled,
-    usersConfigured: authUsers.size
+    authEnabled: isAuthEnabled(),
+    usersConfigured: authUsers.size,
+    authSource: authUserSource
   });
 });
 
 app.get('/api/auth/me', (req, res) => {
   const user = getUserFromRequest(req);
-  if (!authEnabled) {
-    return res.json({ authEnabled: false, user });
+  if (!isAuthEnabled()) {
+    return res.json({ authEnabled: false, user, authSource: authUserSource });
   }
   if (!user) return res.status(401).json({ authEnabled: true, error: 'Not authenticated' });
-  return res.json({ authEnabled: true, user });
+  return res.json({
+    authEnabled: true,
+    user,
+    isAdmin: user.role === 'admin',
+    authSource: authUserSource
+  });
 });
 
 app.post('/api/auth/login', (req, res) => {
-  if (!authEnabled) {
+  refreshAuthUsers();
+  if (!isAuthEnabled()) {
     return res.status(400).json({ error: 'Authentication is not configured on this server.' });
   }
   const { username, password } = req.body || {};
@@ -632,7 +854,8 @@ app.post('/api/auth/login', (req, res) => {
   return res.json({
     ok: true,
     authEnabled: true,
-    user: { username: user.username, displayName: user.displayName }
+    authSource: authUserSource,
+    user: { username: user.username, displayName: user.displayName, role: user.role || 'expert' }
   });
 });
 
@@ -654,24 +877,170 @@ app.use('/api', (req, res, next) => {
   return next();
 });
 
+app.get('/api/data-status', (_req, res) => {
+  res.json({
+    ...dataStatus,
+    expectedFiles: Object.values(EXPECTED_SOURCE_FILES)
+  });
+});
+
+app.get('/api/admin/users', requireAdmin, (_req, res) => {
+  const users = Array.from(authUsers.values()).map(u => ({
+    username: u.username,
+    displayName: u.displayName,
+    role: u.role || 'expert'
+  }));
+  res.json({ source: authUserSource, mutable: authUserSource !== 'env', users });
+});
+
+app.post('/api/admin/users', requireAdmin, (req, res) => {
+  if (authUserSource === 'env') {
+    return res.status(409).json({ error: 'User management is disabled when AUTH_USERS/AUTH_USERS_JSON is set.' });
+  }
+  const { username, displayName, password, role } = req.body || {};
+  const normalized = normalizeUsername(username);
+  if (!normalized || !/^[a-z0-9][a-z0-9_.-]{2,31}$/.test(normalized)) {
+    return res.status(400).json({ error: 'Invalid username (use 3-32 chars: letters, numbers, ._-).' });
+  }
+  const pwd = String(password || '');
+  if (pwd.length < 8) return res.status(400).json({ error: 'Password must be at least 8 characters.' });
+
+  const list = loadUsersFromFile();
+  const exists = list.some(u => normalizeUsername(u.username) === normalized);
+  if (exists) return res.status(409).json({ error: 'Username already exists.' });
+
+  const record = normalizeUserRecord({
+    username: normalized,
+    displayName: String(displayName || normalized),
+    password: pwd,
+    role: normalizeRole(role)
+  });
+  if (!record) return res.status(400).json({ error: 'Could not create user record.' });
+  list.push(record);
+  saveUsersToFile(list);
+  refreshAuthUsers();
+  return res.json({ ok: true, user: { username: record.username, displayName: record.displayName, role: record.role } });
+});
+
+app.post('/api/admin/users/:username/password', requireAdmin, (req, res) => {
+  if (authUserSource === 'env') {
+    return res.status(409).json({ error: 'User management is disabled when AUTH_USERS/AUTH_USERS_JSON is set.' });
+  }
+  const target = normalizeUsername(req.params.username);
+  const pwd = String(req.body?.password || '');
+  if (!target) return res.status(400).json({ error: 'Invalid username.' });
+  if (pwd.length < 8) return res.status(400).json({ error: 'Password must be at least 8 characters.' });
+
+  const list = loadUsersFromFile();
+  const idx = list.findIndex(u => normalizeUsername(u.username) === target);
+  if (idx === -1) return res.status(404).json({ error: 'User not found.' });
+  list[idx] = {
+    ...list[idx],
+    username: target,
+    passwordHash: pbkdf2Hash(pwd)
+  };
+  saveUsersToFile(list);
+  refreshAuthUsers();
+  return res.json({ ok: true });
+});
+
+app.delete('/api/admin/users/:username', requireAdmin, (req, res) => {
+  if (authUserSource === 'env') {
+    return res.status(409).json({ error: 'User management is disabled when AUTH_USERS/AUTH_USERS_JSON is set.' });
+  }
+  const target = normalizeUsername(req.params.username);
+  if (!target) return res.status(400).json({ error: 'Invalid username.' });
+  if (target === normalizeUsername(req.user?.username)) {
+    return res.status(400).json({ error: 'You cannot delete the currently signed-in user.' });
+  }
+  const list = loadUsersFromFile();
+  const next = list.filter(u => normalizeUsername(u.username) !== target);
+  if (next.length === list.length) return res.status(404).json({ error: 'User not found.' });
+  saveUsersToFile(next);
+  refreshAuthUsers();
+  return res.json({ ok: true });
+});
+
+app.put('/api/admin/upload/:filename',
+  requireAdmin,
+  express.raw({ type: '*/*', limit: '50mb' }),
+  async (req, res) => {
+    const filename = String(req.params.filename || '').trim();
+    const allowed = new Set([
+      EXPECTED_SOURCE_FILES.qa,
+      EXPECTED_SOURCE_FILES.extracted,
+      'extracted_summaries.json'
+    ]);
+    if (!allowed.has(filename)) {
+      return res.status(400).json({ error: `Unsupported filename. Allowed: ${Array.from(allowed).join(', ')}` });
+    }
+    const buf = req.body;
+    if (!Buffer.isBuffer(buf) || buf.length === 0) {
+      return res.status(400).json({ error: 'Empty upload.' });
+    }
+    const destination = path.join(SOURCE_DATA_DIR, filename);
+    fs.writeFileSync(destination, buf);
+    await refreshDatasets();
+    return res.json({ ok: true, dataStatus });
+  }
+);
+
+app.post('/api/admin/reload-data', requireAdmin, async (_req, res) => {
+  await refreshDatasets();
+  res.json({ ok: true, dataStatus });
+});
+
 app.get('/api/datasets', (_req, res) => {
   const list = Object.values(datasets).map(ds => ({
     key: ds.key,
     label: ds.label,
     count: ds.items.length,
-    uniquePmids: new Set(ds.items.map(it => it.pmid)).size
+    uniquePmids: new Set(ds.items.map(it => it.pmid)).size,
+    sourceFile: EXPECTED_SOURCE_FILES[ds.key] || null,
+    sourceExists: Boolean(dataStatus.files?.[ds.key]?.exists),
+    sourceError: dataStatus.files?.[ds.key]?.error || null
   }));
   res.json({ datasets: list });
 });
 
 app.get('/api/items', (req, res) => {
-  const { dataset: datasetKey = 'qa', offset = '0', limit = '20', q = '' } = req.query;
+  const { dataset: datasetKey = 'qa', offset = '0', limit = '20', q = '', unreviewed = '0' } = req.query;
   const dataset = datasets[datasetKey];
   if (!dataset) return res.status(400).json({ error: 'Unknown dataset' });
   const search = (q || '').toString().trim().toLowerCase();
-  let filtered = dataset.items;
+  const store = responseStore[datasetKey] || createEmptyDatasetStore();
+  const reviewerKey = normalizeUsername(req.user?.username || 'anonymous') || 'anonymous';
+  const reviewedByUser = (store.reviewedByUser || {})[reviewerKey] || {};
+  const requiredQuestionIds = EVAL_QUESTION_IDS[datasetKey] || [];
+
+  const buildUserReview = (itemId) => {
+    const byQuestion = reviewedByUser[itemId] || {};
+    const review = {};
+    requiredQuestionIds.forEach(qid => {
+      const rec = byQuestion[qid];
+      if (!rec) return;
+      review[qid] = { answer: rec.answer, sure: Boolean(rec.sure), timestamp: rec.timestamp };
+    });
+    const reviewedAll = requiredQuestionIds.length > 0 &&
+      requiredQuestionIds.every(qid => Boolean(byQuestion[qid]));
+    return { review, reviewedAll };
+  };
+
+  let filtered = dataset.items.map(item => {
+    const user = buildUserReview(item.id);
+    return {
+      ...item,
+      userReview: user.review,
+      userReviewedAll: user.reviewedAll
+    };
+  });
+
+  const wantsUnreviewed = ['1', 'true', 'yes'].includes(String(unreviewed).toLowerCase());
+  if (wantsUnreviewed) {
+    filtered = filtered.filter(item => !item.userReviewedAll);
+  }
   if (search) {
-    filtered = dataset.items.filter(item => {
+    filtered = filtered.filter(item => {
       return Object.values(item).some(val =>
         typeof val === 'string' && val.toLowerCase().includes(search)
       );
@@ -707,12 +1076,30 @@ app.post('/api/responses', (req, res) => {
   if (!item) return res.status(404).json({ error: 'Item not found' });
 
   const questionStore = ensureQuestionStore(store, questionId);
+  const reviewerKey = normalizeUsername(req.user?.username || 'anonymous') || 'anonymous';
+
+  // Keep per-user latest decisions so experts can resume unfinished work.
+  store.reviewedByUser = store.reviewedByUser || {};
+  store.reviewedByUser[reviewerKey] = store.reviewedByUser[reviewerKey] || {};
+  store.reviewedByUser[reviewerKey][itemId] = store.reviewedByUser[reviewerKey][itemId] || {};
+
+  const previous = store.reviewedByUser[reviewerKey][itemId][questionId];
+  if (previous) {
+    const prevKey = `${previous.answer}_${previous.sure ? 'sure' : 'unsure'}`;
+    if (questionStore.counts?.[prevKey]) {
+      questionStore.counts[prevKey] = Math.max(0, (questionStore.counts[prevKey] || 0) - 1);
+      if (questionStore.counts[prevKey] === 0) delete questionStore.counts[prevKey];
+    }
+  }
+
   const key = `${answer}_${sure ? 'sure' : 'unsure'}`;
+  questionStore.counts = questionStore.counts || {};
   questionStore.counts[key] = (questionStore.counts[key] || 0) + 1;
 
   const record = {
     timestamp: new Date().toISOString(),
-    reviewer: req.user?.username || 'anonymous',
+    reviewer: reviewerKey,
+    reviewerRole: req.user?.role || 'expert',
     dataset: datasetKey,
     questionId,
     answer,
@@ -731,6 +1118,7 @@ app.post('/api/responses', (req, res) => {
 
   store.reviewedItems[itemId] = store.reviewedItems[itemId] || {};
   store.reviewedItems[itemId][questionId] = record;
+  store.reviewedByUser[reviewerKey][itemId][questionId] = record;
 
   saveResponses();
   res.json({ ok: true });
@@ -757,7 +1145,7 @@ app.post('/api/compare', (req, res) => {
 app.get('/api/summary', (req, res) => {
   const { dataset: datasetKey = 'qa' } = req.query;
   if (!datasets[datasetKey]) return res.status(400).json({ error: 'Unknown dataset' });
-  const summary = aggregateSummary(datasetKey);
+  const summary = aggregateSummary(datasetKey, req.user?.username || 'anonymous');
   res.json(summary);
 });
 
@@ -794,39 +1182,41 @@ function toCsv(rows) {
 app.get('/api/export', (req, res) => {
   const { dataset: datasetKey = 'qa', questionId, decision, format = 'csv' } = req.query;
   if (!datasets[datasetKey]) return res.status(400).json({ error: 'Unknown dataset' });
-  const store = responseStore[datasetKey];
-  const questions = store.responses || {};
-  let records = [];
+  const store = responseStore[datasetKey] || createEmptyDatasetStore();
+  const questionIds = questionId
+    ? [questionId]
+    : (Object.keys(store.responses || {}).length ? Object.keys(store.responses || {}) : (EVAL_QUESTION_IDS[datasetKey] || []));
 
-  const pushRecords = (qid) => {
-    const questionStore = questions[qid];
-    if (!questionStore) return;
-    let recs = questionStore.records || [];
-    if (decision === 'yes' || decision === 'no') {
-      recs = recs.filter(r => r.answer === decision);
+  const byUser = store.reviewedByUser || {};
+  const records = [];
+  for (const reviewer of Object.keys(byUser)) {
+    const byItem = byUser[reviewer] || {};
+    for (const itemId of Object.keys(byItem)) {
+      for (const qid of questionIds) {
+        const rec = byItem[itemId]?.[qid];
+        if (!rec) continue;
+        if (decision === 'yes' || decision === 'no') {
+          if (rec.answer !== decision) continue;
+        }
+        records.push({
+          timestamp: rec.timestamp,
+          reviewer: rec.reviewer || reviewer || 'anonymous',
+          reviewerRole: rec.reviewerRole || '',
+          dataset: rec.dataset,
+          questionId: rec.questionId,
+          decision: rec.answer,
+          sure: rec.sure,
+          pmid: rec.pmid,
+          title: rec.title,
+          journal: rec.journal,
+          year: rec.year,
+          classification: rec.classification,
+          summary: rec.dataset === 'qa'
+            ? `${rec.content?.question || ''} | ${rec.content?.answer || ''}`
+            : `${rec.content?.summary || ''}`
+        });
+      }
     }
-    records = records.concat(recs.map(r => ({
-      timestamp: r.timestamp,
-      reviewer: r.reviewer || 'anonymous',
-      dataset: r.dataset,
-      questionId: r.questionId,
-      decision: r.answer,
-      sure: r.sure,
-      pmid: r.pmid,
-      title: r.title,
-      journal: r.journal,
-      year: r.year,
-      classification: r.classification,
-      summary: r.dataset === 'qa'
-        ? `${r.content.question} | ${r.content.answer}`
-        : `${r.content.summary || ''}`
-    })));
-  };
-
-  if (questionId) {
-    pushRecords(questionId);
-  } else {
-    Object.keys(questions).forEach(pushRecords);
   }
 
   if (format === 'json') {
@@ -842,5 +1232,5 @@ app.get('/api/export', (req, res) => {
 
 const port = process.env.PORT || 3400;
 app.listen(port, () => {
-  console.log(`knowledge-curator-v1 running at http://localhost:${port}`);
+  console.log(`human-expert-validation-v1 running at http://localhost:${port}`);
 });
