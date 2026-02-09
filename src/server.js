@@ -20,6 +20,7 @@ const SOURCE_DATA_DIR = process.env.SOURCE_DATA_DIR
   : (process.env.RUNTIME_DATA_DIR ? RUNTIME_DATA_DIR : BUNDLED_DATA_DIR);
 const RESPONSE_PATH = path.join(RUNTIME_DATA_DIR, 'responses.json');
 const SUMMARY_CACHE_PATH = path.join(RUNTIME_DATA_DIR, 'extracted_summaries.json');
+const SUMMARY_CACHE_VERSION = 2;
 const USERS_PATH = process.env.AUTH_USERS_FILE
   ? path.resolve(process.env.AUTH_USERS_FILE)
   : path.join(RUNTIME_DATA_DIR, 'users.json');
@@ -739,11 +740,16 @@ async function enrichSummaries(items) {
   let cache = {};
   if (fs.existsSync(SUMMARY_CACHE_PATH)) {
     try {
-      cache = JSON.parse(fs.readFileSync(SUMMARY_CACHE_PATH, 'utf8'));
+      const parsed = JSON.parse(fs.readFileSync(SUMMARY_CACHE_PATH, 'utf8'));
+      cache = parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? parsed : {};
     } catch (err) {
       console.warn('Failed to parse summary cache', err);
     }
   }
+  // Ignore stale cache entries (e.g., generated under earlier parsing logic).
+  cache = Object.fromEntries(Object.entries(cache).filter(([_id, entry]) => (
+    entry && typeof entry === 'object' && entry.version === SUMMARY_CACHE_VERSION
+  )));
   const limit = parseInt(process.env.CURATOR_SUMMARY_LIMIT || '40', 10);
   let updated = false;
   for (const item of items.slice(0, Math.max(limit, 1))) {
@@ -778,14 +784,14 @@ async function enrichSummaries(items) {
         };
         item.categorized = enriched;
         item.summary = stripMarkdown(parsed.summary || item.summary);
-        cache[item.id] = { summary: item.summary, categorized: enriched };
+        cache[item.id] = { version: SUMMARY_CACHE_VERSION, summary: item.summary, categorized: enriched };
         updated = true;
         continue;
       } catch (err) {
         console.warn('Failed to parse LLM response', err);
       }
     }
-    cache[item.id] = { summary: item.summary, categorized: item.categorized };
+    cache[item.id] = { version: SUMMARY_CACHE_VERSION, summary: item.summary, categorized: item.categorized };
     updated = true;
   }
   if (updated) {
@@ -1126,7 +1132,9 @@ app.put('/api/admin/upload/:filename',
     if (!Buffer.isBuffer(buf) || buf.length === 0) {
       return res.status(400).json({ error: 'Empty upload.' });
     }
-    const destination = path.join(SOURCE_DATA_DIR, filename);
+    const destination = filename === 'extracted_summaries.json'
+      ? SUMMARY_CACHE_PATH
+      : path.join(SOURCE_DATA_DIR, filename);
     fs.writeFileSync(destination, buf);
     await refreshDatasets();
     return res.json({ ok: true, dataStatus });
